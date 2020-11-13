@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let human =Object.create({},{
+            name : {
+                value : "김상형",
+                enumerable : true
+            },
+            age : {
+                value : 29,
+                enumerable:true
+            },
+        });
+
+        let staff = Object.create(human,{
+            salary :{
+                value:680,
+                enumerable:true,
+            },
+            title:{
+                value:"차장",
+            },
+        });
+
+        for(let i in staff){
+            document.write(staff[i]+"<br>");
+        }
+        document.write("<hr>");
+        // 자신의 고유 속성만 나타냄(상속 받고 나서 추가한 속성들)
+        document.write(Object.getOwnPropertyNames(staff)+"<br>");
+        document.write(Object.keys(staff)+"<br>")//열거가 가능한 거만 나타냄
+    </script>
+</body>
+</html>

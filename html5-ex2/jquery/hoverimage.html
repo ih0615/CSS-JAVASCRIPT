@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>hoverimage</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<p><img src="playbtn_normal.png"></p>
+	<script>
+		$('img').hover(
+			function() { $('img').attr('src', 'playbtn_press.png')},
+			function() { $('img').attr('src', 'playbtn_normal.png')}
+		);
+	</script>
+</body>
+</html>

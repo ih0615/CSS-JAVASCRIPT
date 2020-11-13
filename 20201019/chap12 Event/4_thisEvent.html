@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="header">클릭해</h1>
+    <p id="para">클릭하라고</p>
+    <script>
+        function click(){
+            this.innerHTML +="<br>클릭했3"//this 이벤트 발생시킨 주체
+        }
+        let header = document.getElementById("header");
+        header.onclick = click;
+        let para = document.getElementById("para");
+        para.onclick = click;
+    </script>
+</body>
+</html>

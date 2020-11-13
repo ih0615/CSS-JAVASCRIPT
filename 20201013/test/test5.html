@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var input = prompt("입력하시오");
+        var five = 0;
+        var three = 0;
+        var error = 0;
+        var answer=0;
+        
+        // while (true) {
+        //     if (input == 0) {
+        //         break;
+        //     } else if ((input - 5) % 3 == 0) {
+        //         input -= 5;
+        //         five++;
+        //     } else if (input % 3 == 0) {
+        //         input -= 3;
+        //         three++;
+        //     } else {
+        //         error = 1;
+        //         break;
+        //     }
+        // }
+        for(var i=1;i*5<=input;i++){
+            if((input-(5*i))%3==0){
+                five=i;
+            }
+        }
+        input=input-(5*five);
+        for(var j=1;j*3<=input;j++){
+            if((input-(3*j))%3==0){
+                three=j;
+            }
+        }
+        if(five==0&&three==0){
+            error=1;
+        }
+        if(five+three>0){
+            answer = five+three;
+        }
+        else{
+            answer = -1;
+        }
+        document.write(five + "," + three + "," + error+"<br>");
+        document.write(answer);
+    </script>
+</body>
+
+</html>

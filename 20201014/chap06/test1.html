@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Book(name,price,writer,ISBN,page){
+            this.name = name;
+            this.price = price;
+            this.writer = writer;
+            this.ISBN = ISBN;
+            this.page = page;
+        }
+        var dongjun = new Book("야 너도 JS 할 수 있을까",Number.MAX_VALUE,"이동준","123123321321123",999);
+        document.write(`${dongjun.name}<br>${dongjun.price}<br>${dongjun.writer}<br>${dongjun.ISBN}<br>${dongjun.page}<br>`);
+    </script>
+</body>
+</html>

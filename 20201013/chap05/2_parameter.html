@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function total() {
+            var s = 0;
+            for (var i = 0; i < arguments.length; i++) {
+                s += arguments[i];
+            }
+            return s;
+        }
+
+        function total_string_int() {
+            var s = 0;
+            if (typeof (arguments[0]) == "string") {
+                s = "";
+            }
+            for (var i in arguments) {
+                s += arguments[i];
+            }
+            return s;
+            // for(var i=0; i<arguments.length;i++){
+            //     s+=arguments[i];
+            // }
+            // return s;
+        }
+        document.write(`1+2+3+4 = ${total(1,2,3,4)}<br>`);
+        document.write(`5+6+7+8+9+10 = ${total(5,6,7,8,9,10)}<br>`);
+        document.write(`아동+준이+선생님 = ${total_string_int("아동","준이","선생님")}<br>`);
+        document.write(`1+2+3+3+3 = ${total_string_int(1,3,2,3,3,3)}<br>`)
+    </script>
+</body>
+
+</html>

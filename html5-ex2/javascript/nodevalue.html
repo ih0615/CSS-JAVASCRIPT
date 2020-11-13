@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>nodevalue</title>
+</head>
+<body>
+	<p id="para">이것은 <b>문단</b>이다.</p>
+	<hr>
+	<script>
+		var para = document.getElementById("para");
+		document.write("nodeValue : " + para.firstChild.nodeValue + "<br>");
+		document.write("textContent : " + para.textContent + "<br>");
+		document.write("innerHTML : " + para.innerHTML + "<br>");
+		document.write("innerText : " + para.innerText + "<br>");
+		document.write("outerText : " + para.outerText + "<br>");
+		alert("outerHTML : " + para.outerHTML);
+	</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jQuery.js"></script>
+    <style>
+        .sample{
+            color: red;
+        }
+        .header{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="header">header</h1>
+    <h1 class="header">header sample</h1>
+    <script>
+        // $('h1').addClass('sample');
+        $('h1').toggleClass('sample');
+        // $('h1:first').removeClass('header');
+        $('h1:first').toggleClass('header',false);
+
+    </script>
+</body>
+</html>

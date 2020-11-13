@@ -1,0 +1,162 @@
+body {
+    width: 960px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    width: 960px;
+    height: 250px;
+    margin: 0 auto;
+    position: relative;
+}
+
+h1,
+p {
+    margin: 0;
+}
+
+header>nav {
+    position: absolute;
+    z-index: 1;
+}
+
+.nav_title {
+    display: block;
+    font-weight: bold;
+    font-size: larger;
+    line-height: 42px;
+}
+
+#main_header_title {
+    width: 960px;
+    height: 200px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRq90LrvPC_V4hZgLH2WwrdMZof1Brvusjzsw&usqp=CAU");
+    background-size: cover;
+    position: absolute;
+    overflow: hidden;
+    color: white;
+    top: 35px;
+    z-index: -1;
+}
+
+#main_header_title>img:nth-of-type(1) {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#main_header_title>h1 {
+    position: absolute;
+    top: 20px;
+    left: 130px;
+    font-size: 150px;
+    font-family: 'Nanum Brush Script', cursive;
+    text-shadow: 10px 5px cornflowerblue;
+    letter-spacing: 20px;
+}
+
+#main_header_title>h1:nth-of-type(2) {
+    color: yellow;
+    left: 380px;
+    letter-spacing: 10px;
+}
+
+#main_header_title>p {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    font-family: 'Gamja Flower', cursive;
+}
+
+.main_manu,
+.sub_manu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.sub_manu {
+    display: none;
+}
+
+ul.main_manu>li:nth-of-type(1)>a:hover+ul.sub_manu,
+ul.sub_manu:hover {
+    display: block;
+}
+
+ul.main_manu>li:nth-of-type(2)>a:hover+ul.sub_manu,
+ul.sub_manu:hover {
+    display: block;
+}
+
+ul.main_manu>li:nth-of-type(3)>a:hover+ul.sub_manu,
+ul.sub_manu:hover {
+    display: block;
+}
+
+ul.main_manu>li:nth-of-type(4)>a:hover+ul.sub_manu,
+ul.sub_manu:hover {
+    display: block;
+}
+
+ul.main_manu>li:nth-of-type(5)>a:hover+ul.sub_manu,
+ul.sub_manu:hover {
+    display: block;
+}
+
+.main_manu>li {
+    float: left;
+    text-align: center;
+
+}
+
+.main_manu>li>a {
+    display: inline-block;
+    width: 100px;
+    height: 20px;
+    padding: 5px;
+    color: white;
+    border-radius: 40px;
+}
+
+.main_manu>li>ul {
+    border-radius: 10px;
+}
+
+.main_manu>li>ul>li>a {
+    color: white;
+}
+
+.main_manu>.playstation>a,
+.main_manu>.playstation>ul {
+    background-color: blue;
+}
+
+.main_manu>.xbox>a,
+.main_manu>.xbox>ul {
+    background-color: green;
+}
+
+.main_manu>.nintendo>a,
+.main_manu>.nintendo>ul {
+    background-color: red;
+}
+
+.main_manu>.pc>a,
+.main_manu>.pc>ul {
+    background-color: black;
+}
+
+.main_manu>.retro>a,
+.main_manu>.retro>ul {
+    background-color: blueviolet;
+}

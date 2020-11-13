@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>setinterval2</title>
+</head>
+<body>
+	<p id="nowtime">현재 시간</p>
+	<script>
+		setInterval(function() {
+			document.getElementById("nowtime").innerHTML = 
+				(new Date()).toLocaleString();}, 1000);
+	</script>
+</body>
+</html>

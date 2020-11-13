@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //상속도 받고, 재정의(Override)도 함
+        function Human(name,age){
+            this.name = name;
+            this.age = age;
+        };
+        Human.prototype.intro=function(){
+            document.write(`name = ${this.name}<br>`);
+            document.write(`age = ${this.age}<br>`);
+        };
+        function Student(name, age, major){
+            this.parent = Human;
+            this.parent(name, age);//java의 super
+            this.major = major;
+        };
+        Student.prototype = Human.prototype;//두개의 property를 일치시킴
+        
+        Student.prototype.intro=function(){//재정의(Override) 다만 js에서는 호출 객체에 따라서
+                                           //구분해서 intro를 추출하지는 않음
+            document.write(`name = ${this.name}<br>`);
+            document.write(`age = ${this.age}<br>`);
+            document.write(`major = ${this.major}<br>`);
+        };
+        Student.prototype.study=function(){
+            document.write("넌 학생이구! 난 선생이야");
+        };
+        
+        let lee = new Human("이동준",32);
+        lee.intro();
+
+        let leedongjoon = new Student("이동준",99,"과평반");
+        leedongjoon.intro();
+        leedongjoon.study();
+    </script>
+</body>
+</html>

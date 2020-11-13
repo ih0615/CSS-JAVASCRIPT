@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            /* static(기본) 위치를 기준으로 이동한다. */
+            position: relative;
+
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+            left: 50px;
+            top: 50px;
+        }
+
+        .blue {
+            background-color: blue;
+            left: 100px;
+            top: 100px;
+        }
+
+        .rel {
+            position: relative;
+            left: 100px;
+            top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rel">
+        <div class="box red"></div>
+        <div class="box green"></div>
+        <div class="box blue"></div>
+    </div>
+</body>
+
+</html>

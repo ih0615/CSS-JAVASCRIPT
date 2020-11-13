@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //선언과 동시에 바로 쓰기
+        //근데 이렇게 쓰면 재사용성이 떨어진다.
+        //재사용성이 떨어진다 = 이 함수는 여기서 한번만 쓸 수 있다.
+        //또 쓰고 싶으면 이걸 또 만들어야 함
+        //그래서 익명함수 쓸 때는 변수에 대입해서 쓰는 것이다.
+        document.write(`2+3=${function(a,b){return a+b;}(2,3)}<br>`);
+        document.write(`5+6=${function(a,b){return a+b;}(5,6)}<br>`);
+
+        //함수 복사 가능함
+        var add = function (a, b) {
+            return a + b;
+        };
+        var plus = add;
+        document.write(`50+6=${plus(50,6)}`);
+
+        //함수를 인수에 넣을 수도 있음.
+        //콜백 함수(다른 함수의 인자로 이용되는 함수, 여기서는 add, multi)
+        var multi = function (a, b) {
+            return a * b;
+        };
+
+        function calc(a, b, f) {
+            return f(a, b);
+        }
+        document.write("<br>")
+        document.write(`11+12=${calc(11,12,add)}`);
+        document.write("<br>")
+        document.write(`11*12=${calc(11,12,multi)}`);
+    </script>
+</body>
+
+</html>

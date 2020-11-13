@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <style>
+        .max {
+            color: violet;
+        }
+    </style>
+    <script>
+        // $(document).ready(function() {    
+        // })
+        $(function () {
+            let bigCountLaw = prompt("대수의 법칙을 증명할 숫자는?(주사위 던질 횟수)", 10000);
+            let emptyArray = [0, 0, 0, 0, 0, 0];
+            for (let i = 0; i < bigCountLaw; i++) {
+                let random = Math.floor(Math.random() * 6); //1부터 5
+                //h1태그이면서 클래스 이름이 1~6사이인 것의 텍스트 값을 int로 변환
+                // let count = parseInt($('h1.' + String(random)).text());
+                // count++;
+                emptyArray[random]++;
+                //랙 유발 코드
+                // $('h1.' + String(random)).text(count);
+            }
+            for (let i = 0; i < emptyArray.length; i++) {
+                $('h1.' + (i + 1)).text(emptyArray[i]);
+            }
+            //가장 큰 값을 색칠하는 코드
+            let max = 0;
+            let maxIndex = 0; //클래스 명을 이용할 때 쓰이는 변수
+            for (let i = 1; i <= 6; i++) {
+                let percent = $('h1.' + String(i)).text(); //h1.1 부터 h1.6가 나옴
+                if (max < percent) {
+                    max = percent;
+                    maxIndex = i;
+                }
+                percent = (percent / bigCountLaw) * 100;
+                $('h2.' + String(i)).text(parseFloat(percent).toFixed(2) + '%');
+            }
+            $('h1.' + maxIndex).addClass('max');
+            $('h2.' + maxIndex).addClass('max');
+
+        });
+    </script>
+</head>
+
+<body>
+    <h1>1</h1>
+    <h1 class="1">0</h1>
+    <h2 class="1">0</h2>
+    <h1>2</h1>
+    <h1 class="2">0</h1>
+    <h2 class="2">0</h2>
+    <h1>3</h1>
+    <h1 class="3">0</h1>
+    <h2 class="3">0</h2>
+    <h1>4</h1>
+    <h1 class="4">0</h1>
+    <h2 class="4">0</h2>
+    <h1>5</h1>
+    <h1 class="5">0</h1>
+    <h2 class="5">0</h2>
+    <h1>6</h1>
+    <h1 class="6">0</h1>
+    <h2 class="6">0</h2>
+    <!-- <script></script> body 밑에다 삽입도 가능-->
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>accessor2</title>
+</head>
+<body>
+	<script>
+		var human = {
+			name: "김상형",
+			$age: 29,
+			get age() { return this.$age; },
+			set age(newage) { 
+				if (newage > 0 && newage < 130) {
+					this.$age = newage; 
+				}
+			},
+			intro: function() {
+				document.write("name = " + this.name + "<br>");
+				document.write("age = " + this.age + "<br>");
+			}
+		};
+		
+		human.age = 250;
+		human.intro();
+		human.age = 19;
+		human.intro();
+	</script>
+</body>
+</html>

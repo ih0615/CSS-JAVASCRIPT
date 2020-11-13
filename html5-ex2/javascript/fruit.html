@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>fruit</title>
+	<script>
+		function changeCaption(cap) {
+			document.getElementById("fruit").innerText = cap;
+		}
+	</script>
+</head>
+<body>
+	<h1 id="fruit">과일</h1>
+	<form>
+		<input type="button" value="Apple" onClick="changeCaption('Apple')">
+		<input type="button" value="Orange" onClick="changeCaption('Orange')">
+	</form>
+</body>
+</html>

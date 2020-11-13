@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let array = ['가위', '바위', '보']
+        while (true) {
+            var myChoice = prompt('가위 바위 보 중 하나를 입력하여 주십시오'); //0=가위, 1=바위, 2=보
+            if (myChoice == '가위') {
+                myChoice = 0;
+                break;
+            } else if (myChoice == '바위') {
+                myChoice = 1;
+                break;
+            } else if (myChoice == '보') {
+                myChoice = 2;
+                break;
+            } else {
+                alert('잘못된 입력입니다. 다시 입력하여 주십시오');
+            }
+        }
+        var computerChoice = Math.floor(Math.random() * 3);
+        console.log(`사용자 : ${array[myChoice]} 컴퓨터 : ${array[computerChoice]}`)
+        if (myChoice == computerChoice) {
+            console.log('무승부');
+        } else if (myChoice == computerChoice - 1 || myChoice == computerChoice + 2) {
+            console.log('패배');
+        } else {
+            console.log('승리');
+        }
+    </script>
+</body>
+
+</html>

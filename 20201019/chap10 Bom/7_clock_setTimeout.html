@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="nowtime">현재시간</p>
+    <script>
+        function tick(){
+            let nowtime = document.getElementById("nowtime");
+            nowtime.innerHTML = (new Date()).toLocaleString();
+            setTimeout("tick()",1000);
+        }
+        let timer = setTimeout("tick()",0);
+    </script>
+</body>
+</html>

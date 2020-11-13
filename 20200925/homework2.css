@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+div.container {
+    background-image: url(../20200924/photo.jpg);
+    background-size: 100% 100%;
+    /*width height 가 500px 이므로 거기에 맞춘 크기*/
+    background-repeat: no-repeat;
+    margin: 50% auto;
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+}
+
+h1#title {
+    color: #FFFFFF;
+    text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5, -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5, -2px 0px 0 #4074b5, 0px -2px 0 #4074b5;
+    text-align: center;
+    font-style: normal;
+    width: 500px;
+    height: 50px;
+}
+
+div.part1 {
+    float: left;
+    width: 250px;
+    height: 400px;
+}
+
+div.part2 {
+    float: left;
+    width: 250px;
+    height: 400px;
+}
+
+p.part {
+    float: left;
+    color: blue;
+    width: 250px;
+}

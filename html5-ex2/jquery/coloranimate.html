@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>coloranimate</title>
+	<link rel="Stylesheet" href="css/ui-lightness/jquery-ui-1.10.4.custom.min.css" />
+	<script src="jquery-1.11.0.min.js"></script>
+	<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+</head>
+<body>
+	<div id="effect" style="width:300px;height:200px;background-color:yellow;">
+		<p>색상 애니메이션</p>
+	</div>
+	<script>
+	$("#effect").click(function() {
+		var target = "yellow";
+		if ($("#effect").css("backgroundColor") == "rgb(255, 255, 0)") {
+			target = "red";
+		}
+		$("#effect").animate({
+			backgroundColor:target
+		}, 2000);
+	});
+	</script>
+</body>
+</html>

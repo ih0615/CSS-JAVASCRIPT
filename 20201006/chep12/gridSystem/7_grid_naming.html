@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 960px;
+            margin: 0 auto;
+            display: grid;
+            /* grid-template-columns: 2fr 8fr; */
+            gap: 10px;
+            /*row-gap, column-gap*/
+            /* step 1 */
+            grid-template-areas:
+                'header header header header header'
+                'aside section section section section'
+                'footer footer footer footer footer';
+        }
+
+        .container>div {
+            background-color: violet;
+        }
+
+        /* step 2 : 공간별로 이름 붙이기 */
+        .header {
+            grid-area: header;
+        }
+
+        .aside {
+            grid-area: aside;
+        }
+
+        .section {
+            grid-area: section;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Lorem, ipsum.</h1>
+            <p>Occaecat ad cillum enim deserunt. Sunt veniam proident ipsum laborum occaecat laboris ullamco nisi fugiat
+                duis qui qui excepteur voluptate. Quis qui eiusmod minim esse minim eiusmod incididunt ea quis voluptate
+                adipisicing qui aliquip. Officia et amet veniam cupidatat est est Lorem laboris commodo adipisicing
+                consequat deserunt. Exercitation laborum nostrud officia in ut labore reprehenderit duis occaecat duis
+                dolor culpa anim proident.
+
+                Labore eiusmod culpa ut consectetur anim duis. In adipisicing non enim pariatur ex elit dolore duis. Et
+                aliquip ad velit velit.
+
+                Aliquip consequat enim velit cupidatat consectetur quis dolore. Veniam consequat est sint sunt ad
+                excepteur sunt do nulla eu aute. Excepteur dolore do magna proident culpa sit tempor sit cupidatat. Anim
+                ut eiusmod incididunt exercitation pariatur ipsum qui do Lorem pariatur nisi amet.</p>
+        </div>
+        <div class="aside">
+            <h1>Lorem, ipsum.</h1>
+            <p>Occaecat ad cillum enim deserunt. Sunt veniam proident ipsum laborum occaecat laboris ullamco nisi fugiat
+                duis qui qui excepteur voluptate. Quis qui eiusmod minim esse minim eiusmod incididunt ea quis voluptate
+                adipisicing qui aliquip. Officia et amet veniam cupidatat est est Lorem laboris commodo adipisicing
+                consequat deserunt. Exercitation laborum nostrud officia in ut labore reprehenderit duis occaecat duis
+                dolor culpa anim proident.
+
+                Labore eiusmod culpa ut consectetur anim duis. In adipisicing non enim pariatur ex elit dolore duis. Et
+                aliquip ad velit velit.
+
+                Aliquip consequat enim velit cupidatat consectetur quis dolore. Veniam consequat est sint sunt ad
+                excepteur sunt do nulla eu aute. Excepteur dolore do magna proident culpa sit tempor sit cupidatat. Anim
+                ut eiusmod incididunt exercitation pariatur ipsum qui do Lorem pariatur nisi amet.</p>
+        </div>
+        <div class="section">
+            <h1>Lorem, ipsum.</h1>
+            <p>Occaecat ad cillum enim deserunt. Sunt veniam proident ipsum laborum occaecat laboris ullamco nisi fugiat
+                duis qui qui excepteur voluptate. Quis qui eiusmod minim esse minim eiusmod incididunt ea quis voluptate
+                adipisicing qui aliquip. Officia et amet veniam cupidatat est est Lorem laboris commodo adipisicing
+                consequat deserunt. Exercitation laborum nostrud officia in ut labore reprehenderit duis occaecat duis
+                dolor culpa anim proident.
+
+                Labore eiusmod culpa ut consectetur anim duis. In adipisicing non enim pariatur ex elit dolore duis. Et
+                aliquip ad velit velit.
+
+                Aliquip consequat enim velit cupidatat consectetur quis dolore. Veniam consequat est sint sunt ad
+                excepteur sunt do nulla eu aute. Excepteur dolore do magna proident culpa sit tempor sit cupidatat. Anim
+                ut eiusmod incididunt exercitation pariatur ipsum qui do Lorem pariatur nisi amet.</p>
+        </div>
+        <div class="footer">
+            <h1>Lorem, ipsum.</h1>
+            <p>Occaecat ad cillum enim deserunt. Sunt veniam proident ipsum laborum occaecat laboris ullamco nisi fugiat
+                duis qui qui excepteur voluptate. Quis qui eiusmod minim esse minim eiusmod incididunt ea quis voluptate
+                adipisicing qui aliquip. Officia et amet veniam cupidatat est est Lorem laboris commodo adipisicing
+                consequat deserunt. Exercitation laborum nostrud officia in ut labore reprehenderit duis occaecat duis
+                dolor culpa anim proident.
+
+                Labore eiusmod culpa ut consectetur anim duis. In adipisicing non enim pariatur ex elit dolore duis. Et
+                aliquip ad velit velit.
+
+                Aliquip consequat enim velit cupidatat consectetur quis dolore. Veniam consequat est sint sunt ad
+                excepteur sunt do nulla eu aute. Excepteur dolore do magna proident culpa sit tempor sit cupidatat. Anim
+                ut eiusmod incididunt exercitation pariatur ipsum qui do Lorem pariatur nisi amet.</p>
+        </div>
+    </div>
+</body>
+
+</html>

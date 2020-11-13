@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>scroll</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<p>스크롤 위치 조사 및 변경</p>
+	<p><img src="birdegg.jpg" /></p>
+	<script>
+		$('body').click(function() {
+			alert($(this).scrollLeft() + ", " + $(this).scrollTop());
+		});
+		$('body').keydown(function() {
+			$('body').scrollTop(30);
+		});
+	</script>
+</body>
+</html>

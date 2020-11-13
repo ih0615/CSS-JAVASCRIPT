@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(131, 162, 255);
+            /* 중요 */
+            position: absolute;
+        }
+        .wrap{
+            position: relative;
+        }
+        .box{
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation-name: 임의의이름;
+            animation-duration: 4s;
+
+            animation-fill-mode: both;
+            /* forwards, backwards, both */
+            animation-direction: alternate;
+            /* reverse, alternate-reverse, alternate */
+            animation-iteration-count: infinite;
+
+            animation-delay: 2s;
+            animation-timing-function: ease;
+        }
+
+        @keyframes 임의의이름
+        {
+            0%{
+                left: 0; top: 0;
+            }
+            25%{
+                left: 100px; top: 100px;
+            }
+            
+            50%{
+                left: 200px; top: 0px;
+            }
+            100%{
+                left: 300px; top: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box">
+
+        </div>
+    </div>
+</body>
+</html>

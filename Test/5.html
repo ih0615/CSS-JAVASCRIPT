@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Student(name, number, gender) {
+            this.이름 = name;
+            this.학번 = number;
+            this.성별 = gender;
+        }
+        Student.prototype.toString = function () {
+            return `이름 : ${this.이름} 학번 : ${this.학번} 성별 : ${this.성별}`
+        }
+        var array = [];
+        array.push(new Student('이동준', 2009038033, '남'));
+        array.push(new Student('이나겸', 2020038011, '여'));
+        array.push(new Student('박준현', 2015012011, '남'));
+        array.push(new Student('배수현', 2017011023, '여'));
+
+        for (let i = 0; i < 2; i++) {
+            let name = prompt('이름은?');
+            let number = prompt('학번은?');
+            let gender = prompt('성별은?');
+            array.push(new Student(name, number, gender));
+        }
+
+        var output = '';
+        for (var index in array) {
+            output += array[index] + '\n';
+        }
+        alert(output);
+    </script>
+</body>
+
+</html>

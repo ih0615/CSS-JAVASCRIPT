@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>is</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<p>평이한 문단</p>
+	<p class="sample">샘플 문단</p>
+	<hr />
+	<script>
+		if ($('p').is('.sample')) {
+			document.write("샘플 문단이 있다.");
+		} else {
+			document.write("샘플 문단이 없다.");
+		}
+	</script>
+</body>
+</html>

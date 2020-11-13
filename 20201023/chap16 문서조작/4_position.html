@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jQuery.js"></script>
+</head>
+<body>
+    <p>문단</p>
+    <p><img src="../cosmos.jpg" alt=""></p>
+    <p><img src="../birdegg.jpg" alt=""></p>
+
+    <hr>
+    <script>
+        let pic = $('img');
+        let pos = pic.position(); //위치 조사만 가능(get만 가능)
+        document.write("위치 : "+pos.left+", "+pos.top);
+
+        let off = pic.offset();
+        off.left += 20;
+        off.top += 20;
+        pic.offset(off);
+        document.write("위치 : "+pic.position().left+", "+pic.position().top);
+
+        alert($('body'))
+        //키보드를 아래로 누르면 수직 좌표가 30으로 강제 변경될 것임
+        $('body').keydown(function(){
+            $('body').scrollTop(30);
+        })
+    </script>
+</body>
+</html>

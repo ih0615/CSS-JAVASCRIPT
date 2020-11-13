@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+     
+        function showMessage(message, from){
+            if(from===undefined){
+                from=='unknown';
+            }
+            console.log(`${message} by${from}`);
+        }
+        showMessage('hi');
+
+        function showMessage2(message, from='unknown'){
+            console.log(`${message} by${from}`);
+        }
+        showMessage2('hi2');
+        
+    </script>
+</body>
+</html>

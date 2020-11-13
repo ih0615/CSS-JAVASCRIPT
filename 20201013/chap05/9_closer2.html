@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function outcount() {
+            var count = 0;
+
+            setInterval(function () { //1초에 한번씩 실행하는 함수
+                count++; //count 변수가 소멸되지 않고 메모리에 계속 남아서 값을 증가시킴
+                document.write(`${count}초 지났습니다. <br>`);
+            }, 1000);
+        }
+        outcount();
+    </script>
+</body>
+
+</html>

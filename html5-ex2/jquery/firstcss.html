@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>firstcss</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<h2>문단1</h2>
+	<h2>문단2</h2>
+	<script>
+
+		//메서드 채이닝 활용 예시
+		// $('h2').css('background', 'yellow');
+		// $('h2:first').css('border', 'solid red');
+
+		//위의 메서드와 똑같은 동작을 함
+		$('h2').css('background','yellow').first().css('border','solid red');
+	</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="para">문단입니다</p>
+    <script>
+        let para = document.getElementById("para");
+        let img = document.createElement("img");
+
+        //1.속성 직접 대입
+        img.src = "cosmos.jpg"; //HTML 상에서 이미 존재하는 속성에서만 쓸 수 있는 방법
+
+        //2. 속성 설정 메서드 호출
+        // img.setAttribute("src","cosmos.jpg");
+
+        //3. 속성 노드를 만들어 붙이기
+        // let src = document.createAttribute("src");//src 속성 만들기
+        // src.nodeValue = "cosmos.jpg";
+        // img.setAttributeNode(src);
+        para.appendChild(img);
+    </script>
+</body>
+
+</html>

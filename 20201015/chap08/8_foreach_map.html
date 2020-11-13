@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let score = [82, 96, 52, 76, 0, 100, 69, 88];
+        let sum = 0;
+        score.forEach(function (value) {
+            sum += value;
+        }); //여기서 value란 배열의 각각의 값을
+        document.write(sum + "<br>");
+        
+        document.write("<hr>");
+        sum =0;
+        let acumulator = function(value){
+            sum+=value;
+        }
+        score.forEach(acumulator);
+        document.write(sum+"<hr>");
+        let sum2 = 0;
+        for (var i in score) {
+            sum2 += score[i];
+        }
+        document.write(sum2 + "<br>");
+        document.write("<hr>");
+// ---------------------------------------------------------
+        let score2 = score.map(function (value) {
+            return value * 2;
+        });
+        document.write(score2 + "<br>");
+        document.write("<hr>");
+        let score3=[];
+        for(var i in score){
+            score3[i]=score[i]*2;
+        }
+        document.write(score3 + "<br>");
+        document.write("<hr>");
+    </script>
+</body>
+
+</html>

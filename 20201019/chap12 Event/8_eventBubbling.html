@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div">
+        <p id="para">클릭하세요</p>
+    </div>
+    <script>
+        let div = document.getElementById("div");
+        div.onclick = function(){
+            alert("div 클릭");
+        }
+        let para = document.getElementById("para");
+        para.onclick = function(ev){
+            alert("para 클릭");
+            ev.stopPropagation();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>eq</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<h3>문단0</h3>
+	<h3>문단1</h3>
+	<h3>문단2</h3>
+	<h3>문단3</h3>
+	<h3>문단4</h3>
+<script>
+	$('h3').first().css('background', 'yellow');//eq(0)=first()
+	$('h3').eq(2).css('background', 'blue');
+	$('h3').eq(-2).css('background', 'red');//eq(-1)=last()
+</script>
+</body>
+</html>

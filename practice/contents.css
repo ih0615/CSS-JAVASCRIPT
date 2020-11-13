@@ -1,0 +1,227 @@
+#contents p {
+    font-family: 'Nanum Brush Script', cursive;
+    font-size: 24px;
+    line-height: 30px;
+    color: whitesmoke;
+}
+
+#contents {
+    width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.main_article>img.firstImage {
+    width: 100px;
+    height: 300px;
+    float: left;
+    margin: 20px;
+}
+
+#main_section {
+    width: 720px;
+    float: left;
+}
+
+.main_article {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid black;
+    margin: 10px;
+    width: 720px;
+    height: 360px;
+    border-collapse: collapse;
+}
+
+.main_article>p.firstArticle {
+    margin-right: 50px;
+    margin-top: 50px;
+    width: 500px;
+    height: 300px;
+    float: right;
+}
+
+.main_article>iframe {
+    display: block;
+    float: right;
+}
+
+div.thirdImage>img {
+    display: block;
+    margin: 0 auto;
+}
+
+div.thirdp>p {
+    display: inline-block;
+    width: 600px;
+    margin: 20px 50px auto;
+    text-align: center;
+}
+
+#main_aside {
+    width: 200px;
+    margin: 10px;
+    border: 1px solid black;
+    float: right;
+}
+
+#main_aside>input {
+    display: none;
+}
+
+section.button {
+    overflow: hidden;
+}
+
+section.button>label {
+    display: block;
+    width: 100px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    float: left;
+    text-align: center;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+input#char:checked~section.button>label:nth-of-type(1) {
+    background-color: white;
+    color: black;
+}
+
+input#series:checked~section.button>label:nth-of-type(2) {
+    background-color: white;
+    color: black;
+}
+
+input#char~div:nth-of-type(1) {
+    display: none;
+}
+
+input#series~div:nth-of-type(2) {
+    display: none;
+}
+
+input#char:checked~div:nth-of-type(1) {
+    display: block;
+}
+
+input#series:checked~div:nth-of-type(2) {
+    display: block;
+}
+
+li.item~div {
+    display: block;
+}
+
+li.item {
+    margin: 10px;
+}
+
+div.thumbnail>img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+div.discription {
+    text-align: center;
+    margin: 3px;
+}
+
+div.discription>strong {
+    font-size: 24px;
+    color: white;
+}
+
+#main_footer {
+    margin: 10px auto;
+    width: 940px;
+    position: relative;
+    border: 1px solid black;
+    text-align: center;
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    overflow: hidden;
+}
+
+#main_footer>div.farticle {
+    display: inline-block;
+}
+
+#main_footer>img.left_image {
+    width: 50px;
+    height: 50px;
+    float: left;
+    position: absolute;
+    left: 20%;
+}
+
+#main_footer>img.right_image {
+    width: 50px;
+    height: 50px;
+    float: right;
+    position: absolute;
+    right: 20%;
+}
+
+input#mario1,
+input#mario2,
+input#mario3,
+input#mario4 {
+    display: none;
+}
+
+div#videoLabel {
+    display: inline-block;
+    width: 80px;
+    height: 360px;
+    text-align: center;
+}
+
+div#videoLabel>label {
+    display: block;
+    height: 50px;
+    width: 80px;
+    background-color: gray;
+    border: 1px solid gray;
+    border-radius: 10px;
+    font-family: 'Nanum Brush Script', cursive;
+    color: white;
+    font-size: 24px;
+    line-height: 50px;
+}
+
+iframe#mario1 {
+    display: none;
+}
+
+iframe#mario2 {
+    display: none;
+}
+
+iframe#mario3 {
+    display: none;
+}
+
+iframe#mario4 {
+    display: none;
+}
+
+input#mario1:checked~iframe#mario1 {
+    display: block;
+}
+
+input#mario2:checked~iframe#mario2 {
+    display: block;
+}
+
+input#mario3:checked~iframe#mario3 {
+    display: block;
+}
+
+input#mario4:checked~iframe#mario4 {
+    display: block;
+}

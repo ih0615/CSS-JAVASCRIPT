@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>eventcall</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<h1>클릭하세요.</h1>
+	<button type="button" onclick="btnclick();">클릭하기</button>
+	<script>
+		$('h1').click(function() { alert("클릭했습니다."); });
+		function btnclick() {
+			$('h1').click();
+		}
+	</script>
+</body>
+</html>

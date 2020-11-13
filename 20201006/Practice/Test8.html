@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 960px;
+            margin: 0 auto;
+        }
+        div{
+            box-sizing: border-box;
+            border: 1px solid green;
+            padding: 10px;
+        }
+        body>div{
+            margin-top: 10px;
+        }
+        #wrap{
+            display: grid;
+            grid-template-columns: 2fr 8fr;
+            padding: 0px;
+            gap: 30px;
+            border: none;
+        }
+        #section{
+            height: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <h1>Header</h1>
+    </div>
+    <div id="navigation">
+        <h1>Navigation</h1>
+    </div>
+    <div id="wrap">
+        <div id="aside">
+            <h1>Aside</h1>
+            <p>Ut nulla nisi irure qui incididunt commodo. Cillum esse quis amet in aliquip dolor quis quis adipisicing
+                voluptate excepteur duis eu ullamco. Voluptate tempor laboris reprehenderit ad voluptate mollit nostrud
+                laborum labore.
+
+                Consectetur anim ipsum magna commodo consectetur enim ex eu culpa. Culpa do deserunt aliqua id elit
+                fugiat.
+                Lorem aute ullamco aliqua nulla commodo et aliqua culpa non. Amet reprehenderit aliquip reprehenderit
+                commodo nostrud eiusmod eiusmod nostrud. Eu amet aliquip quis consectetur do reprehenderit mollit
+                incididunt
+                labore ut. Do aliqua ut dolore enim officia non enim occaecat qui in Lorem id deserunt velit. Ad do ex
+                exercitation consectetur Lorem cillum elit adipisicing ut magna et ea magna est.</p>
+        </div>
+        <div id="section">
+            <h1>Section</h1>
+            <p>Dolor pariatur sunt incididunt voluptate velit. Irure exercitation adipisicing ad ut ex fugiat consequat
+                nostrud dolore dolor. Voluptate deserunt non et tempor elit est eu nulla laboris fugiat velit esse.
+                Commodo
+                deserunt incididunt labore est proident quis voluptate amet minim ea aliqua id. Culpa labore non labore
+                ad.
+                Non aute reprehenderit nisi do aliquip.
+
+                Ad laborum duis duis magna non est mollit commodo proident. Esse est ullamco id ipsum laborum excepteur
+                duis
+                laborum magna sint labore officia nostrud consequat. Officia consequat culpa esse minim. Labore enim eu
+                enim
+                eiusmod Lorem culpa sint est velit velit sunt consectetur exercitation.</p>
+        </div>
+    </div>
+    <div id="footer">
+        <h1>Footer</h1>
+    </div>
+</body>
+
+</html>

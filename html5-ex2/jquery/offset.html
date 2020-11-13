@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>offset</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<p>문단</p>
+	<p><img src="cosmos.jpg" /></p>
+	<hr />
+	<script>
+		var pic = $('img');
+		var off = pic.offset();
+		off.left += 50;
+		off.top += 30;
+		pic.offset(off);
+	</script>
+</body>
+</html>

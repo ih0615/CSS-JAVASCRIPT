@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="race">
+        <li>테란</li>
+        <li>프로토스</li>
+        <li>저그</li>
+    </ul>
+    <ol>
+        <li>BTS</li>
+        <li>블랙핑크</li>
+    </ol>
+    <hr>
+    <script>
+        let race = document.getElementById("race");
+        let childs = race.getElementsByTagName("li");
+        // for (let li in childs) {
+        //     document.write(`${li}번째 목록 : ${childs[li].firstChild.nodeValue}<br>`);
+        // }
+        document.write("<hr>");
+        let childs2 = document.getElementsByTagName("li");
+        for (let li in childs2) {
+            document.write(`${li}번째 목록 : ${childs2[li].firstChild.nodeValue}<br>`);
+        }
+    </script>
+</body>
+
+</html>

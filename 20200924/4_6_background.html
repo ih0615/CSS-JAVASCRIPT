@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* CSS3부터는 여러개의 배경 이미지를 적용 가능 */
+        body {
+            background-image: url(BackgroundFront.png), url(BackgroundBack.png);
+            background-size: 100%;
+            /* 같은 이미지가 더이상 반복되지 않음 */
+            background-repeat: no-repeat;
+            /* 배경화면이 스크롤을 내려도 계속 따라옴 */
+            background-attachment: fixed;
+            /* background-position 지정 방식 */
+            /* 키워드, x축크기만, x축크기와 y축 크기 입력 */
+            background-position: center;
+        }
+        p{
+            font-size: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <p>Do ut nostrud pariatur occaecat laboris sint amet sit aliqua veniam velit eu aliquip.</p>
+    <p>Elit officia incididunt nulla aliqua enim.</p>
+    <p>Proident ut irure consequat aute minim nostrud amet.</p>
+    <p>Non sunt amet culpa in aute cupidatat sint culpa voluptate.</p>
+    <p>Cillum consectetur nulla mollit do eiusmod eu magna fugiat et.</p>
+</body>
+
+</html>

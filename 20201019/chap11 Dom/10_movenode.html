@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div"><p>1문단</p><p>2문단</p><p>3문단</p></div>
+    <script>
+        let div = document.getElementById("div");
+        let para1 = div.childNodes[0];//1문단 p태그를 가리킴
+        div.appendChild(para1);//이미 존재하는 노드를 가지고 appendchild나 insertBefore
+                              //호출 시 덮어쓰기가 되버림
+                              //여기선 1문단이 지워지고 3문단 뒤로 감
+        let para2 = para1.cloneNode(true);//기존꺼 냅두고, 기존것과 똑같은 걸
+        div.appendChild(para2);//뒤에 삽입한다
+    </script>
+</body>
+</html>

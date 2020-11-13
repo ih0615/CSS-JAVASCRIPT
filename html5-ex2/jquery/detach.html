@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>detach</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<h2>문단입니다.</h2>
+	<script>
+		$('h2').click(function() {
+			alert("문단을 클릭했습니다.");
+		});
+		var para = $('h2').detach();
+		para.appendTo('body');
+	</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+h1 {
+    color: red;
+    background-color: blue;
+    display: inline-block;
+    /* width:225px */
+}
+
+h1:hover {
+    color: white;
+    background-color: yellow;
+}
+
+p {
+    color: yellow;
+    background-color: red;
+}
+
+p::first-letter {
+    font-size: 2em;
+}
+
+p::first-line {
+    color: blue;
+}
+
+p:hover {
+    color: black;
+    background-color: violet;
+}
+p::selection{
+    color: red;
+    background-color: black;
+}
+
+div.hiding{
+    overflow: hidden;
+    width: 1250px;
+    height: 800px;
+    -ms-transition-duration:1s;
+    -webkit-transition-duration:1s;
+    -moz-transition-duration:1s;
+    transition-duration:1s;
+}
+input[type=checkbox]:checked+div.hiding{
+    height: 0;
+}

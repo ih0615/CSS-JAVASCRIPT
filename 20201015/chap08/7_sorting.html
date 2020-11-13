@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let score = [5, 4, 3, 2, 1];
+        document.write(score + "<br>");
+        // 오름차순 정렬
+        score.sort();
+        document.write(score + "<br>");
+        // 정렬 기준 삽입
+        function compare(left, right) {
+            return right - left; //left가 앞쪽이면 음수, right가 앞쪽이면 양수, 같으면0을 리턴
+        };
+        score.sort(compare);
+        document.write(score + "<br>");
+        score.sort(
+            function compare(left, right) {
+                return left - right;
+            }
+        );
+        document.write(score + "<br>");
+
+        //내림 차순 방법
+        //score.sort 한 다음 score.reverse 하기
+        //score.sort(false)
+
+        let score2 =[100,50,2,30,1];
+        score2.sort(
+            function compare(left, right) {
+                return left - right;
+            }
+        );
+        document.write(score2+"<br>");
+
+        let ex = "ABC"
+        let result = ex.toLowerCase();
+        document.write(ex+"<br>"+result);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <style>
+        #wrap {
+            width: 960px;
+            height: 960px;
+            margin: 0 auto;
+        }
+
+        #memo {
+            width: 960px;
+            height: 500px;
+            box-sizing: border-box;
+            border: 1px solid black;
+        }
+
+        #input {
+            width: 960px;
+            height: 460px;
+            box-sizing: border-box;
+            border: 1px solid black;
+            position: relative;
+        }
+
+        #text {
+            width: 500px;
+            height: 200px;
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            margin: 0;
+            padding: 0;
+        }
+
+        #submit {
+            width: 200px;
+            height: 203px;
+            position: absolute;
+            left: 605px;
+            top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="input">
+            <input type="text" id="text">
+            <button id="submit">전송</button>
+        </div>
+        <div id="memo"></div>
+    </div>
+    <script>
+        document.getElementById('submit').addEventListener('click', function () {
+            let text = document.getElementById('text').value
+            let time = new Date();
+            let memo = document.getElementById('memo');
+            let allContents = document.createElement('div');
+            let allTextSpace = document.createElement('h1');
+            let allText = document.createTextNode(text + ' ' + time);
+            allTextSpace.append(allText);
+            let button = document.createElement('button');
+            let buttonText = document.createTextNode('지우기');
+            button.addEventListener('click', function () {
+                let memo1 = document.querySelector('#memo>div');
+                let parent = button.parentElement
+                allContents.remove(parent);
+            })
+            button.append(buttonText);
+            allContents.append(allText, button);
+            memo.append(allContents);
+        })
+    </script>
+</body>
+
+</html>

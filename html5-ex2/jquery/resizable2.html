@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>resizable2</title>
+	<link rel="Stylesheet" href="css/ui-lightness/jquery-ui-1.10.4.custom.min.css" />
+	<script src="jquery-1.11.0.min.js"></script>
+	<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+</head>
+<body>
+	<div id="resizable" class="ui-widget-content">
+	<h3 class="ui-widget-header">크기 조정 가능</h3>
+	<p>이 디비전은 마우스로 드래그하여 크기 조정이 가능합니다.</p>
+	</div>
+	<script>
+		$("#resizable").resizable({
+			minWidth : 200,
+			maxWidth : 500,
+			minHeight : 100,
+			maxHeight : 300
+		});
+	</script>
+</body>
+</html>

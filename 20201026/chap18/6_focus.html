@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+
+<body>
+    <form action="">
+        <label for="user">이름</label>
+        <input type="text" id="user" value="김상형"><br>
+        <label for="pass">비번</label>
+        <input type="text" id="pass"><br>
+    </form>
+    <script>
+        $('input').focus(function () {
+            $(this).css('border', '3px solid springgreen');
+        });
+        $('input').blur(function () {
+            $(this).css('border', '1px solid black');
+        });
+        $('#pass').blur(function(){
+            if($(this).val().length<6){
+                alert('비밀번호는 6자 이상이어야 합니다.');
+            }
+        });
+    </script>
+</body>
+
+</html>

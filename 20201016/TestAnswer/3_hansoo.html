@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkHansoo(input){
+            let digit = String(input).length;//인수의 자릿수
+            let stringinput = String(input);//인수를 String 형태로 변환한 것
+            if(digit<=2){
+                return true;
+            }
+            else{//3의 자리 이상부터가 본격적인 시작
+                let diff = 0;//두 숫자간의 차이
+                let previous = 0;//직전의 두 둣자간의 차이
+                //예시
+                //123
+                //1과 2를 비교한뒤 diff에 1넣고 previous에도 1을 넣음
+                //2와 3을 비교해서 그 값을 diff에 넣고 이 diff를 previous와 비교
+                for(let i = 0; i<digit -1; i++){
+                    diff = Number(stringinput[i]==Number(stringinput[i+1]));
+                    if(i==0){//제일 처음 비교 시
+                    previous=diff;
+                    }
+                    else{
+                        // previous와 diff가 다르면 한수가 아님
+                        if(diff!=previous){
+                            return false;
+                        }
+                        else{
+                            previous=diff;
+                        }
+                    }
+                }
+                return true;
+            }
+        }
+
+        let inputNumber = prompt("숫자를 입력하십시오");
+        let count = 0;
+        for(let i = 1; i<=inputNumber;i++){
+            if(checkHansoo(i)){z
+                count++;
+            }
+        }
+        alert(count);
+    </script>
+</body>
+</html>

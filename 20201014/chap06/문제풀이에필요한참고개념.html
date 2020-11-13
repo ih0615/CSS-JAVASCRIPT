@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 문자열의 각 자리수 접근
+        var example = "385";
+        
+        // 배열 연산자를 이용하여 접근 가능함
+        alert(example[0]);//3
+        alert(example[1]);//8
+        alert(example[2]);//5
+
+        // 소수점 버림방법
+        alert(parseInt(3.5));
+        alert(Math.floor(3.5));
+        
+        // 배열을 만드는 기본적인 방법
+        var ar = [1,2,3,5];
+        // 4칸짜리 배열 만들고 그 안에 값들을 넣음
+
+        //10001칸 짜리 배열 만들고 그안에다가 false라는 값으로 채워넣음
+        var ar2 = new Array(10001);//10001칸 빈배열
+        ar2.fill(false);//그 빈 배열을 false로 다 채움
+        ar2[50]=true;//ar2배열의 index값이 50인(51번째)요소의 값만 true를 넣음
+    </script>
+</body>
+</html>

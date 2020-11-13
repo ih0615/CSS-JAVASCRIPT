@@ -1,0 +1,14 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>outerhtml</title>
+</head>
+<body>
+	<p id="para">이것은 문단이다.</p>
+	<script>
+		var para = document.getElementById("para");
+		para.outerHTML = "<h1>This is a paragraph.</h1>";
+	</script>
+</body>
+</html>

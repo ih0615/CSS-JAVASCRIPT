@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>freeze</title>
+</head>
+<body>
+	<script>
+		var human = {
+			name: "김상형",
+			age: 29
+		};
+		
+		Object.freeze(human);
+		
+		delete human.age;
+		human.name = "장동건";
+		
+		for (var i in human) {
+			document.write(human[i] + "<br>");
+		}
+	</script>
+</body>
+</html>

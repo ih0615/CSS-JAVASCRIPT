@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>isarray</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<p>문단1</p>
+	<p>문단2</p>
+	<hr />
+	<script>
+		var ar = [1,2,3];
+		var jQ = $('p');
+		document.write("ar의 배열 여부 : " + $.isArray(ar) + "<br />");
+		document.write("jQ의 배열 여부 : " + $.isArray(jQ) + "<br />");
+	</script>
+</body>
+</html>

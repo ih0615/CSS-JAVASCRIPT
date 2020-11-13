@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            /* absolute인 경우 부모가 스태틱이 아닌 경우 부모 태그 안에서 적용
+               부모 태그의 영향을 받음 */
+            /* fixed의 경우 영향을 받지 않음 */
+
+            position: absolute;
+
+        }
+
+        .red {
+            background-color: red;
+            left: 10px;
+            top: 10px;
+        }
+
+        .green {
+            background-color: green;
+            left: 50px;
+            top: 50px;
+        }
+
+        .blue {
+            background-color: blue;
+            left: 90px;
+            top: 90px;
+        }
+
+        .rel {
+            position: relative;
+            left: 100px;
+            top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rel">
+        <div class="box red"></div>
+        <div class="box green"></div>
+        <div class="box blue"></div>
+    </div>
+</body>
+
+</html>

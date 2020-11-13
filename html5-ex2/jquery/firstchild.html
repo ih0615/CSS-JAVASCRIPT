@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>firstchild</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<p>여자에게 인기있는 남자들</p>
+	<ol>
+		<li>능력있는 남자
+		<li>돈 많은 남자
+		<li>잘 생긴 남자
+		<li>프로그래머
+	</ol>
+	<p>남자에게 인기있는 여자들</p>
+	<ol>
+		<li>예쁜 여자
+		<li>귀여운 여자
+		<li>섹시한 여자
+	</ol>
+	<script>
+		$('li:first').css('background', 'yellow');
+		$('li:first-child').css('border', 'solid 3px red');
+	</script>
+</body>
+</html>

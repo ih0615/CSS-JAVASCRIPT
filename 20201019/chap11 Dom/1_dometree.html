@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타이틀</title>
+</head>
+
+<body>
+    <!-- h1, p 등은 엘리먼트 노드 -->
+    <!-- 제목이다. 이것은 문단 이다 텍스트 노드 -->
+    <!-- header 속성 노드 -->
+    <h1 id="header">제목이다.</h1>
+    <p>이것은 <b>문단</b> 이다</p>
+    <script>
+        //변수 header = id가 header인 태그
+        let header = document.getElementById("header");
+        document.write(`노드 타입 = ${header.nodeType}<br>
+        노드 이름 = ${header.nodeName}<br>
+        노드 값 = ${header.nodeValue}<br>`);//주의 : header.nodeValue가 아니라 
+                                           //header.firstchild.nodeValue가 text
+
+        //"제목이다에 해당하는 부분"
+        let text = header.firstChild;
+        document.write(`<hr>노드 타입 = ${text.nodeType}<br>
+        노드 이름 = ${text.nodeName}<br>
+        노드 값 = ${text.nodeValue}<br>`);
+    </script>
+</body>
+
+</html>

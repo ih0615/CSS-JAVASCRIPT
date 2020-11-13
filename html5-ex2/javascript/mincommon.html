@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>mincommon</title>
+</head>
+<body>
+	<script>
+		var num1 = Number(prompt("첫 번째 숫자를 입력하세요.", "6"));
+		var num2 = Number(prompt("두 번째 숫자를 입력하세요.", "8"));
+		
+		var common = 1;
+		for (;;) {
+			if (common % num1 == 0 && common % num2 == 0) {
+				break;
+			}
+			common++;
+		}
+		document.write("최소 공배수 = " + common);
+	</script>
+</body>
+</html>

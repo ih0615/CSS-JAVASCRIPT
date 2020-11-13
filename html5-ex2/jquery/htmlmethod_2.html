@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>htmlmethod</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<p>원래 내용입니다.</p>
+	<script>
+		$('p').text('내용을 <b>변경</b>한다.');
+		document.write("읽은 내용 : " + $('p').html());
+	</script>
+</body>
+</html>

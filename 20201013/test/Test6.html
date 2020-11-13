@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var listfile = [];
+    var input = prompt("숫자를 입력해 주세요");
+    for (var i = 1; i <= input; i++) {
+        listfile.push(i + i % 10 + Math.floor((i % 100) / 10) + Math.floor((i % 1000) / 100) + Math.floor((i % 10000) / 1000) + Math.floor(i / 10000));
+    }
+
+    for (var j = 1; j <= input; j++) {
+        var count = 0;
+        for (var k = 0; k < input; k++) {
+            if (j == listfile[k]) {
+                count++;
+            }
+        }
+        if (count == 0) {
+            document.write(j + "<br>");
+        }
+    }
+
+</script>
+</body>
+</html>

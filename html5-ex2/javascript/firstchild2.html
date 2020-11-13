@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>firstchild2</title>
+</head>
+<body>
+<body>
+	<p>첫 문단이다.</p>
+	<p id="para">이것은 <span>가운데</span> 문단이다.
+		<a href="http://www.naver.com">네이버</a>
+		<img src="cosmos.jpg" /></p>
+	<p>마지막 문단이다.</p>
+	<hr>
+	<script>
+		var para = document.getElementById("para");
+		document.write("막내 = " + para.lastChild.nodeName + "<br>");
+		document.write("부모 = " + para.parentNode.nodeName + "<br>");
+		document.write("형 = " + para.previousSibling.firstChild.nodeValue + "<br>");
+		document.write("아우 = " + para.nextSibling.firstChild.nodeValue + "<br>");
+		document.write("부모 = " + para.ownerDocument.nodeName + "<br>");
+	</script>
+</body>
+</html>

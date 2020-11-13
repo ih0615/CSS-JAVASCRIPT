@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>novar</title>
+</head>
+<body>
+	<script>
+		var score = 100;
+		function func() {
+			score = 77;
+			document.write("함수안 score = " + score + "<br>");
+		}
+		func();
+		document.write("함수밖 score = " + score + "<br>");
+	</script>
+</body>
+</html>

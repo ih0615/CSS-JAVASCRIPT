@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+
+<body>
+    <h2>구구단</h2>
+    <div></div>
+    <script>
+        let str = "";
+        for (let i = 1; i <= 9; i++) {
+            str += '<p>3*' + i + ' = ' + (3 * i) + '</p>';
+            // $('<p>3*' + i + ' = ' + (3 * i) + '</p>').appendTo($('div')); //div 태그 안에 p 태그 삽입
+        }
+        $(str).appendTo($('div'));
+    </script>
+</body>
+
+</html>

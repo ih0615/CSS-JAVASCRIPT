@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>valueof</title>
+</head>
+<body>
+	<script>
+		var a = new Object(1000);
+		var b = a.valueOf();
+		var c = 2000 + a.valueOf();
+	
+		document.write("타입 = " + typeof(a) + ", 값 = " + a + "<br>");
+		document.write("타입 = " + typeof(b) + ", 값 = " + b + "<br>");
+		document.write("타입 = " + typeof(c) + ", 값 = " + c + "<br>");
+	</script>
+</body>
+</html>

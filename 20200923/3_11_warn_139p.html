@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 원래 의도 : li태그의 첫 번째 자손에 위치한 a 태그 선택 */
+        /* 그러나 실제 결과와 다름 */
+        /* li에 있는 모든 a태그 선택됨 */
+        /* li태그의 자손이면서, 첫번째 태그이면서 그것이 a 인것 */
+        li>a:first-child{
+            color: red;
+        }
+        /* 원래 의도대로 하려면 */
+        /* 가장 첫번째 태그이면서, 그것이 li태그여야 하며 그 것의 자손 */
+        li:first-child>a{
+            color: springgreen;
+            font-size: 3em;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">Condrasa</a></li>
+        <li><a href="#">Condrasa</a></li>
+        <li><a href="#">Condrasa</a></li>
+        <li><a href="#">Condrasa</a></li>
+        <li><a href="#">Condrasa</a></li>
+    </ul>
+</body>
+</html>

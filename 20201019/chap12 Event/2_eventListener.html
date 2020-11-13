@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="header">클릭하세요</h1>
+    <script>
+        let header = document.getElementById("header");
+
+        function headerClick() { //핸들러
+            alert("ㅎㅇㅎㅇ")
+        }
+
+        function headerClick2() {
+            alert("ㅎㅇㅎㅇ222222")
+        }
+        header.addEventListener('click', headerClick); //첫번재 파라메테에 이벤트 이름 적기
+        header.addEventListener('click', headerClick2);
+        
+        header.removeEventListener('click', headerClick2);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // and는 하나라도 false이면 전부 다 false이다.
+        // 하나라도 false가 나오면 그 뒤에건 수행하지 않는다.
+        // or은 하나라도 true이면 전부 다 true이다.
+        var age = 32;
+        if (age > 19 && confirm("술을 잘 마십니까?") == true) {
+            document.write("어서옵쇼");
+        } else {
+            document.write("ㅂㅂ2");
+        }
+        age = 15;
+        if (checkAge(age) > 19 && confirm("술을 잘 마십니까?") == true ) {
+            document.write("어서옵쇼");
+        } else {
+            document.write("ㅂㅂ2");
+        }
+        if (confirm("술을 잘 마십니까?") == true && age > 19) {
+            document.write("어서옵쇼");
+        } else {
+            document.write("ㅂㅂ2");
+        }
+
+        function checkAge(age){
+            if(age>19){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>

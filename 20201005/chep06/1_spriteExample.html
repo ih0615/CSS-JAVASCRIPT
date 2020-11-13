@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .icon{
+            /* inline 형식은 width, height가 적용이 안된다. */
+            display: block;
+        }
+        .bg-header_left_button {
+            width: 62px;
+            height: 32px;
+            background: url('css_sprites.png') -1px -1px;
+        }
+
+        .bg-header_right_button {
+            width: 32px;
+            height: 32px;
+            background: url('css_sprites.png') -65px -1px;
+        }
+    </style>
+</head>
+
+<body>
+<i class="icon bg-header_left_button"></i>
+<i class="icon bg-header_right_button"></i>  
+</body>
+
+</html>

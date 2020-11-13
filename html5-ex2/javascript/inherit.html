@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>inherit</title>
+</head>
+<body>
+	<script>
+		var human = Object.create({}, {
+			name : {
+				value : "김상형",
+				enumerable:true,
+			},
+			age : {
+				value : 29,
+				enumerable:true,
+			},
+		});
+	
+		var staff = Object.create(human, {
+			salary : {
+				value : 680,
+				enumerable:true,
+			},
+			title : {
+				value : "차장",
+			},
+		});
+	
+		for (var i in staff) {
+			document.write(staff[i] + "<br>");
+		}
+		document.write("--------<br>");
+		document.write(Object.getOwnPropertyNames(staff) + "<br>");
+		document.write(Object.keys(staff) + "<br>");
+	</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>createmethod</title>
+</head>
+<body>
+	<script>
+		var human = Object.create({}, {
+			name : {
+				value : "김상형",
+				enumerable:true,
+			},
+			age : {
+				value : 29,
+			},
+		});
+		
+		for (var i in human) {
+			document.write(human[i] + "<br>");
+		}
+	</script>
+</body>
+</html>

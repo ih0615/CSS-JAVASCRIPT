@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function total() {
+            let sum = 0;
+            for (let i = 0; i < arguments.length; i++) {
+                sum += arguments[i];
+            }
+            return sum;
+        };
+
+        function totalByIn() {
+            let sum = 0;
+            for (let i in arguments) {
+                sum += arguments[i];
+            }
+            return sum;
+        }
+        document.write(total(2, 3, 4, 5, 6) + "<br>");
+        document.write(totalByIn(2, 3, 6) + "<br>");
+    </script>
+</body>
+
+</html>

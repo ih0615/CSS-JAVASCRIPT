@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>hover2</title>
+	<script src="jquery-1.11.0.min.js"></script>
+	<style>
+		.enter { background:lime; }
+	</style>
+</head>
+<body>
+	<h2>아메리카노</h2>
+	<h2>캬라멜 마키아또</h2>
+	<h2>프리미엄 라떼</h2>
+	<h2>길다방 커피</h2>
+	<script>
+		$('h2').hover(
+			function() { $(this).addClass('enter')},
+			function() { $(this).removeClass('enter')}
+		);
+	</script>
+</body>
+</html>

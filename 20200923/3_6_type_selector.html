@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type=text] {
+            /* important 무조건 스타일 적용 */
+            background: darkcyan !important;
+        }
+
+        input[type=password] {
+            background: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <!-- input[type=text] -->
+        <!-- 원래는 태그 안에 스타일이 우선순위가 높지만 !important로 인해 위 속성 적용 -->
+        <input type="text" style="background: darkgreen;">
+        <input type="password">
+        <!-- 기본적으로 input은 text type이 적용 되지만
+        style 선택자는 이를 모른다.
+        따라서 input[type=text]가 적용이 되지 않는다 -->
+        <input>
+    </form>
+</body>
+
+</html>

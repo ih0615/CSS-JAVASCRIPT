@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../chap13/jq.js"></script>
+    <script>
+        $(function(){
+            $('*').css('background','yellow');
+            $('h1').css('color','blue');
+            $('#para').css('color','green');
+            $('.sample').css('color','red');
+
+            //태그 전체의 background color 값 출력해보기
+            alert($('*').css('backgroundColor'));
+        })
+    </script>
+</head>
+<body>
+    <h1>제목입니다.</h1>
+    <h2 id="para">작은 제목입니다.</h2>
+    <h2 class="sample">샘플입니다.</h2>
+</body>
+</html>

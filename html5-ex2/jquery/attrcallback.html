@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>attrcallback</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<p>코스모스 <img src="cosmos.jpg" /> 클로버 <img src="clover.png" /></p>
+	<script>
+		$('img').attr('title', function() {
+			return this.src + ' 이미지';
+		});
+	</script>
+</body>
+</html>

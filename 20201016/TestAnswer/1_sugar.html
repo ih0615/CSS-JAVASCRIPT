@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let inputSugar = Number(prompt("설탕 공장에서 요청한 설탕 kg 수"))
+        let countSugarPackgae = 0;
+        while (true) {
+            //17
+            //18
+
+            //5kg단위로 묶어본다.
+            //17->3
+            //18->3
+            //나머지가 0으로 딱 떨어지면 바로 break;
+            //일단 이 몫 값을 countSugarPackage에 대입;
+            if (inputSugar % 5 == 0) {
+                countSugarPackgae += inputSugar / 5;
+                document.write(countSugarPackgae);
+                break;
+            }
+
+            //5kg 단위로 딱 떨어지지 않으면 3kg 만큼 묶어서 가져간다.
+            inputSugar -= 3;
+            countSugarPackgae++; //3kg만큼 묶어서 가져간다의 의미 : 묶음 수 한개 증가
+            // 만약 남은 kg 수가 3kg 미만일 경우에는 음수가 발생한다.
+            // 이말의 의미는 숫자 3과 5를 이용해서는 나눌 수 없다는 것이다.
+            //예시 숫자 2,7 등
+            if (inputSugar < 0) {
+                document.write(-1);
+                break; //while(true) 종료
+            }
+            
+            
+            
+            //break가 안되었다면 3 만큼을 빼고,
+            //17-3=14
+            //18-3=15
+            //countSugarPackage++ = 3kg 짜리 묶음이 하나 더 나왔다.
+            //만약 이 시점에 음수가 나오면 5kg와 3kg로 안묶임
+        }
+    </script>
+</body>
+
+</html>

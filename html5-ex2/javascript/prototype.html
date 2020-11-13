@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>prototype</title>
+</head>
+<body>
+	<script>
+		function Human(name, age) {
+			this.name = name;
+			this.age = age;
+		}
+		Human.prototype.intro = function() {
+			document.write("name = " + this.name + "<br>");
+			document.write("age = " + this.age + "<br>");
+		};
+		
+		var kim = new Human("김상형", 29);
+		var lee = new Human("이승우", 40);
+		kim.intro();
+		lee.intro();
+	</script>
+</body>
+</html>

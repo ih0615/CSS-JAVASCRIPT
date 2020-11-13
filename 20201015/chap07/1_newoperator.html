@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = new Object(); //아무 것도 없는 비어있는 객체도 생성가능
+        let b = new Object(1234); //숫자나 문자 같은 원시타입의 변수를 객체로 감싸서 생성 가능
+        let c = new Object("문자열");
+
+        // Object 객체는 예외적으로 new 없이도 객체 생성 가능
+        let d = Object("test");
+
+        let e = 1111;
+        let f = "이동준";
+        let g = false;
+        let h = {
+            name: "이동준",
+            age: 32,
+            toString: function () //객체를 String으로 출력하는 법
+            {
+                return `name : ${this.name}, age : ${this.age}`;
+            }
+        };
+
+        document.write(`타입 = ${typeof(a)}, 값 = ${a}<br>`);
+        document.write(`타입 = ${typeof(b)}, 값 = ${b}<br>`);
+        document.write(`타입 = ${typeof(c)}, 값 = ${c}<br>`);
+        document.write(`타입 = ${typeof(d)}, 값 = ${d}<br>`);
+        document.write(`타입 = ${typeof(e)}, 값 = ${e}<br>`);
+        document.write(`타입 = ${typeof(f)}, 값 = ${f}<br>`);
+        document.write(`타입 = ${typeof(g)}, 값 = ${g}<br>`);
+        document.write(`타입 = ${typeof(h)}, 값 = ${h.toString()}<br>`);
+        //""랑 + 연산을 하게 되면 자동적으로 toString 함수를 호출합니다.
+        document.write(`타입 = ${typeof(h)}, 값 = ${h}<br>`);
+
+        function Human(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        let lee = new Human("lee",10);
+        document.write(`타입 = ${typeof(lee)}, 값 = ${lee}<br>`);
+        // 시험에 나옴
+        Human.prototype.toString = function () {
+            return `name : ${this.name}, age : ${this.age}`
+        }
+    </script>
+</body>
+
+</html>

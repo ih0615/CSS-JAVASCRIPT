@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>csscallback</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<h1>문단1</h1>
+	<h1>문단2</h1>
+	<h1>문단3</h1>
+	<script>
+		var arColor = ['Red', 'Green', 'Blue'];
+		$('h1').css('color', function(index, style) {
+			return arColor[index];
+		});
+	</script>
+</body>
+</html>

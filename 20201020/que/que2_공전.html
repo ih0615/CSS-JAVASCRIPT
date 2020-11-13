@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div{
+            left: 100px;
+            width: 500px;
+            height: 500px;
+            background-image: url(nightsky.jpg);
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            //변수를 선언
+            let sun = document.getElementById("sun");
+            let earth = document.getElementById("earth");
+            let moon = document.getElementById("moon");
+
+            //문서 객체의 스타일 속성 변경
+            sun.style.position = "absolute";
+            earth.style.position = "absolute";
+            moon.style.position = "absolute";
+            //태양 위치 잡기
+            sun.style.left = 250 + 'px';
+            sun.style.top = 200 + 'px';
+
+            let earthAngle = 0;
+            let moonAngle = 0;
+            setInterval(function () {
+                let earthLeft = 250 + 150 * Math.cos(earthAngle);
+                let earthTop = 200 + 150 * Math.sin(earthAngle);
+
+                let moonLeft = earthLeft + 50 * Math.cos(moonAngle);
+                let moonTop = earthTop + 50 * Math.sin(moonAngle);
+
+                //위치 이동
+                earth.style.left = earthLeft + 'px';
+                earth.style.top = earthTop + 'px';
+                moon.style.left = moonLeft + 'px';
+                moon.style.top = moonTop + 'px';
+
+                earthAngle += 0.1;
+                moonAngle += 0.3;
+            }, 1000 / 30); //0.33초
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div">
+        <img src="sun.png" id="sun" alt="">
+        <img src="earth.png" id="earth" alt="">
+        <img src="moon.png" id="moon" alt="">
+    </div>
+</body>
+
+</html>

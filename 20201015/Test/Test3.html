@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+    <script>
+        let human = function(name,number,gender){
+            this.name = name;
+            this.number=number;
+            this.gender=gender;
+        }
+        human.prototype.toString=function(){
+            return `이름 : ${this.name} 학번 : ${this.number} 성별 : ${this.gender}<br>`
+        }
+        let lee1 = new human("이동준","2009038033","남");
+        let lee2 = new human("이나겸","2020038011","여");
+        let choi = new human("최현신","2015012011","남");
+        let bae = new human("배수현","2017011023","여");
+        Student=[];
+        Student.push(lee1,lee2,choi,bae);
+        Student[0].number="2019038033";
+        Student.splice(1,1);
+        let im = new human(prompt("이름을 입력하십시오"),prompt("학번을 입력하십시오"),prompt("성별을 입력하십시오"));
+        let park = new human(prompt("이름을 입력하십시오"),prompt("학번을 입력하십시오"),prompt("성별을 입력하십시오"));
+        Student.push(im,park);
+        for(let i in Student){
+            document.write(Student[i].toString()+"<br>");
+        }
+        // --------------------------------------------------------------------------
+        let idx = Student.findIndex((function(item) {return item.name === "이동준"}));
+        document.write(idx);
+        Student.splice(0,1);
+        for(let i in Student){
+            document.write(Student[i].toString()+"<br>");
+        }
+        
+    </script>
+-->
+    <script>
+        function human(name, number, gender){
+            this.name = name;
+            this.number=number;
+            this.gender=gender;
+        }
+        human.prototype.intro=function(){
+            return `이름 : ${this.name} 학번 : ${this.number} 성별 : ${this.gender}<br>`
+        }
+        let student=[
+            new human("이동준","2009038033","남"),
+            new human("이나겸","2020038011","여"),
+            new human("최현신","2015012011","남"),
+            new human("배수현","2017011023","여")
+        ]
+        student[0].number="2019038033";
+        student.splice(1,1);
+        student.push(new human(prompt("이름을 입력하십시오"),prompt("학번을 입력하십시오"),prompt("성별을 입력하십시오")));
+        student.push(new human(prompt("이름을 입력하십시오"),prompt("학번을 입력하십시오"),prompt("성별을 입력하십시오")));
+        for(let i in student){
+           document.write(student[i].intro());
+        }
+        
+    </script>
+</body>
+</html>

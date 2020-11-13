@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        setTimeout(function () {
+            let message = document.getElementById("message");
+            message.innerHTML = "작업이 완료되었습니다." //"<h1>작업이 완료되었습니다!</h1>";
+        }, 3000);
+        //람다식 = function을 축약한 형태
+        setTimeout(() => {
+        
+        }, timeout);
+    </script>
+    <p id="message">3초만 기다려주세요.</p>
+</body>
+
+</html>

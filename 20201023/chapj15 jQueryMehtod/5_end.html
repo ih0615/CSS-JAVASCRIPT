@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jQuery.js"></script>
+</head>
+<body>
+    <h3>문단0</h3>
+    <h3>문단<span>1</span></h3>
+    <h3>문단<span>2</span></h3>
+    <h3>문단3</h3>
+    <h3>문단4</h3>
+    <script>
+        $('h3').filter(':odd').css('background','yellow').
+        end().filter(':has(span)').css('border','solid black');
+    </script>
+</body>
+</html>

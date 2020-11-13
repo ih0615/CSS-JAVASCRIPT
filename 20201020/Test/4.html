@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Student(name, number, gender) {
+            this.name = name;
+            this.number = number;
+            this.gender = gender;
+        };
+        Student.prototype.toString = function () {
+            return `이름 : ${this.name} 학번 : ${this.number} 성별 : ${this.gender}`
+        };
+        let StudentList = [];
+        StudentList.push(
+            new Student("이동준", "20080912", "남"),
+            new Student("이나겸", "20101005", "여"),
+            new Student("이겨레", "20041215", "남"),
+            new Student("박수현", "20080405", "여"),
+        );
+        for (let i in StudentList) {
+            if (StudentList[i].name == "이동준") {
+                StudentList[i].number = '20200912';
+            }
+        }
+        for(let i in StudentList){
+            if(StudentList[i].name == "이나겸"){
+                StudentList.splice(i,1);
+            }
+        }
+        // const idx = StudentList.findIndex(function (item) {
+        //     return item.name === "이나겸";
+        // });
+
+        // if (idx != -1) {
+        //     StudentList.splice(idx, 1);
+        // }
+
+        for (let i = 0; i < 2; i++) {
+            let name = prompt("이름은?");
+            let number = prompt("학번은?");
+            let gender = prompt("성별은?");
+            StudentList.push(new Student(name, number, gender));
+        }
+
+        for (let i in StudentList) {
+            document.write(StudentList[i] + "<br>");
+        }
+    </script>
+</body>
+
+</html>

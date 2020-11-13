@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var human
+        =
+        {
+            name:"이동준",
+            age:32,
+            address : //객체 안에 객체가 또 들어갈 수 잇음
+            {
+                city:"경기도",
+                dong:"생연동"
+            },//세미콜론 끝에 붙여줘야 그 다음 속성도 추가 가능
+            intro:function()//객체 안에 함수도 들어갈 수 있음
+            {
+                document.write("name = "+this.name+"<br>");//객체 안의 멤버 가리킬 경우
+                document.write("age = "+this.age+"<br>");  //반드시 this 키워드 쓰기
+            }                                              //java에서는 this생략을 허용했으나
+        }                                                  //js에서는 허용하지 않음
+        human.intro();
+        document.write(`주소 : ${human.address.city} ${human.address.dong}<br>`);
+    </script>
+</body>
+</html>

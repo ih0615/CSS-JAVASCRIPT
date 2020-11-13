@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=2/0;
+        if(isFinite(a)==false){
+            document.write("무한대임<br>");
+        }
+        //a==infinity 이렇게 비교하는것이 불가능함
+        //a가 -infinity 일수 있기 때문이다.
+
+        var b= 0/0;
+        if(isNaN(b)){
+            document.write("숫자아니야<br>");
+        }
+        // b==NaN은 성립되지 않음
+        // NaN은 특정 값이 아니고, '숫자가 아니다'라고 말할 뿐이다.
+        // 예시
+        // var c = "abc"
+        // 변수 b와 변수 c는 둘다 NaN이지만, 이 둘은 다른 값이다.
+    </script>
+</body>
+</html>

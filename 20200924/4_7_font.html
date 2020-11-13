@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 브라우저 마다 폰트가 다르기 때문에 차지하는 공간에 차이가 있음. -->
+    <!-- 따라서 폰트사이즈로 레이아웃을 잡으면 문제가 발생할 소지가 있다. -->
+    <style>
+        /* 앞의 폰트가 없으면 뒤의 폰트가 적용. */
+        /* 전부 없을시 브라우저 기본 폰트가 적용. */
+        .font_arial{
+            font-family: '이동준체',Arial;
+        }
+        /* sans-serif, serif폰트는 ; 사용시 익스플로러에서 적용 안됨 */
+        .font_roman{
+            font-family: '동준산스','Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <h1 class="font_arial">Hello HTML</h1>
+    <p class="font_roman">Lorem ipsum dolor sit amet.</p>
+</body>
+</html>

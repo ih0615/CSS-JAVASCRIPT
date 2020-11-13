@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let human = {
+            name:"이동준",
+            age:32
+        };
+        human.salary = 248;
+
+        human.salary = Number.MAX_VALUE;
+
+        human.salary = Number.MIN_VALUE;
+
+        delete human.salary;
+        
+        for(let i in human){
+            document.write(human[i]+"<br>");
+        }
+        Object.defineProperty(human,"salary",
+        {
+            value : 248,
+            enumerable : false,
+            writable : false
+        });//속성 추가하면서 값도 넣고, 그 속성에 관련된 속성들도 추가.
+        
+        human.salary = Number.MAX_VALUE
+        document.write("<hr>");
+        for(let i in human){
+            document.write(human[i]+"<br>");
+        }
+        document.write(human.salary+"<br>");
+
+        Object.defineProperties(human, {
+            kg: {
+                value : "68",
+                enumerable : true
+            },
+            cm:{
+                value:173,
+                enumerable:true
+            }
+        });
+        document.write("<hr>");
+        for(let i in human){
+            document.write(human[i]+"<br>");
+        }
+    </script>
+</body>
+</html>

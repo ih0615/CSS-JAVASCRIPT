@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jQuery.js"></script>
+</head>
+<body>
+    <p>문단 안에 <strong>강조</strong> 표기</p>
+    <script>
+        let result ="조상 : "
+        document.write("부모 : "+$('strong').parent().get(0).tagName+"<br>");
+        // parentsUntil(div) : div전까지만 올라감
+        // parents(div):div를 찾는거
+        $('strong').parents().each(function(index){
+            result += this.tagName+" ";
+        });
+        document.write(result);
+        
+    </script>
+</body>
+</html>

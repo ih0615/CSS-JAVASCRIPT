@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" method="POST">
+        <table>
+            <tr>
+                <td>이름</td>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td>성별</td>
+                <td><select name="gender">
+                        <option value="남성">남성</option>
+                        <option value="여성">여성</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td>아이디</td>
+                <td><input type="text" name="ID"></td>
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <td><input type="password" name="PW" id="pw"></td>
+            </tr>
+            <tr>
+                <td>비밀번호 확인</td>
+                <td><input type="password" name="PWR" id="pwr"></td>
+            </tr>
+            <tr>
+                <td>주소</td>
+                <td><input type="text" name="address"></td>
+            </tr>
+            <tr>
+                <td>전화번호</td>
+                <td><input type="tel" name="tel"></td>
+            </tr>
+            <tr>
+                <td>이메일 주소</td>
+                <td><input type="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>취미</td>
+                <td>축구<input type="checkbox" name="hobby" value="축구">
+                    야구<input type="checkbox" name="hobby" value="야구">
+                    농구<input type="checkbox" name="hobby" value="농구"><br>
+                    수영<input type="checkbox" name="hobby" value="수영">
+                    게임<input type="checkbox" name="hobby" value="게임">
+                    독서<input type="checkbox" name="hobby" value="독서"><br>
+                    음악<input type="checkbox" name="hobby" value="음악">
+                    TV<input type="checkbox" name="hobby" value="TV">
+                    영화<input type="checkbox" name="hobby" value="영화"><br>
+                    연극<input type="checkbox" name="hobby" value="연극">
+                    뮤지컬<input type="checkbox" name="hobby" value="뮤지컬">
+                    전시<input type="checkbox" name="hobby" value="전시">
+                </td>
+            </tr>
+            <tr>
+                <td><button id="submit">회원가입</button></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        let submit = document.getElementById('submit');
+        submit.addEventListener('click', function () {
+            let pw = document.getElementById('pw').value;
+            let pwr = document.getElementById('pwr').value;
+            if (pw == pwr) {
+                alert("맞습니다.");
+            } else {
+                alert("틀렸습니다.");
+                document.getElementById('pw').focus();
+            }
+        });
+    </script>
+</body>
+
+</html>

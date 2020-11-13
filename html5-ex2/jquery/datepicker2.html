@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Title</title>
+	<link rel="Stylesheet" href="css/ui-lightness/jquery-ui-1.10.4.custom.min.css" />
+	<script src="jquery-1.11.0.min.js"></script>
+	<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+</head>
+<body>
+	<p>날짜선택 : <input type="text" id="datepicker" /></p>
+	<script>
+		$("#datepicker").datepicker({
+			dateFormat:"yy-m-d",
+			numberOfMonths: [2,3],
+			showAnim:"fold",
+			showButtonPanel:true,
+			yearRange:"c-1:c+1",
+		});
+	</script>
+</body>
+</html>

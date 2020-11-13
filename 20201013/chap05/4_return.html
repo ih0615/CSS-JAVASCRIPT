@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function sum(n) {
+            if (n < 0)
+                return; //아무것도 리턴하지 않고 바로 종료해버림
+
+            var sum = 0;
+            for (var i = 0; i < n; i++) {
+                sum += i;
+            }
+
+            return sum;
+        }
+        document.write(`${sum(-1)}<br>`);
+        document.write(`${sum(100)}<br>`);
+    </script>
+</body>
+
+</html>

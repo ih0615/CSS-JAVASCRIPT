@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* id는 프로그래밍에서 변수라고 생각하면 됨
+           중복 불가
+           class는 하나의 묶음으로 묶는 것
+           중복 가능 */
+        /* 만약에 특정한 하나의 태그만 색상을 적용하고 싶다면 */
+        /* important > 태그내 style > id > class > 태그선택자 > * > body 순으로 먹힘 */
+        h1 {
+            color: red;
+        }
+
+        .idj {
+            color: red;
+        }
+
+        .jjs {
+            color: blue;
+        }
+
+        .chs {
+            color: green;
+        }
+        .zzang{
+            background: green;
+        }
+        /* and 조건 공백없이 붙여쓰기 */
+        /* id가 idj 이면서 class가 zzang인 경우 */
+        #idj.zzang{
+            color: magenta;
+            background: mediumblue;
+        }
+        
+        /* OR 의 경우 ', '로 표현 */
+    </style>
+</head>
+<body>
+    <!-- class는 여러개 가능 -->
+    <!-- and 조건 시 -->
+    <h1 class="idj" id="idj">Magna eiusmod elit quis ex ad velit voluptate ullamco ut nostrud.</h1>
+    <!-- 두개 이상의 클래스 -->
+    <h2 class="idj zzang">Incididunt labore veniam et reprehenderit mollit deserunt dolore reprehenderit culpa adipisicing aliqua dolore ad.
+    </h2>
+    <!-- 두개 동시 적용 시 밑에 있는것 우선 -->
+    <h1 class="idj jjs">Ea voluptate sit qui magna laborum id magna.</h1>
+    <h2 class="jjs zzang">Esse deserunt laborum aliqua aliqua eu sunt incididunt laboris consectetur sit amet est est.</h2>
+    <!-- 단독 -->
+    <p class="chs">Anim laborum deserunt laboris dolore consectetur anim velit ut ullamco ea.</p>
+    
+</body>
+
+</html>

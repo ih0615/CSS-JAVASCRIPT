@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jsonobject</title>
+</head>
+<body>
+	<script>
+		var human = { 
+			name: "김상형", 
+			age: 29 
+		};
+		var json = JSON.stringify(human);
+		document.write(json + "</br />");
+		
+		var human2 = JSON.parse(json);
+		document.write("name = " + human2.name + "<br>");
+		document.write("age = " + human2.age + "<br>");
+	</script>
+</body>
+</html>

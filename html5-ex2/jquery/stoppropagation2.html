@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>stoppropagation2</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<h1>큰 제목 안에 <span>스팬</span>이 있다.</h1>
+	<script>
+		$('span').click(function(event) {
+			$(this).css('background', 'red');
+			event.stopPropagation();
+		});
+		$('h1').click(function(event) {
+			$(this).css('background', 'green');
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var body;
+        if (confirm("add?") == true) {
+            body = "return a+b";
+        } else {
+            body = "return a-b";
+        }
+        var func = new Function("a", "b", body);
+        document.write(`result = ${func(20,10)}<br>`);
+    </script>
+</body>
+
+</html>

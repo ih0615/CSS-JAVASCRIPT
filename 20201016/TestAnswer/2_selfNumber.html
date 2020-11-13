@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function d(n){
+            let sum = n;
+            while(true){
+                if(n==0){
+                    break;
+                }
+                sum+=n%10;
+                n = Math.floor(n/10);
+            }
+            return sum;
+        }
+        let array = new Array(10001);//0번째 인덱스 안스고, 제일 끝인덱스 값이 10000;
+        array.fill(false);
+        let out = "";
+        for(let i = 1; i<10001;i++);{//d(i)를 1부터 10000까지 수행하기
+            let index = d(i);
+            array[index] = true;
+        }
+        for(var i = 1; i<10001;i++){
+            if(array[i]==false){//d 함수로 구할 수 없는 숫자 = 셀프넘버
+                out+=i+"<br>";
+            }
+        } 
+        document.write(out);
+
+    </script>
+</body>
+</html>

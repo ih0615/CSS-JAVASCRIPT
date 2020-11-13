@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 체크된 상태의 체크박스 바로 뒤에 있는 div의 높이를 0으로 둔다 */
+        input[type=checkbox]:checked+div {
+            height: 0px;
+        }
+
+        div {
+            /*지정된 높이를 벗어날 만큼 내용이 많으면 그 내용물은 모두 숨긴다*/
+            overflow: hidden;
+            /*div 너비와 높이를 지정한다*/
+            width: 650px;
+            height: 500px;
+
+            /* 변환이 있을 때 1초 동안 변환된다 */
+            /* 변환효과 적용(벤더 프리픽스) */
+            /* 익스플로러 */
+            -ms-transition-duration: 1s;
+            /* 크롬, 오페라 */
+            -webkit-transition-duration: 1s;
+            /* 파이어 폭스 */
+            -moz-transition-duration: 1s;
+            /* 변환시간 1초 표준 */
+            transition-duration: 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox">
+    <div>
+        <h1>Lorem, ipsum.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+</body>
+
+</html>

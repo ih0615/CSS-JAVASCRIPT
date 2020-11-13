@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>objectstring2</title>
+</head>
+<body>
+	<script>
+		function Human(name, age) {
+			this.name = name;
+			this.age = age;
+		}
+		Human.prototype.toString = function() {	
+			return "name : " + this.name + ", age : " + this.age;
+		}
+	
+		var human = new Human("김상형", 29);
+		document.write("human  = " + human + "<br>");
+	</script>
+</body>
+</html>

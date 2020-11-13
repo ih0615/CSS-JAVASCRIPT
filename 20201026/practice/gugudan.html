@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <style>
+        #wrap>div {
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+
+        #wrap {
+            width: 760px;
+            height: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        #questionDiv {
+            width: 500px;
+            height: 200px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 50px;
+            overflow: hidden;
+        }
+
+        #answerDiv {
+            width: 500px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        #timeDiv {
+            width: 200px;
+            height: 100px;
+            position: absolute;
+            left: 500px;
+            top: 0;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        #resultDiv {
+            width: 200px;
+            height: 300px;
+            position: absolute;
+            left: 500px;
+            top: 100px;
+        }
+
+        #answer {
+            width: 300px;
+            height: 100px;
+            font-size: 36px;
+        }
+
+        #start {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="questionDiv">
+            <h1 id="question">문제</h1>
+        </div>
+        <div id="answerDiv">
+            <input type="text" id="answer">
+            <button id="start">실행</button>
+        </div>
+        <div id="timeDiv">
+            <h3 id="time"></h3>
+        </div>
+        <div id="resultDiv">
+            <h3 id="result"></h3>
+        </div>
+    </div>
+    <script>
+        $('#start').on('click', function () {
+            let oCount = 0;
+            let xCount = 0;
+            let dan = Math.floor(Math.random() * 9) + 1;
+            let jisu = Math.floor(Math.random() * 9) + 1;
+            let questionResult = dan * jisu;
+            let timeCount = 0;
+            $('#answer').focus();
+            $('#question').text(dan + ' X ' + jisu + ' =  ?');
+            setInterval(function () {
+                timeCount++
+                $('#time').text(timeCount / 10);
+            }, 100)
+            $('#answer').on('keyup', function (e) {
+                if (e.keyCode === 13) {
+                    if (timeCount <= 20) {
+                        if (Number($('#answer').val()) == Number(questionResult)) {
+                            document.getElementById('result').innerHTML += "정답<br>";
+                            oCount++;
+                        } else {
+                            document.getElementById('result').innerHTML += "오답<br>";
+                            xCount++;
+                        }
+                    } else {
+                        document.getElementById('result').innerHTML += "시간초과<br>";
+                        xCount++;
+                    }
+                    dan = Math.floor(Math.random() * 9) + 1;
+                    jisu = Math.floor(Math.random() * 9) + 1;
+                    questionResult = dan * jisu;
+                    timeCount = 0;
+                    $('#question').text(dan + ' X ' + jisu + ' =  ?');
+                    $('#answer').val('');
+                    if (oCount + xCount == 10) {
+                        if (oCount > 8) {
+                            alert('구구단 좀 하시는군요');
+                        } else if (oCount > 4) {
+                            alert('초등학생 수준입니다.');
+                        } else {
+                            alert('머저리야');
+                        }
+                        oCount = 0;
+                        xCount = 0;
+                        $('#result').text('');
+                    }
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+div.hiding, div.hidingGroup{
+    overflow: hidden;
+    width: 1650px;
+    height: 800px;
+    -ms-transition-duration:1s;
+    -webkit-transition-duration:1s;
+    -moz-transition-duration:1s;
+    transition-duration:1s;
+}
+/* checkbox 체크 햇을 때 */
+input[type=checkbox]:checked+div{
+    height: 0;
+}
+/* case1 */
+/* hover했을 때 
+#title_in_section:hover+input+div,#title_in_section:hover+input{
+    height: 0;
+}
+*/
+/* case2 */
+/* title_in_section 및 전부 */
+/*
+#title_in_section:hover~*{
+    height: 0;
+}
+*/
+
+#title_in_section:hover+div.hidingGroup{
+    height: 0;
+}
+

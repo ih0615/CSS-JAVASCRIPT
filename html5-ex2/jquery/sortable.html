@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>sortable</title>
+	<link rel="Stylesheet" href="css/ui-lightness/jquery-ui-1.10.4.custom.min.css" />
+	<script src="jquery-1.11.0.min.js"></script>
+	<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+	<style>
+		ul { list-style-type:none; }
+		li { margin:3px;font-size:150%;border:solid gray 1px;background:yellow; }
+	</style>
+</head>
+<body>
+	<ul id="sortable">
+		<li>1.짜장면
+		<li>2.짬뽕
+		<li>3.탕수육
+		<li>4.군만두
+		<li>5.양장피
+		<li>6.팔보채
+	</ul>
+	<script>
+		$("#sortable").sortable();
+	</script>
+</body>
+</html>

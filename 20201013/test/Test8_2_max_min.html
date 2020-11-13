@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var max = Number.MIN_VALUE;//어떤 숫자를 입력하더라도 처음 입력한 숫자가 무조건 max
+        var min = Number.MAX_VALUE;//어떤 숫자를 입력하더라도 처음 입력한 숫자가 무조건 min
+        for(var i=0; i<5;i++){
+            var result = Number(prompt("input"));//Number을 꼭 붙여야 함 아니면 사전순으로 비교
+            if(result>max){
+                max = result;
+            }
+            if(result<min){
+                min = result;
+            }
+        }
+        document.write(`max = ${max}, min = ${min}`);
+    </script>
+</body>
+</html>

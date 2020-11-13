@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>parsehtml</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<p id="result"></p>
+	<script>
+		var str="<p>이것은 <b>문단</b>입니다.</p>"
+		var html = $.parseHTML(str);
+		$('#result').append(html);
+	</script>
+</body>
+</html>

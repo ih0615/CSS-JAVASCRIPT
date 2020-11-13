@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>recursive</title>
+</head>
+<body>
+	<script>
+		function fact(n) {
+			if (n == 1) {
+				return 1;
+			} else {
+				return n * fact(n-1);
+			}
+		}
+		document.write("5! = " + fact(5) + "<br>");
+	</script>
+</body>
+</html>

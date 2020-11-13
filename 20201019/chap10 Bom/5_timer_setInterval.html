@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="nowtime">현재 시간</p>
+    <script>
+        function tick() {
+            let nowtime = document.getElementById("nowtime"); //id가 nowtime인 태그 선택
+            nowtime.innerHTML = (new Date()).toLocaleString();
+        }
+        let timer = setInterval("tick()", 1000); //1초에 한번씩 실행
+        tick(); //등록 직후부터 바로 사용하게 하기위해서 강제 호출
+    </script>
+</body>
+
+</html>

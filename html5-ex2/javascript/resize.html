@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>resize</title>
+</head>
+<body>
+	<p id="size">윈도우 크기</p>
+	<script>
+		window.onresize = function() {
+			var size = document.getElementById("size");
+			size.innerHTML = window.innerWidth + " * " + window.innerHeight;
+		}
+		onresize();
+	</script>
+</body>
+</html>

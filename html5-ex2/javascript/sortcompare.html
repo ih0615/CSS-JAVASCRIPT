@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>sortcompare</title>
+</head>
+<body>
+	<script>
+		var score = [82, 96, 54, 76, 92, 99, 69, 88];
+		document.write("before = " + score + "<br>");
+	
+		function compare(left, right) {
+			return right - left;
+		}
+		score.sort(compare);
+		document.write("after = " + score + "<br>");
+	</script>
+</body>
+</html>

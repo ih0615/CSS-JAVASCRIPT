@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- style 태그 -->
+    <style>
+        div {
+            background-color: aqua;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+    </style>
+    <style>
+        /* 여기서 @import이란? */
+        /* 요즘은 거의 안쓰이는데, css안에서, @import 쓰면 css파일을 읽어들일 수 있다. */
+        /* 이 것의 import태그 사용하기 */
+        /* Style 태그안에 선택자를 통해 준 것이 있으면 다시 스타일을 넣어야 함 */
+        @import url(1_with_at_rule.css);
+    </style>
+    <!-- link 태그 -->
+    <link rel="stylesheet" href="1_import_1.css">
+</head>
+
+<body>
+    <div>
+        <h1>Lorem, ipsum dolor.</h1>
+        <p>Magna commodo nulla deserunt ea reprehenderit ad ullamco cupidatat reprehenderit consequat veniam.</p>
+    </div>
+</body>
+
+</html>

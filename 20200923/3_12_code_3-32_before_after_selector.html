@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            /* rint : 변수 이름 */
+            /* counter-increment 변수의 증가 rint++ */
+            counter-increment: rint;
+        }
+        /* 세미 콜론은 {}안에다 하되 밖에는 X */
+        p::before {
+            content: counter(rint) ".";
+        }
+
+        p::after {
+            /* attr : data-page라는 속성을 집어 넣겠다. */
+            content: " - "attr(data-page) " page";
+        }
+
+        p::first-letter {
+            font-size: 3em;
+        }
+        /* 반응 문자 선택자 */
+        p::selection{
+            background-color: rgb(202, 215, 251);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <p data-page="52">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, itaque!</p>
+    <p data-page="273">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati, ab!</p>
+    <p data-page="890">Duis nulla eiusmod veniam voluptate do.</p>
+</body>
+
+</html>

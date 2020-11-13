@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+
+<body>
+    <script>
+        let target = {
+            name: '김상형',
+            age: 29
+        };
+        let obj = {
+            age: 35,
+            height: 180,
+            weight: 65
+        };
+        $.extend(target, obj);//target에 obj에 있는 값을 추가하고 덮어쓰기
+        document.write(`이름 : ${target.name} <br>나이 : ${target.age}<br>키 : ${target.height}<br>몸무게 : ${target.weight}`);
+    </script>
+</body>
+
+</html>

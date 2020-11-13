@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 700px;
+            height: 700px;
+            display: block;
+        }
+
+        #text {
+            margin: 0;
+            width: 300px;
+            height: 100px;
+        }
+
+        #button {
+            margin: 0;
+            margin-top: 10px;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="text">
+    <input type="button" value="저장" id="button">
+    <h1 id="box"></h1>
+    <script>
+        document.getElementById('button').addEventListener('click', function () {
+            if (document.getElementById('text').value != '') {
+                let text = document.getElementById('text').value;
+                let date = new Date().toLocaleDateString();
+                let time = new Date().toLocaleTimeString();
+                document.getElementById('box').innerHTML += text + ' ' + date + ' ' + time + '<br>';
+                document.getElementById('text').value = '';
+            }
+        })
+        document.getElementById('text').addEventListener('keyup', function (e) {
+            if (e.keyCode === 13) {
+                if (document.getElementById('text').value != '') {
+                    let text = document.getElementById('text').value;
+                    let date = new Date().toLocaleDateString();
+                    let time = new Date().toLocaleTimeString();
+                    document.getElementById('box').innerHTML += text + ' ' + date + ' ' + time + '<br>';
+                    document.getElementById('text').value = '';
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

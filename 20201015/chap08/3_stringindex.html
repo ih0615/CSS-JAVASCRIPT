@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // human["age"] : human 객체의 age 멤버에 접근
+        // 배열 : 첨자를 키로하고, 값을 저장하는 해시로 구현된 객체
+        let ar = [0, 1, 2, 3];
+        ar["korea"] = 4; //이런식으로 쓸거면 차라리 객체를 쓰는게 좋음
+        delete ar[2];
+        ar[-3.14] = 5;
+
+        //배열은 우리가 아는 그 배열대로 쓰는 게 맞다.(index는 0부터 시작한다 등)
+        // for문과 for in의 차이가 더 잘 보임
+        for (let i in ar) {
+            document.write(`ar[${i}]=${ar[i]}<br>`);
+        }
+        document.write("<br>");
+        document.write("<hr>");
+        document.write("<br>");
+        for(let i=0; i<ar.length;i++){
+            document.write(`ar[${i}]=${ar[i]}<br>`);
+        }
+    </script>
+</body>
+
+</html>

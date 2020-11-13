@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>support</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<h1>브라우저 기능 탐지</h1>
+	<hr />
+	<script>
+		$(function() {
+			document.write("ajax  : " + $.support.ajax + "<br />");
+			document.write("boxModel : " + $.support.boxModel + "<br />");
+			document.write("changeBubbles : " + $.support.changeBubbles + "<br />");
+			document.write("opacity : " + $.support.opacity + "<br />");
+			document.write("style : " + $.support.style + "<br />");
+			document.write("tbody : " + $.support.tbody + "<br />");
+			document.write("cssFloat : " + $.support.cssFloat  + "<br />");
+			document.write("checkOn : " + $.support.checkOn  + "<br />");
+			document.write("leadingWhitespace  : " + $.support.leadingWhitespace   + "<br />");
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- video-js 를 사용 하기 위해 필요한 것 -->
+    <link rel="stylesheet" href="https://vjs.zencdn.net/7.2.3/video-js.css">
+    <script src="https://vjs.zencdn.net/7.2.3/videojs">
+    </script>
+</head>
+
+<body>
+    <!-- video-js를 사용하기 -->
+    <video controls width="640" height="360" class="video-js" data-setup="{}">
+        <source src="Hand Washing - 34091.mp4" type="video/mp4">
+    </video>
+
+    <video src="Hand Washing - 34091.mp4" controls></video>
+    <!-- 자동 재생은 뮤트상태를 놨을때만 작동 -->
+    <video controls poster="../icons8_dog_64px.png" autoplay muted>
+        <source src="Hand Washing - 34091.webm" type="video/webm">
+        <source src="Hand Washing - 34091.mp4" type="video/mp4">
+    </video>
+
+    <!-- 유튜브의 경우 -->
+    <p>유튜브 퍼오기(iframe)</p>
+    <iframe src="https://www.youtube.com/embed/8ziE4-hIk2c" frameborder="0"></iframe>
+    <iframe src="https://www.youtube.com/embed/hoRfsTvnpWM" frameborder="0"></iframe>
+</body>
+
+</html>

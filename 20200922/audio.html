@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- HTML5 표기법 -->
+    <audio src="Kalimba.mp3" controls></audio>
+    <!-- XHTML5 표기법 -->
+    <audio src="Kalimba.mp3" controls="controls"></audio>
+    <!-- controls를 추가하지 않으면 패널이 표기되지 않음 -->
+    <audio src="Kalimba.mp3"></audio>
+
+    <!-- 다양한 브라우저에서 모두 음악이 재생되게 하려면 -->
+    <!-- source안에 여러가지 확장자를 다 넣으면 된다. -->
+    <audio controls>
+        <source src="Kalimba.ogg" type="audio/ogg">
+        <source src="Kalimba.mp3" type="audio/mp3">
+    </audio>
+<br>
+<p>자동재생</p>
+<!-- 자동 재생 정책상 막아 둠(과거에는 가능했었음)-->
+    <audio src="Kalimba.mp3" controls autoplay></audio>
+</body>
+
+</html>

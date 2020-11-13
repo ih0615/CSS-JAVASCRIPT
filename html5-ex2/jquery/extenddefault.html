@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>extenddefault</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<script>
+		function DoSomething(option) {
+			option = $.extend({
+				name:'김상형', 
+				age:29
+			}, option);
+			
+			document.write("이름 : " + option.name + ", 나이 : " + option.age + "<br>");
+		}
+		
+		DoSomething();
+		DoSomething({name:"이순신", age:45});
+	</script>
+</body>
+</html>

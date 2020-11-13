@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #field{
+            position: relative;
+        }
+        .mario{
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="width:800px; height:800px" id="field">
+
+    </div>
+    <script>
+        let bugNum = Math.floor(Math.random() * 10) + 1;
+        let field = document.getElementById('field');
+        for (let i = 0; i < bugNum; i++) {
+            let randomLeft = Math.floor(Math.random()*740)+1;
+            let randomTop = Math.floor(Math.random()*740)+1;
+            let image = document.createElement('img');
+            image.setAttribute('src', 'mario.png');
+            image.setAttribute('class','mario');
+            image.style.left=randomLeft+'px';
+            image.style.top=randomTop+'px';
+            image.addEventListener('click', function (event) {
+                event.target.remove(image);
+            });
+            field.appendChild(image);
+        }
+    </script>
+</body>
+
+</html>

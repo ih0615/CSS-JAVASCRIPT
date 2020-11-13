@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 암시적 형변환
+        var name = "이동준";
+        var score = 98;
+        document.write(name + "의 점수는" + score + "점이다."); //암시적 형변환
+        var num1 = 8;
+        var num2 = '6';
+        document.write("<br>");
+        document.write(num1 - num2); //암시적 형변환
+        // 명시적 형변환
+        var korean = '82';
+        var english = '100';
+        var total = Number(korean) + Number(english); //명시적 형변환
+        document.write("총점은 " + total + "점이다.");
+
+        // String 형태로 형 변환하는 두가지 방법
+        var i = 100;
+        var j = 200;
+
+        //명시적 형변환
+        document.write(String(i) + String(j));
+        document.write("<br>");
+        //암시적 형변환
+        document.write(""+i + j ); //java에서는 이렇게 하면 100, 200이 찍힘
+                                   //""을 맨 뒤로 하면 그냥 숫자 처럼 인식
+                                   //암시적 형변환이 진행됨
+                                   
+        // String의 쓰임새
+        var salary = 320;
+        var bonus = 120;
+        document.write('이동준의 이번달 급여는 '+salary+bonus+'만원 입니다.');
+        document.write('<br>');
+        document.write('이동준의 이번달 급여는 '+String(salary+bonus)+'만원 입니다.');//명시적 형변환
+        document.write('<br>');
+        document.write('이동준의 이번달 급여는 '+(salary+bonus)+'만원 입니다.');//암시적 형변환        
+    </script>
+</body>
+
+</html>

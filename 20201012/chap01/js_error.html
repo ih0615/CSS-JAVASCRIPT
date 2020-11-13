@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // java style
+        // void sayHello혹은 int sayHello
+        function sayHello() //return을 따로 적지않음
+        {
+            var who;
+            who = /*prmt*/prompt("What's yout name?", "이동준");
+            alert(who+"씨 안녕하십니까");
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="button" value="버튼" onclick="sayHello()">
+    </form>
+</body>
+</html>

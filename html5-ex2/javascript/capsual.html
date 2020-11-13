@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>capsual</title>
+</head>
+<body>
+	<script>
+		var human = {
+			name: "김상형",
+			age: 29
+		};
+		
+		Object.preventExtensions(human);
+		
+		human.salary = 345;
+		for (var i in human) {
+			document.write(human[i] + "<br>");
+		}
+	</script>
+</body>
+</html>

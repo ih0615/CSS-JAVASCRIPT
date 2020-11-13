@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* CSS3부터는 여러개의 배경 이미지를 적용 가능 */
+        body{
+            background-image: url(BackgroundFront.png),url(BackgroundBack.png);
+            /* contain : 안에 들어잇는 내용물한테 가로 길이를 맞춤 */
+            /* 안에 들어있는 내용물의 크기에 따라 가로 길이 달라짐 */
+            /*background-size: contain;*/
+            /* cover : 높이를 100% 적용한 것*/
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lorem ipsum dolor sit.</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit, illum!</p>
+</body>
+</html>

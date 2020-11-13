@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 1.css파일 -->
+    <link rel="stylesheet" href="css/overcast/jquery-ui-1.10.4.custom.min.css">
+    <!-- 2.jquery라이브러리 -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!-- 3.jquery UI 라이브러리 -->
+    <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+</head>
+
+<body>
+    <div id="accordion">
+        <h3>사본</h3>
+        <div>
+            <p>알아보자</p>
+        </div>
+        <h3>본론</h3>
+        <div>
+            <p>이러쿵 저러쿵하다.</p>
+            <p>그래서 어쩌구 저쩌구</p>
+        </div>
+        <h3>결론</h3>
+        <div>
+            <p>그러하다</p>
+        </div>
+    </div>
+    <script>
+        $('#accordion').accordion({
+            active: 1,
+            animate: false,
+            heightStyle: 'content',
+            incons: false
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="header.css">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contents.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header id="main_header">
+        <div id="header_title">
+            <h1>Super Mario</h1>
+            <p>Mario's Story</p>
+        </div>
+        <nav id="upnav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contents</a></li>
+                <li><a href="#">Game</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+        <nav id="downnav">
+            <ul>
+                <li><a href="#">Mario 1</a></li>
+                <li><a href="#">Mario 2</a></li>
+                <li><a href="#">Mario 3</a></li>
+                <li><a href="#">Mario world</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="contents">
+        <section id="main_section">
+            <article class="main_article">
+                <img class="firstImage"
+                    src="https://ww.namu.la/s/8c4c2f5028951a1728e32238f70b1926b6831c22974ca59ab9b207aea02092b40e5c499f0e10194643f341fa4167b3a442d15808e436c3a6296e9c6e8f8f792e9873e61139878dd77f932283529fc6bd522b90f0b66a784b43d31ff7706fe8e04c0a1f11630bbf1ac42498c1ce1f88f1"
+                    alt="">
+                <p class="firstArticle">닌텐도의 비디오 게임 마리오 시리즈의 주인공이자 닌텐도의 마스코트. 더 나아가 비디오 게임을 대표하는 게임계의 슈퍼스타격인 캐릭터다. 마리오의
+                    아버지인 미야모토
+                    시게루가 동키콩에서 '점프맨'이라는 이름으로 처음 소개한 이후부터 다양한 게임 시리즈에 주역이나 간판 캐릭터로 사용되었다.
+
+                    1990년대 초반 미국의 어린이들을 대상으로 한 조사에서는 미키 마우스보다 인지도가 높게 나타난 최초의 캐릭터로 기록되어 세상을 놀라게 하였으며[15], 이후 2008년의 한
+                    조사에 따르면 미국인의 93%가 아는 캐릭터일 정도로 세계에서 가장 유명한 비디오 게임 캐릭터 중 하나다.</p>
+            </article>
+            <article class="main_article">
+                <input id="mario1" type="radio" name="videoSelector" checked>
+                <input id="mario2" type="radio" name="videoSelector">
+                <input id="mario3" type="radio" name="videoSelector">
+                <input id="mario4" type="radio" name="videoSelector">
+                <div id="videoLabel">
+                    <label for="mario1">Mario 1</label><br>
+                    <label for="mario2">Mario 2</label><br>
+                    <label for="mario3">Mario 3</label><br>
+                    <label for="mario4">Mario 4</label>
+                </div>
+                <iframe id="mario1" width="640px" height="360px"
+                    src="https://www.youtube.com/embed/BmDT1eq23l4?autoplay=1&amp;mute=1" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <iframe id="mario2" width="640" height="360"
+                    src="https://www.youtube.com/embed/Izc1yLUxPIw?autoplay=1&amp;mute=1" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <iframe id="mario3" width="640" height="360"
+                    src="https://www.youtube.com/embed/itYQS1vyG8s?autoplay=1&amp;mute=1" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <iframe id="mario4" width="640" height="360"
+                    src="https://www.youtube.com/embed/cgI3kHQ1NQY?autoplay=1&amp;mute=1" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </article>
+            <article class="main_article">
+                <div class="thirdImage">
+                    <img width="320px" height="160px" src="k209022p1n1.jpg" alt="">
+                </div>
+                <div class="thirdp">
+                    <p>인종은 라틴계이며, 이탈리아와 깊은 관계가 있는 걸로 설정되어 있는데, 마리오라는 이름부터 이탈리아계 이름이다. 하지만 영어가 능숙하며 애니메이션 판에서는 브루클린 출신이고,
+                        영화판 내지 닌텐도의 이벤트 등에서는 '이탈리아계 미국인'으로서 설정되어 있다. 특히 골프 US 코스에서는 성조기 디자인을 한 복장을 입고 있던 적도 있다. 그 외에 GB판
+                        슈퍼 마리오 랜드 2 6개의 금화에서는 '마리오 랜드'라는 자신만의 국가를 가지고 있는 것이 확인되었다</p>
+                </div>
+            </article>
+        </section>
+        <aside id="main_aside">
+            <input id="char" type="radio" name="aside_button" checked>
+            <input id="series" type="radio" name="aside_button">
+            <section class="button">
+                <label for="char">캐릭터</label>
+                <label for="series">시리즈</label>
+            </section>
+            <div class="tab_item">
+                <ul>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail">
+                                <img src="https://ww.namu.la/s/e6e7310e55dfbe0fce8c1a83ce63435e4b5fa5febc6e9fe3659eed7d7b5100357dcbeb18556ecfe5a3440003b2463a8c0eade5b01dcecc10a3d9a6bf657d6e1b0d0ea95a06a17694fc3a87415680ac7c3f09523935e21234619b73e2318083a896ca2c7ac662d1b6847b54198eb579af"
+                                    alt="">
+                            </div>
+                            <div class="discription">
+                                <Strong>마리오</Strong>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail">
+                                <img src="https://ww.namu.la/s/dd99adc1614b9aad9e10f4c5aca7f8858b7fd34a62380b4b8558818dcff36b5b3ebced05a3b2a4e4365f2ef4c967164b626f38e5376a870ec7bc5b853f4c2f3d9dc243237b3e864e69e9a9b3a557571291a6f20f7e38df9be7977606116e0002b254938410ddd5b00401506c692c2d23"
+                                    alt="">
+                            </div>
+                            <div class="discription">
+                                <Strong>루이지</Strong>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail">
+                                <img src="https://w.namu.la/s/81366509b92f194f5a27bfb7eec380b29c37647d96262524b692e2bbb815521dd7910b283563589b07febcc530e6c239afdfb97ead1afbecc0d519ea15cd70bdd8ccf5f8321bb917073d2e49ced496c3cda0694fc68497a4c178acd6dd48aca6"
+                                    alt="">
+                            </div>
+                            <div class="discription">
+                                <Strong>쿠파</Strong>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail">
+                                <img src="https://post-phinf.pstatic.net/MjAxODAyMDNfMTQg/MDAxNTE3NjM2MDQ1MDg4.6N59VDuIlQqlPbyI188cvcryg_sIntd9CahD4v4x-Kcg.9QhLXhO90De3e_PjIpSjGTi0juisXhTziLKzMPPTrpog.PNG/%EC%8A%88%ED%8D%BC_%ED%8E%98%EC%9D%B4%ED%8D%BC_%EB%A7%88%EB%A6%AC%EC%98%A4_%ED%94%BC%EC%B9%98_%EA%B3%B5%EC%A3%BC.png?type=w1200"
+                                    alt="">
+                            </div>
+                            <div class="discription">
+                                <Strong>피치</Strong>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab_item">
+                <ul>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail">
+                                <img src="https://w.namu.la/s/8005249dda17dcd57bf561b1fd84a7086f2ffebff9ca029341ea136a3ae30604aded6c42097cd14ec65ce775840b767e2cb8e056bc189102ecac956cc08eb43e0cbbef4077ebeb5deeb217128837a53545aaa5601c327efaee69be44dd6893f8"
+                                    alt="">
+                            </div>
+                            <div class="discription">
+                                <Strong>슈퍼 마리오브라더스</Strong>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail">
+                                <img src="https://ww.namu.la/s/be9fcb460e95f8c80e8c1cbc7fdfb209488e0777f94ff781ec5c01f7e2d6f4c7fbb6d4c185cd2792a97e5691dad4662e6c3e43d8523fe7c63b7292220b4ee7724670b1b4a688c2f6fee7584e31dfaa70af964d66bf532a9536e17426e4fcc0fe48a54d8460e576a16b52201a6236e63c"
+                                    alt="">
+                            </div>
+                            <div class="discription">
+                                <Strong>슈퍼 마리오브라더스2</Strong>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail">
+                                <img src="https://w.namu.la/s/4299848b6a0e2b96925d0915baef2911563f2e15dfb4a3dda357718bda7ed3fe5c24190eb6a60d172198cb23022424e5b3cdd3eb2d5b75e4bcb8e99d397396faa49616c9a13126781a5b3039ffe653bdbc7ac85d47679f1892802fdaeee96b5ed2d0dd7a6d4f97e02295ee6203dde5fc"
+                                    alt="">
+                            </div>
+                            <div class="discription">
+                                <Strong>슈퍼 마리오브라더스3</Strong>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <div class="thumbnail">
+                                <img src="https://ww.namu.la/s/7273e6690dc85d025ee66739bcb1a4915d8b872c362b6f5e4cb8a9a872af91ae78c1475f32bdf13b893a56be5bd0c50912a6dd77eaa3294aa7b593a925f8f6f28611080963db9ea5a299d97fe41a9d4f532db95f55cfdcfdd21afe8ca5c5f2172d8cda852ac2fca7a757097383e16a08"
+                                    alt="">
+                            </div>
+                            <div class="discription">
+                                <Strong>슈퍼 마리오 월드</Strong>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+    <footer id="main_footer">
+        <img class="left_image"
+            src="https://previews.123rf.com/images/abolins/abolins1703/abolins170300014/73948644-%ED%95%B4%EA%B3%A8-%EC%95%84%EC%9D%B4%EC%BD%98.jpg"
+            alt="">
+        <div class="farticle">
+            <h1>마리오는 죽었습니다.</h1>
+            <p>루이지도 죽었습니다.</p>
+        </div>
+        <img class="right_image"
+            src="https://previews.123rf.com/images/abolins/abolins1703/abolins170300014/73948644-%ED%95%B4%EA%B3%A8-%EC%95%84%EC%9D%B4%EC%BD%98.jpg"
+            alt="">
+    </footer>
+</body>
+
+</html>

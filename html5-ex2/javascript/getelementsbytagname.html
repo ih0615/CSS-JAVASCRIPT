@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>getelementsbytagname</title>
+</head>
+<body>
+	<p>문단1</p>
+	<p>문단2</p>
+	<div>
+		<p>문단3</p>
+		<p>문단4</p>
+	</div>
+	<hr>
+	<script>
+		var plist = document.getElementsByTagName("p");
+		document.write("문단 개수 : " + plist.length + "<br>");
+		for (var p in plist) {
+			document.write(p + "번째 문단 : " + plist[p].firstChild.nodeValue + "<br>");
+		}
+	</script>
+</body>
+</html>

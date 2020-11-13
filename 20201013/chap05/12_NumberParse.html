@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        document.write(Number("12") + "<br>");
+        document.write(Number("12개") + "<br>"); //조금이라도 숫자 외의 것이 들어오면 NaN
+        document.write(parseInt("12개") + "<br>"); //parseInt는 숫자인 부분에 대해서는 최대한 표현함
+
+        // 진법에 대한 표현 차이
+        var hex = "0x1a"; //앞에 0x가 붙으면 16진수, 앞에 0이 붙으면 8진수
+
+        // 전부 26이라고 나옴, hex 자체가 이미 16진수
+        document.write(parseInt(hex, 16) + "<br>"); //10진수로 출력함
+        document.write(Number(hex) + "<br>"); //10진수로 출력함
+        document.write(parseInt(hex) + "<br>"); //10진수로 출력함
+
+        var decimal = 12;
+        // 참고로 js에서는 최대 36진법 까지 지원함(알파벳, 숫자)
+        document.write(parseInt(decimal, 10) + "<br>"); //decimal을 10진수로 인식함
+        document.write(parseInt(decimal, 16) + "<br>"); //decimal을 16진수로 인식함
+
+        var hexa = 0x1a;
+        document.write("hex = " + hexa + "<br>");
+        document.write("hex = " + hexa.toString(16) + "<br>"); //toString : 비파괴메소드(원본 값을 바꾸지 않음)
+        document.write("hex = " + hexa.toString(2) + "<br>");
+    </script>
+</body>
+
+</html>

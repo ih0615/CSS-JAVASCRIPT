@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>inserttree</title>
+</head>
+<body>
+	<p>문단 하나만 있습니다.</p>
+	<script>
+		var para = document.createElement("p");
+		var text1 = document.createTextNode("추가된 ");
+		para.appendChild(text1);
+		var b = document.createElement("b");
+		var text2 = document.createTextNode("문단");
+		b.appendChild(text2);
+		para.appendChild(b);
+		var text3 = document.createTextNode("입니다.");
+		para.appendChild(text3);
+		document.body.appendChild(para);
+	</script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            width: 30px;
+            height: 30px;
+            margin-left: 20px;
+            font-size: 20px;
+        }
+
+        button#answer,
+        button#submit,
+        button#cancel {
+            width: 100px;
+            height: 50px;
+            font-size: 20px;
+        }
+
+        #input {
+            position: absolute;
+            top: 50px;
+            left: 150px;
+        }
+
+        #time {
+            position: absolute;
+            top: 50px;
+            left: 500px;
+        }
+    </style>
+    <script>
+        window.oncontextmenu = function () { //마우스 우클릭 방지
+            alert('밑장빼지마');
+            return false;
+        }
+        window.onload = function () {
+            //랜덤한 숫자 3개를 뽑기
+            let array = [];
+            output = "";
+            do {
+                let computer = Math.floor(Math.random() * 10); //0부터 9까지의 값
+                const idx = array.indexOf(computer);
+                if (idx == -1) {
+                    array.push(computer);
+                    output += computer;
+                }
+            } while (array.length < 3)
+            let cancel = document.getElementById('cancel');
+            let submit = document.getElementById('submit');
+
+            let buttons = document.getElementsByClassName('choiceValue');
+
+            let h1output = document.getElementById('output');
+            let h3input = document.getElementById('input');
+
+            let answer = document.getElementById('answer');
+            let time = document.getElementById('time');
+
+            let count = 0; //시도횟수
+            let timeCount = 0; //시간
+
+            //리셋할때 동작할 함수
+            function shuffleNewNumber() {
+                for (let k = 0; k < buttons.length; k++) {
+                    buttons[k].style.color = '';
+                }
+                let shuffleArray = [];
+                output = '';
+                do {
+                    let computer = Math.floor(Math.random() * 10); //0부터 9까지의 값
+                    const idx = shuffleArray.indexOf(computer);
+                    if (idx == -1) {
+                        shuffleArray.push(computer);
+                        output += computer;
+                    }
+                } while (shuffleArray.length < 3)
+                console.log(output);
+            }
+
+            let timceCountInterval = setInterval(function () {
+                timeCount++;
+                time.innerText = timeCount;
+            }, 150);
+
+
+            //이벤트 리스너들 추가
+
+            //버튼들 추가
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].addEventListener('click', function () {
+                    if (h1output.innerHTML.includes(i) == false) {
+                        if (h1output.innerHTML.length < 3) {
+                            h1output.innerHTML += i;
+                        }
+                    }
+                })
+            }
+            //cancel(취소)
+            cancel.addEventListener('click', function () {
+                h1output.innerHTML = '';
+                answer.innerHTML = '정답은?';
+            })
+            //answer(정답)
+            answer.addEventListener('click', function () {
+                this.innerHTML = "정답은" + output;
+            })
+            //submit(제출)
+            submit.addEventListener('click', function () {
+                if (h1output.innerHTML.length != 3) {
+                    return;
+                }
+                count++ //시도 횟수 증가
+                //값 비교하기
+                if (parseInt(output) == parseInt(h1output.innerHTML)) { //정답인경우
+                    count = 0;
+                    alert('정답');
+
+                    if (timeCount < 100) {
+                        alert('are you a genius?');
+                    } else {
+                        alert('are you parasite?');
+                    }
+
+                    h3input.innerHTML = ''; //제출한 값들도 리셋함
+                    shuffleNewNumber();
+                    h1output.innerHTML = '';
+                    answer.innerHTML = '정답은?';
+                    timeCount = 0;
+
+                    clearInterval(timeCountInterval);
+                    timeCountInterval = setInterval(
+                        function () {
+                            timeCount++;
+                            time.innerHTML = timeCount;
+                        }, 150
+                    )
+                } else {
+                    let arr = [output[0], output[1], output[2]];
+                    let ball = 0;
+                    let strike = 0;
+
+                    for (let j = 0; j < h1output.innerHTML.length; j++) {
+                        let test = arr.indexOf(h1output.innerHTML[j]);
+                        if (test != -1) {
+                            if (arr[j] == h1output.innerHTML[j]) {
+                                strike++;
+                            } else {
+                                ball++;
+                            }
+                        }
+                    }
+                    let h1Temp = h1output.innerHTML;
+                    if (strike == 0 && ball == 0) {
+                        h3input.innerHTML += '[' + h1output.innerHTML + ']' + ' ' + 'out';
+                        h3input.innerHTML + "<br>";
+                        h1output.innerHTML = '';
+                    } else {
+                        h3input.innerHTML += '[' + h1output.innerHTML + ']' + ' ' + strike + 's' + ball +
+                            'b';
+                        h3input.innerHTML + "<br>";
+                        h1output.innerHTML = '';
+                    }
+                }
+            })
+        }
+    </script>
+</head>
+
+<body>
+    <div style="height: 60px;">
+        <h1 id="output" style="margin-left: 170px;"></h1>
+    </div>
+
+    <div>
+        <div style="margin-bottom: 20px;">
+            <button class="choiceValue">0</button>
+            <button class="choiceValue">1</button>
+            <button class="choiceValue">2</button>
+            <button class="choiceValue">3</button>
+            <button class="choiceValue">4</button>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <button class="choiceValue">5</button>
+            <button class="choiceValue">6</button>
+            <button class="choiceValue">7</button>
+            <button class="choiceValue">8</button>
+            <button class="choiceValue">9</button>
+        </div>
+        <button id="cancel" style="margin-right: 20px;">취소</button>
+        <button id="submit" style="margin-top: 20px;">제출</button>
+        <div style="height: 60px;">
+            <h3 id="input" style="margin-left: 170px;"></h3>
+            <!--SBO-->
+            <h5 id="time"></h5>
+            <!--시간-->
+        </div>
+        <button id="answer">정답은?</button>
+    </div>
+</body>
+
+</html>

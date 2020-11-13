@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>replacechild</title>
+</head>
+<body>
+	<p>1문단.</p>
+	<p id = "para2">2문단.</p>
+	<p>3문단.</p>
+	<script>
+		var h2 = document.createElement("h2");
+		var text = document.createTextNode("교체된 제목입니다.");
+		h2.appendChild(text);
+
+		var para2 = document.getElementById("para2");
+		document.body.replaceChild(h2, para2);
+	</script>
+</body>
+</html>

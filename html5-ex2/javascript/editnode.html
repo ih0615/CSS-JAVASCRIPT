@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>editnode</title>
+</head>
+<body>
+	<p id="para">이것은 문단이다.</p>
+	<script>
+		var para = document.getElementById("para");
+		var text = para.firstChild;
+		text.nodeValue = "This is a paragraph.";
+	</script>
+</body>
+</html>

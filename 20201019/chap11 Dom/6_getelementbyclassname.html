@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>문단1</p>
+    <p>문단2</p>
+    <p class="example test abc">문단3</p>
+    <p class="example">문단4</p>
+    <hr>
+    <script>
+        let plist = document.getElementsByClassName("example");
+        document.write(`문단 개수 : ${plist.length}<br>`);//class에 example가 들어간 태그
+        for(let p in plist){//p 값이 자동으로 ++된다.
+            document.write(`${p}번째 문단 : ${plist[p].firstChild.nodeValue}<br>`);
+        }
+    </script>
+</body>
+</html>

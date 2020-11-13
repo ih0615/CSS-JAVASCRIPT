@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jQuery.js"></script>
+</head>
+
+<body>
+    <a>그림 <img src="../cosmos.jpg" alt=""></a>
+    <input type="checkbox" name="" id="example" checked>
+    <p></p>
+    <hr>
+    <script>
+        document.write($('img').prop('tagName') + '<br>');
+        $('#example').change(function () {
+            $('p').html(
+                //attr 은 실행시 상태 유지
+                'attr : ' + $(this).attr('checked') + '<br>' +
+                // prop 와 is 는 현재 상태 반영
+                'prop : ' + $(this).prop('checked') + '<br>' +
+                'is : ' + $(this).is(':checked') + '<br>'
+            )
+        })
+    </script>
+</body>
+
+</html>

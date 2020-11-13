@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var char = [];
+        var input = prompt("문자열을 입력하십시오.");
+        for (var i = 0; i < input.length; i++) {
+            char.push(input[i]);
+        }
+        for (var j = 0; j < char.length; j++) {
+            var count = 0;
+            for (var k = j + 1; k < char.length; k++) {
+                if (char[j] == char[k]) {
+                    count++
+                    char[k] = "";
+                }
+            }
+            if (char[j] != "") {
+                document.write(`${char[j]}는 ${count+1}글자 있습니다.<br>`);
+            }
+        }
+    </script>
+</body>
+
+</html>

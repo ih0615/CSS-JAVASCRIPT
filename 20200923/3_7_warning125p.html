@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- #header h1, h2 != #header h1, #header h2 -->
+    <!-- #header h1, h2 : id가 header이면서 후손인 h1인 태그 혹은  그냥 h2인 태그 -->
+    <!-- #header h1, #header h2 : id가 header이면서 h1인 태그
+                                  혹은 id가 header이면서 h2인 태그 -->
+    <style>
+        #header h1,
+        h2 {
+            color: red;
+        }
+
+        #header h1,
+        #header h2 {
+            background: orange;
+        }
+    </style>
+</head>
+
+<body>
+<div id="header">
+    <h1>Exercitation fugiat proident officia incididunt nostrud magna excepteur deserunt.</h1>
+    <h2>Magna elit aute dolore eiusmod adipisicing culpa ea tempor ad aute Lorem aliquip.</h2>
+    <h2>Ipsum laborum esse Lorem incididunt velit proident dolor.</h2>
+</div>
+<div id="aaaaa">
+    <h1>Fugiat elit magna dolore enim Lorem in irure amet proident cupidatat.</h1>
+    <h2>Laborum id occaecat et officia nisi veniam exercitation cupidatat et dolor sunt cupidatat officia.</h2>
+    <h2>Nulla laborum proident occaecat consectetur.</h2>
+</div>
+</body>
+
+</html>

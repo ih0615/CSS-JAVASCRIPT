@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var score = 100;
+
+        function func() {
+            var score = 77;
+            document.write("함수 안 score = " + score + "<br>");
+            document.write("함수 안 score = " + this.score + "<br>");
+        }
+        func();
+        document.write("함수 밖 score = " + score + "<br>");
+    </script>
+</body>
+
+</html>

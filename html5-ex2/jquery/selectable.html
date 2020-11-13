@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>selectable</title>
+	<link rel="Stylesheet" href="css/ui-lightness/jquery-ui-1.10.4.custom.min.css" />
+	<script src="jquery-1.11.0.min.js"></script>
+	<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+	<style>
+		ul { list-style-type:none; }
+		li { margin:3px;font-size:150%;border:solid gray 1px; }
+		#selectable .ui-selecting { background: lime; }
+		#selectable .ui-selected { background: red; color: white; }
+	</style>
+</head>
+<body>
+	<ul id="selectable">
+		<li>짜장면
+		<li>짬뽕
+		<li>탕수육
+		<li>군만두
+	</ul>
+	<p id="result">선택 결과</p>
+	<script>
+		$("#selectable").selectable({
+			stop:function(event, ui) {
+				var s = $(".ui-selected", this).text();
+				$("#result").text("선택한 메뉴 : " + s);
+			}
+		});
+	</script>
+</body>
+</html>

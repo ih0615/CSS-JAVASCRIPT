@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>dequeue</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<button type="button" id="btn1">start</button>
+	<h1 style="position:relative">애니메이션 대상</h1>
+	<hr />
+	<script>
+		$('#btn1').click(function() { 
+			$('h1').animate({left:'+=100'})
+			.queue(function() {
+				$(this).css('color','red')
+				.dequeue();
+			})
+			.animate({left:'-=100'})
+			.queue(function() {
+				$(this).css('color','black')
+				.dequeue();
+			})
+		});
+	</script>
+</body>
+</html>

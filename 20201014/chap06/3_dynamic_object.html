@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var human ={
+            name:"이동준",
+            age:32
+        };
+        human.salary = 248;//추가하고 싶은 멤버를 그냥 쓰면 자동으로 추가 됨
+
+        document.write(human.name+"<br>");
+        document.write(human.age+"<br>");
+        document.write(human.salary+"<br>");
+
+        var person={};
+        person.kg = 68;
+        person.cm = 173;
+        person.func = function(){
+            document.write(`Hello ${this.kg}kg ${this.cm}cm<br>`);
+        }
+        person.func();
+
+        if("kg" in person){//in 키워드 : 해당 객체에 해당 멤버가 존재하는 지 여부 조사
+            document.write("kg정보가 있습니다.<br>");
+        }
+        if("name" in person){
+            document.write("이름이 있습니다.<br>");
+        }
+        else{//해당 멤버가 없는 경우 예외 처리
+            document.write("이름이 없습니다.<br>");
+            person.name = "이동준";
+            document.write("이름 "+person.name+"<br>");
+        }
+
+        //in키워드는 배열에서도 사용 됨
+        var arr=[1,2,3];
+        delete arr[1];
+        if(0 in arr){//0번째 값이 있는지 체크
+            document.write("ㅎㅇ");
+        }
+        if(1 in arr){//1번째 값이 있는지 체크
+            document.write("ㅂㅂ");
+        }
+        document.write("<br>"+arr[1]);//arr[1]값은 삭제 되었음으로 undefined가 출력 됨
+    </script>
+</body>
+</html>

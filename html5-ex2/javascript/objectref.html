@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>objectref</title>
+</head>
+<body>
+	<script>
+		var human = {
+			name: "김상형",
+			age: 29
+		};
+	
+		var kim = human;
+		kim.name = "김태희";
+	
+		document.write("name = " + human.name + "<br>");
+		document.write("age = " + human.age + "<br>");
+	</script>
+</body>
+</html>

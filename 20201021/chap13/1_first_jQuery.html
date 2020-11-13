@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jq.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script> -->
+</head>
+
+<body>
+    <h1>hi</h1>
+    <p id="para">Anim ut labore est nulla laborum.</p>
+    <script>
+        // h1태그의 배경색을 아쿠아로 해라
+        // $('h1').css('background','aqua');
+
+        let jQ = $('h1'); //jQ변수에 jQuery 객체가 들어감(유사 배열, 복수개의 h1태그들)
+        jQ.css('background', 'aqua');
+        // jQ.style.background = 'aqua';//이런건 안됨. 왜냐면 DOM이 아니라 jQuery객체라서
+        
+        //$(선택자) //선택자를 통하여 태그 선택하고 그 태그를 jQuery로써 활용함
+        $('h1').css('background', 'aqua').css('color', 'red');
+        $('#para').css('background','springgreen');
+        // jQuery 내부적으로 $랑 jQuery를 같은 문자로 인식
+        // jQuery('h1').css('background','aqua');
+    </script>
+    <script>
+        // let hlist = document.getElementsByTagName("h1");
+        // let h1 = hlist[0];
+        // h1.style.background = 'aqua';
+    </script>
+</body>
+
+</html>

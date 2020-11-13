@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>with2</title>
+</head>
+<body>
+	<script>
+		var human = {
+			name: "김상형",
+			age: 29
+		};
+		
+		var name = "이순신";
+		with(human) {
+			document.write("name = " + name + "<br>");
+			document.write("age = " + age + "<br>");
+		}
+	</script>
+</body>
+</html>

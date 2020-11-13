@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let alphabet = new Array(26);
+        alphabet.fill(-1);
+        let input = prompt('영단어를 입력하시오');
+        input = input.toLowerCase();
+        document.write(input + "<br>");
+
+        for (let i = 0; i < input.length; i++) {
+            let index = input.charCodeAt(i) - 'a'.charCodeAt(0);
+            if (alphabet[index] == -1) {
+                alphabet[index] = i;
+            }
+        }
+        for (let i = 0; i < alphabet.length; i++) {
+            if (alphabet[i] = -1) { //if(alphabet[i]=1으로 쓰면 if(true)랑 동일)
+                document.write(`${String.fromCharCode(Number(i+97))}는 ${alphabet[i]+1}번째에 처음 나옵니다.<br>`);
+            }
+        }
+    </script>
+</body>
+
+</html>

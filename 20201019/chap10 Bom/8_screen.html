@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        document.write(`화면 폭 = ${screen.width}<br>`);
+        document.write(`화면 높이 = ${screen.height}<br>`);
+        document.write(`화면 영역 폭 = ${screen.availWidth}<br>`);
+        document.write(`화면 영역 높이 = ${screen.availHeight}<br>`);
+        document.write(`화면 영역 왼쪽 = ${screen.availLeft}<br>`);
+        document.write(`화면 영역 위쪽 = ${screen.availTop}<br>`);
+        document.write(`화면 색상 수 = ${screen.colorDepth}<br>`);
+
+        function openChild() {
+            let child;
+            let spec =
+                `width=${screen.width/2} ,height=${screen.height/2}, left=${screen.width/4},top=${screen.height/4}`
+            child = window.open("", "", spec);
+            child.document.write("<p>Child Window</p>");
+        }
+    </script>
+    <input type="button" value="open" onclick="openChild()">
+</body>
+
+</html>

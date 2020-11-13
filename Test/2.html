@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var array = [];
+        var input = 0;
+        var output = '';
+        do {
+            var computer = Math.floor(Math.random() * 10);
+            input = computer;
+            const idx = array.indexOf(input);
+            if (idx == -1) {
+                array.push(input);
+                output += input + '';
+            }
+        } while (array.length < 4);
+        console.log(output);
+    </script>
+</body>
+
+</html>

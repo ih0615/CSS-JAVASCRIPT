@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jQuery.js"></script>
+</head>
+<body>
+    <p>그림<img></p>
+    <a href="#"><img></a>
+    <hr>
+    <script>
+        $('p').find('img').attr('src','../cosmos.jpg');
+        $('a').find('img').attr({
+            src:'../clover.png',
+            alt:'클로버 그림'
+        });
+        $('img').attr('title',function(){
+            return this.src+'이미지~~~~!';
+        });
+        $('a').click(function(){
+            $('img').removeAttr('title');
+        })
+        
+    </script>
+</body>
+</html>

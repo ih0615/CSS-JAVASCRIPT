@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1 id="print">입력 번호</h1>
+    </div>
+    <div id="numberSpace">
+        <input type="button" value="0" id="0" onclick="inputNumber(0)">
+        <input type="button" value="1" id="1" onclick="inputNumber(1)">
+        <input type="button" value="2" id="2" onclick="inputNumber(2)">
+        <input type="button" value="3" id="3" onclick="inputNumber(3)">
+        <input type="button" value="4" id="4" onclick="inputNumber(4)">
+        <br>
+        <input type="button" value="5" id="5" onclick="inputNumber(5)">
+        <input type="button" value="6" id="6" onclick="inputNumber(6)">
+        <input type="button" value="7" id="7" onclick="inputNumber(7)">
+        <input type="button" value="8" id="8" onclick="inputNumber(8)">
+        <input type="button" value="9" id="9" onclick="inputNumber(9)">
+    </div>
+    <div id="confirmSpace">
+        <input type="button" value="취소" id='cancel'>
+        <input type="button" value="제출" id='submit' onclick="check()">
+    </div>
+    <div id="answerSpace">
+        <input type="button" value="정답" onclick="printAnswer()">
+    </div>
+    <script>
+        function random(max, min) {
+            max = Math.floor(max);
+            min = Math.ceil(min);
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+        window.onload = function () {
+            let array = [];
+            let answer = "";
+            do {
+                let computer = Math.floor(Math.random() * 10);
+                computer;
+                const idx = array.indexOf(computer);
+                if (idx == -1) {
+                    array.push(computer);
+                    answer += computer + " ";
+                }
+            } while (array.length < 3);
+
+            let input = [];
+            let output = "";
+            let cancel = document.getElementById('cancel');
+            let print = document.getElementById('print');
+            let number0 = document.getElementById('0');
+            let number1 = document.getElementById('1');
+            let number2 = document.getElementById('2');
+            let number3 = document.getElementById('3');
+            let number4 = document.getElementById('4');
+            let number5 = document.getElementById('5');
+            let number6 = document.getElementById('6');
+            let number7 = document.getElementById('7');
+            let number8 = document.getElementById('8');
+            let number9 = document.getElementById('9');
+
+            function clear() {
+                input = [];
+                print.innerHTML = '입력aaaa번호';
+            };
+
+            function inputNumber(i) {
+            input.push(i);
+            output += i;
+            print.innerHTML = output;
+            };
+
+            cancel.addEventListener('click', clear);
+            number0.addEventListener('click',inputNumber(0));
+            number1.addEventListener('click',inputNumber(1));
+            number2.addEventListener('click',inputNumber(2));
+            number3.addEventListener('click',inputNumber(3));
+            number4.addEventListener('click',inputNumber(4));
+            number5.addEventListener('click',inputNumber(5));
+            number6.addEventListener('click',inputNumber(6));
+            number7.addEventListener('click',inputNumber(7));
+            number8.addEventListener('click',inputNumber(8));
+            number9.addEventListener('click',inputNumber(9));
+
+        }
+
+
+
+        
+
+        function check() {
+            let strike = 0;
+            let ball = 0;
+            let out = 0;
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++) {
+                    if (i == j) {
+                        if (input[i] == output[j]) {
+                            strike++;
+                        }
+                    } else {
+                        if (input[i] == output[j]) {
+                            ball++
+                        } else {
+                            out++
+                        }
+                    }
+                }
+            }
+            return `${strike}s ${ball}b ${out}out`;
+        }
+
+        function printAnswer() {
+            alert(this.answer);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="header">클릭ㅎ</h1>
+    <!-- input태그 클릭시 header에 등록된 이벤트를 호출하도록 함 -->
+    <input type="button" value="크을릭" onclick="header.onclick()">
+    <script>
+        let header = document.getElementById("header");
+        header.onclick=function(){
+            alert("클릭햇습니다.!!!!")
+        }
+    </script>
+</body>
+</html>

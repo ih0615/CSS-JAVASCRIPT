@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+    <pre id="str"></pre>
+    <pre id="trim"></pre>
+    <script>
+        let str = "    우리나라    대한민국      ";
+        $('#str').html("원본 ------> "+str+'<------');
+        $('#trim').html("정리 ------>"+$.trim(str)+'<------');
+        //jQuery객체                   유틸리티
+    </script>
+</body>
+</html>

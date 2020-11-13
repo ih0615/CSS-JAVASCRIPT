@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>contextmenu</title>
+</head>
+<body>
+	<p>마우스 오른쪽 버튼을 사용할 수 없습니다.</p>
+	<script>
+		window.oncontextmenu = function() {
+			return false;
+		}
+		onresize();
+	</script>
+</body>
+</html>

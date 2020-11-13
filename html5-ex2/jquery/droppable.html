@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>droppable</title>
+	<link rel="Stylesheet" href="css/ui-lightness/jquery-ui-1.10.4.custom.min.css" />
+	<script src="jquery-1.11.0.min.js"></script>
+	<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+</head>
+<body>
+	<div id="draggable" style="width:100px;height:100px;background-color:blue;">
+		<p>드래그</p>
+	</div>
+	<div id="droppable" style="width:200px;height:150px;background-color:yellow;">
+		<p>여기에 떨어뜨리세요</p>
+	</div>
+	<script>
+	$("#draggable").draggable();
+	$("#droppable").droppable({
+		drop:function(event, ui) {
+			$(this).find('p').html('참 잘했어요');
+		}
+	});
+	</script>
+</body>
+</html>

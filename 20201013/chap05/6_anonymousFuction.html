@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function name(parameters) {
+
+        }
+        var add = function (a, b) {
+            return a + b;
+        }; //세미콜론 필수
+        document.write(add(2, 3));
+
+        //익명함수 vs 일반함수
+
+        document.write("<br>");
+        document.write(multiply2(5, 6)); //일반함수는 호출하는 부분 먼저 쓰고 밑에가서 함수 적어도 됨
+        document.write(multiply(7, 8)); //익명함수의 경우에는 먼저 선언된 다음에야 호출 됨(에러)
+
+
+        var multiply = function (a, b) {
+            return a * b;
+        };
+
+        function multiply2(a, b) {
+            return a * b;
+        }
+        alert("mulitply 부분부터 에러이기에 여기 있는 코드는 실행 안됨");
+    </script>
+</body>
+
+</html>

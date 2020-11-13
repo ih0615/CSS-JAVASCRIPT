@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>blur</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<form>
+		<label for="user">이름</label>
+		<input type="text" id="user" value="김상형"/><br/>
+		<label for="pass">비번</label>
+		<input type="text" id="pass"/><br/>
+	</form>
+	<script>
+		$('#pass').blur(function() {
+			if ($(this).val().length < 6) {
+				alert("비밀 번호는 6자 이상이어야 합니다.");
+			}
+		});
+	</script>
+</body>
+</html>

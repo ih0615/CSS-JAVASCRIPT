@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>accordion4</title>
+	<link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.10.4.custom.min.css" />
+	<script src="jquery-1.11.0.min.js"></script>
+	<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+</head>
+<body>
+	<div id="accordion">
+		<h3>서론</h3>
+		<div>
+			<p>알아보자</p>
+		</div>
+		<h3>본론</h3>
+		<div>
+			<p>이러쿵 저러쿵하다.</p>
+			<p>그래서 어쩌구 저쩌구</p>
+		</div>
+		<h3>결론</h3>
+		<div>
+			<p>그러하다.</p>
+		</div>
+	</div>
+	<button type="button" onclick="btnenable();">사용 가능</button>
+	<button type="button" onclick="btndisable();">사용 금지</button>
+	<script>
+		$("#accordion").accordion();
+		function btnenable() {
+			$("#accordion").accordion("enable");
+		}
+		function btndisable() {
+			$("#accordion").accordion("disable");
+		}
+	</script>
+</body>
+</html>

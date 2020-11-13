@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var not_initial;
+        document.write("초기화 되지 않은 변수 : "+ not_initial);
+        document.write("초기화 되지 않은(선언되지도 않은) 변수 : "+ ghost);
+        // if(ghost == null) 이런 코드는 잘못된 코드
+        if(not_initial==undefined){
+            alert("이 변수는 초기화 되지 않았다.");
+        }
+        else{
+            alert("이 변수 값은 "+not_initial+"이다.");
+        }
+        // document.write("초기화 되지 않은(선언되지도 않은) 변수 : "+ ghost);
+        
+    </script>
+    
+</body>
+</html>

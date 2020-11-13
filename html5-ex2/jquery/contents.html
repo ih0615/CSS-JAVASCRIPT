@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>contents</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<p>문단 안에 <span>스팬</span>이 있습니다.</p>
+	<script>
+		$('p').contents().filter(function() {
+			return this.nodeType != 1;
+		}).wrap('<b/>');
+	</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>eachfind</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<p>문단 안에 <strong>강조</strong> 표시가 있다.</p>
+	<p>이 문단도 <span><strong>마찬가지</strong></span>이다.</p>
+	<div>디비전 안에 <strong>강조</strong> 표시가 있다.</p>
+	<p>이 문단은 내부에 글자가 <strong>무척</strong>이나 많은 아주 길다란 문단이다.</p>
+	<script>
+		$('p').each(function(index) {
+			if ($(this).text().length < 20) {
+				$(this).find('strong').css('background', 'yellow')
+			}
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>insertafter</title>
+	<script src="jquery-1.11.0.min.js"></script>
+	<style>
+		div { text-indent:20px; }
+	</style>
+</head>
+<body>
+	<h2>문단 삽입 테스트</h2>
+	<div>
+		<p>원래 있던 문단1</p>
+		<p>원래 있던 문단2</p>
+		<p>원래 있던 문단3</p>
+	</div>
+	<script>
+		var para1 = $('<p>새문단1</p>').css('font-weight', 'bold');
+		var para2 = $('<p>새문단2</p>').css('font-weight', 'bold');
+		var para3 = $('<p>새문단3</p>').css('font-weight', 'bold');
+		var para4 = $('<p>새문단4</p>').css('font-weight', 'bold');
+		var div = $('div');
+		para1.appendTo(div);
+		para2.prependTo(div);
+		para3.insertAfter(div);
+		para4.insertBefore(div);
+	</script>
+</body>
+</html>

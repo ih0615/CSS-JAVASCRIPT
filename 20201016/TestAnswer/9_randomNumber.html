@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 시험에 나옴
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min; //최댓값은 제외, 최솟값은 포함
+        }
+
+        let array = [];
+        let input = 0;
+        let output = '';
+        do{
+            let computer = getRandomInt(0,10);
+            computer;
+            const idx = array.indexOf(computer);
+            if(idx == -1){//해당 값이 array에 없는 경우
+                array.push(computer);
+                output+=computer+' ';
+            }
+        }while(array.length<4)
+        alert(output);
+    </script>
+</body>
+</html>

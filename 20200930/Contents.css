@@ -1,0 +1,59 @@
+contents {
+    display: block;
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+aside {
+    width: 200px;
+    height: 700px;
+    float: left;
+    overflow: hidden;
+}
+
+#main_aside>#main_aside_manu>ul>li>a {
+    display: block;
+    border-radius: 20px;
+    color: white;
+    font-size: 36px;
+    text-align: center;
+    margin: 10px 0;
+    font-family: 'Nanum Brush Script', cursive;
+    text-shadow: 1px 1px black;
+}
+
+#main_aside>#main_aside_manu>ul>li:nth-of-type(1)>a {
+    background-color: green;
+}
+
+#main_aside>#main_aside_manu>ul>li:nth-of-type(2)>a {
+    background-color: blue;
+}
+
+#main_aside>#main_aside_manu>ul>li:nth-of-type(3)>a {
+    background-color: yellow;
+}
+
+#main_aside>#main_aside_manu>ul>li:nth-of-type(4)>a {
+    background-color: red;
+}
+
+#main_aside>#main_aside_manu>ul>li:nth-of-type(5)>a {
+    background-color: black;
+}
+
+#main_aside_discription>img{
+    width: 200px;
+    height: 200px;
+
+}
+#main_aside_discription>
+
+section {
+    width: 750px;
+    height: 700px;
+    border: 1px solid black;
+    float: right;
+}

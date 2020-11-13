@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="exampe">제목입니다.</h1>
+    <p>문단1</p>
+    <p>문단2</p>
+    <p class="example">문단3</p>
+    <p class="example">문단4</p>
+    <hr>
+    <script>
+        let plist = document.querySelectorAll("p.example");
+        document.write(`문단 개수 : ${plist.length}<br>`);
+        for(let p in plist){
+            document.write(`${p}번째 : ${plist[p].firstChild.nodeValue}<br>`);
+        }
+    </script>
+</body>
+</html>

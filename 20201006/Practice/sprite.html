@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #main_header{
+            background: url(header_background.png);
+            line-height: 45px;
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .left_icon{
+            position: absolute;
+            background: url(css_sprites.png) -1px -1px;
+            width: 62px;
+            height: 35px;
+            top: 7px;
+            left: 5px;
+            
+        }
+        .right_icon{
+            position: absolute;
+            background: url(css_sprites.png) -65px -1px;
+            width: 35px;
+            height: 35px;
+            top: 7px;
+            right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main_header">
+        <i class="left_icon"></i>
+        <h1>mobile</h1>
+        <i class="right_icon"></i>
+    </div>
+</body>
+</html>

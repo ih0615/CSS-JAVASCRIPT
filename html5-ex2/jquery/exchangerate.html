@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>exchangerate</title>
+	<script>
+		function $(arg) {
+			var rate = 1149;
+			if (arg == undefined) {
+				document.write("현재 환율은 " + rate + "원입니다.<br />");
+			} else {
+				document.write(arg + "달러는 " + (arg * rate) + "원입니다.<br />");
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>달러 계산기</h1>
+	<hr />
+	<script>
+		$();
+		$(123);
+	</script>
+</body>

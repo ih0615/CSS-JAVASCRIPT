@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script>
+        /*
+    var input = prompt("숫자를 입력하십시오");
+    input = Number(input);
+    for (var i = 1; i <= input; i++) {
+        if (i % 2 == 0) {
+            for (var j = 0; j <= (2 * input)-1; j++) {
+                if (j < Math.floor(input - (i-1)) || j > Math.floor(input + (i-1))) {
+                    document.write("&nbsp");
+                } else {
+                    document.write("*");
+                }
+            }
+        } else {
+            for (var j = 0; j <= (2 * input); j++) {
+                if (j < Math.floor(input - (i-1)) || j > Math.floor(input + (i-1))) {
+                    document.write("&nbsp");
+                } else {
+                    document.write("*");
+                }
+            }
+        }
+        document.write("<br>");
+    }
+    */
+        var floor = Number(prompt("몇 층으로 피라미드를 만들시 쓰시오"));
+        for (var i = 1; i <= floor; i++) {
+            for (var j = 0; j <= ((2 * floor) + 1); j++) { //한줄당 찍어야 하는 공백과 별
+                if(j>=floor-(i-1)&&j<=floor+(i-1)){
+                    document.write("*");
+                }
+                else{
+                    document.write("&nbsp");
+                }
+            }
+            document.write("<br>");
+        }
+    </script>
+</body>
+
+</html>

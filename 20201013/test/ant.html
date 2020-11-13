@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let number = [];
+    number[0] = "1";
+    for (let i = 1; i <= 19; i++) {
+        number[i] = "";
+        let past = number[i - 1]
+        let pastLength = past.length;
+        let pastNumber = [];
+        let count = 0;
+        for (let j = 0; j < pastLength; j++) {
+            pastNumber.push(past[j]);
+        }
+        let key = pastNumber[0];
+        for (let k = 0; k < pastNumber.length; k++) {
+            if(key==pastNumber[k]){
+                count++;
+            }
+            else{
+                number[i]+=key.toString()+count.toString();
+                key=pastNumber[k];
+                count = 0;
+                k--;
+            }
+
+        }
+        number[i]+=key.toString()+(count).toString();
+        document.write(number[i]+"<br>");
+    }
+
+
+</script>
+</body>
+</html>

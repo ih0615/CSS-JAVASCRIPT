@@ -1,0 +1,7 @@
+footer {
+    width: 960px;
+    height: 150px;
+    margin: 10px auto;
+    position: relative;
+    border: 1px solid black;
+}

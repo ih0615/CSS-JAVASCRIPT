@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>clonenode</title>
+</head>
+<body>
+	<div id="div"><p>1문단.</p><p>2문단.</p><p>3문단.</p></div>
+	<script>
+		var div = document.getElementById("div");
+		var para1 = div.childNodes[0];
+		var newpara = para1.cloneNode(true);
+		div.appendChild(newpara);
+	</script>
+</body>
+</html>

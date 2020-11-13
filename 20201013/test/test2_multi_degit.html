@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var first = prompt("첫번째 값을 입력하십시오");
+        var second = prompt("첫번째 값을 입력하십시오");
+        var secondString = second.toString();
+        document.write(first);
+        document.write("<br>");
+        document.write(second);
+        document.write("<br>");
+        // document.write(first*((second%100)%10));
+        document.write(first * Number(secondString[2]));
+        document.write("<br>");
+        // document.write((first*((second%100)-Math.floor(second%100)%10))/10);
+        document.write(first * Number(secondString[1]));
+        document.write("<br>");
+        // document.write(Math.floor(first*(second-(second%100)))/100);
+        document.write(first * Number(secondString[0]));
+        document.write("<br>");
+        document.write(first * second);
+
+        var input1 = prompt("숫자 1");
+        var input2 = prompt("숫자 2");
+        var input2_for_6 = input2;//(6)을 구하기 위해서 (2)의 값을 임의의 변수에 복사
+
+        // for(;;) : while(true){}
+        // for(;input2%10!=0;) : input2가 10의 배수가 될때 까지 수행
+        for (; input2 % 10 != 0;) {
+            var temp = input2 % 10; //10으로 나눈 값의 나머지
+            document.write(input1*temp+"<br>");
+            input2 = (input2 - temp)/10;
+        }
+        document.write(input1*input2_for_6);
+    </script>
+</body>
+
+</html>

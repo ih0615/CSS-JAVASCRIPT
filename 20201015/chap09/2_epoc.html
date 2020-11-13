@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let birth = new Date(1988,5,15);
+        let now = new Date();
+        let ellapse = (now.getTime()-birth.getTime())/(86400*1000);
+        document.write(`오늘은 태어난지 ${Math.floor(ellapse)}일 째입니다.`);
+    </script>
+</body>
+</html>

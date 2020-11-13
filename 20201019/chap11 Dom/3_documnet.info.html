@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p><a href="https://www.google.com/">구글</a>
+        <img src="cosmos.jpg">
+        <a href="https://www.naver.com/">네이버</a></p>
+    <img id="example" src="cosmossssssss.jpg" alt="asdf" title="코쓰모쓰">
+    <hr>
+    <script>
+        document.write(`제목 : ${document.title}<br>`);
+        document.write(`URL : ${document.URL}<br>`);
+        document.write(`lastModified : ${document.lastModified}<br>`);
+        document.write(`readyState : ${document.readyState}<br>`);
+        document.write(`inputEncoding : ${document.inputEncoding}<br>`);
+        document.write(
+            `링크 갯수 : ${document.links.length}개, 0 = ${document.links[0].href} , 1 = ${document.links[1].href}<br>`);
+        document.write(`이미지 갯수 : ${document.images.length}<br>`);
+        document.write(`폼 갯수 : ${document.forms.length}<br>`);
+        // link, images, forms는 배열 형태로 객체들을 저장하고 있다.
+
+        let img = document.getElementById("example");
+        let attr = img.attributes;//attr은 속성값들을 갖는 배열
+        for(let i = 0; i<attr.length;i++){
+            document.write(`${i}번째 속성 이름 : ${attr[i].name} 속성 값 : ${attr[i].value}<br>`);
+        }
+
+    </script>
+</body>
+
+</html>

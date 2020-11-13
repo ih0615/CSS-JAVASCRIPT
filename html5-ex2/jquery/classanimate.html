@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>classanimate</title>
+	<link rel="Stylesheet" href="css/ui-lightness/jquery-ui-1.10.4.custom.min.css" />
+	<script src="jquery-1.11.0.min.js"></script>
+	<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+	<style>
+		div { width:100px;height:100px;background-color:yellow;color:black; }
+		.large { width:300px;height:200px;background-color:red;color:blue; }
+	</style>
+</head>
+<body>
+	<div id="effect" >
+		<p>클릭하세요</p>
+	</div>
+	<script>
+		$("#effect").click(function() {
+			$("#effect").addClass("large", 2000, rollback);
+		});
+		function rollback() {
+			$("#effect").removeClass("large", 2000);
+		}
+	</script>
+</body>
+</html>

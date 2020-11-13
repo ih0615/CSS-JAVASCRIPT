@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>childselector</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<h2>문단 안에 <a>링크</a> 태그가 있다.
+	두 번째 <span><a>링크</a></span>는 손자이다.</h2>
+	<script>
+		$('h2 > a').css('border', 'solid');
+		$('h2 a').css('background', 'yellow');
+	</script>
+</body>
+</html>

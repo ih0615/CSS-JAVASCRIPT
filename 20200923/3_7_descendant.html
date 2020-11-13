@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div 바로 아래 있는 h1 */
+        div>h1 {
+            color: red;
+        }
+
+        /* div 안에 있는 모든 h1 */
+        div h1 {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- > : 자손 -->
+    <!-- div>ul>li*3 -->
+    <div>
+        <h1>Sit veniam sint tempor tempor laboris duis.</h1>
+        <h2>Occaecat proident dolore sint nostrud pariatur reprehenderit sint duis.</h2>
+        <ul>
+            <li>
+                <h1>Adipisicing incididunt qui excepteur consequat est esse tempor amet mollit exercitation eiusmod
+                    laborum.</h1>
+            </li>
+            <li>Duis labore in commodo fugiat ipsum.</li>
+            <li>Sunt reprehenderit consequat amet excepteur minim dolor nulla.</li>
+        </ul>
+    </div>
+    <!-- 공백 : 후손 -->
+</body>
+
+</html>

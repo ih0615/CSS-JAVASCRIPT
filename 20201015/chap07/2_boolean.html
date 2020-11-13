@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = new Boolean(true); //보통은 var a = true 이렇게 많이 씀
+        let b = new Boolean(1);
+        let c = new Boolean(0);//false
+        let d = new Boolean("문자열");
+        let e = new Boolean(null);//false
+        let f = new Boolean(0/0);//false
+        let g = new Boolean(undefined);
+        let h = new Boolean(Number("abc"+1));
+        let i = new Boolean(-1);
+        let j = new Boolean("");//false
+
+        document.write(a.valueOf()+"<br>");
+        document.write(b.valueOf()+"<br>");
+        document.write(c.valueOf()+"<br>");
+        document.write(d.valueOf()+"<br>");
+        document.write(e.valueOf()+"<br>");
+        document.write(f.valueOf()+"<br>");
+        document.write(g+"<br>");
+        document.write(h.valueOf()+"<br>");
+        document.write(i.valueOf()+"<br>");
+        document.write(j.valueOf()+"<br>");
+    </script>
+</body>
+</html>

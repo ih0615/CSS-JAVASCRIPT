@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //java스타일
+        function add(a, b) {
+            return a + b;
+        }
+
+        function sum(n) {
+            var s = 0;
+            for (var i = 0; i <= n; i++) {
+                s = add(s, i);
+                // s+=i;
+            }
+            return s;
+        }
+
+        // js 스타일
+        function sumjs(n) {
+            function add(a, b) {
+                return a + b;
+            }
+            var s = 0;
+            for (var i = 0; i <= n; i++) {
+                s = add(s, i);
+            }
+            return s;
+        }
+        // outer 함수와 inner 함수의 관계
+        function outer() {
+            var outvalue = 1234;
+
+            function inner() {
+                var invalue = 5678; //var을 빼면 alert도 동작한다. 책 76p
+                document.write(outvalue + "<br>"); //안쪽 함수는 바깥쪽 함수의 변수에 접근 됨
+            }
+            inner();
+            alert(invalue); //바깥쪽 함수는 안쪽 함수의 변수에 접근 안됨
+            // java를 예로 들면 함수가 전역 변수에 접근은 가능하나, main이 함수의 지역변수에
+            // 접근 못하는 것과 같은 이치 이다.
+        }
+        document.write(sum(100));
+        document.write("<br>");
+        document.write(sumjs(100));
+        document.write("<br>");
+        outer();
+    </script>
+</body>
+
+</html>

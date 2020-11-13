@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <style>
+        .blue {
+            background-color: royalblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <h1>Hello world!</h1>
+        <h1>Hello world!</h1>
+        <h1>Hello world!</h1>
+        <h1>Hello world!</h1>
+        <h1>Hello world!</h1>
+        <h1>Hello world!</h1>
+        <h1>Hello world!</h1>
+        <h1>Hello world!</h1>
+    </div>
+    <script>
+        // let box = document.getElementById('box');
+        // box.addEventListener('click',function(){
+        //     if(event.target.tagName=='H1'){
+        //         event.target.classList.add('blue');
+        //     }
+        // })
+        // box.addEventListener('dblclick',function(){
+        //     if(event.target.tagName=='H1'){
+        //         event.target.classList.remove('blue');
+        //     }
+        // })
+        
+        // let h1 = document.getElementsByTagName('h1');
+        // for (let i = 0; i < h1.length; i++) {
+        //     h1[i].addEventListener('click', function () {
+        //         h1[i].classList.add('blue');
+        //     })
+        // }
+        
+        $('h1').on('click',function(){
+            $(this).addClass('blue');
+        });
+        $('h1').on('dblclick',function(){
+            $(this).removeClass('blue');
+        })
+    </script>
+</body>
+
+</html>

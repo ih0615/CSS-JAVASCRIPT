@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" id="userInput" value="">
+        <input type="button" value="클릭" id="userButton" onclick="tranlate()">
+    </form>
+
+    <script>
+        //마우스 오른쪽 버튼에 대한 예외처리
+        window.oncontextmenu = function () {
+            alert("우클릭 금지입니다.");
+            return false;
+        }
+
+        function tranlate() {
+            let array = ['ㄱ', 'ㄴ', 'ㄷ', 'ㄹ', 'ㅁ', 'ㅂ', 'ㅅ', 'ㅇ', 'ㅈ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ', 'ㅏ', 'ㅑ', 'ㅓ', 'ㅕ', 'ㅗ',
+                'ㅛ',
+                'ㅜ', 'ㅠ', 'ㅡ', 'ㅣ'
+            ];
+            let input = document.getElementById("userInput").value; //인풋 텍스트 안의 내용 가져옴, value 자동완성 안됨
+            let inputResult = input.search(/^[A-Ya-y]*$/);
+            if (inputResult == -1) {
+                alert("잘못된 입력입니다.");
+                return false
+            } else {
+                input = input.toLowerCase(); //소문자로 바꿔줌
+            }
+            let out = "";
+            for (let i = 0; i < input.length; i++) {
+                out += array[input.charCodeAt(i) - 'a'.charCodeAt(0)];
+            };
+            alert(out);
+        }
+    </script>
+</body>
+
+</html>

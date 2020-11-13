@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>addattribute</title>
+</head>
+<body>
+	<p id="para">문단입니다.</p>
+	<script>
+		var para = document.getElementById("para");
+		var img = document.createElement("img");
+		
+		// 1.속성 직접 대입
+		img.src = "cosmos.jpg";
+		
+		// 2.속성 설정 메서드 호출
+		// img.setAttribute("src","cosmos.jpg");
+		
+		// 3.속성 노드를 만들어 붙이기
+		//var src = document.createAttribute("src");
+		//src.nodeValue="cosmos.jpg";
+		//img.setAttributeNode(src);
+		
+		para.appendChild(img);
+	</script>
+</body>
+</html>

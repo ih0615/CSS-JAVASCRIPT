@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function check(a,b){
+            if(a>0&&b>0){
+                return 1;
+            }
+            else if(a>0&&b<0){
+                return 4;
+            }
+            else if(a<0&&b>0){
+                return 2;
+            }
+            else if(a<0&&b<0){
+                return 3;
+            }
+            else if(a==0 || b==0){
+                return 0;
+            }
+            else{
+                return "error"
+            }
+        }
+        var x = prompt("x값을 입력하시오");
+        var y = prompt("y값을 입력하시오");
+        document.write(check(x,y));
+    </script>
+</body>
+</html>

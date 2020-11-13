@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>imginfo</title>
+</head>
+<body>
+	<p><img id="cosmos" src="cosmos.jpg" title="코스모스"/></p>
+	<hr>
+	<script>
+		var img = document.getElementById("cosmos");
+		var attrs = img.attributes;
+		for (var i = 0; i < attrs.length;i++) {
+			document.write(i + "번째 속성 이름 = " + attrs[i].name + 
+			", 속성 값 = " + attrs[i].value + "<br>");
+		}
+	</script>
+</body>
+</html>

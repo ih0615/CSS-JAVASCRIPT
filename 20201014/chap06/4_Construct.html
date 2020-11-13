@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Human(name, age) { //안에 return 키워드가 없다.
+            this.name = name; //this.name : 객체의 멤버, name : 매개변수
+            this.age = age;
+        }
+
+        //한번만 만들어지고, 공용으로 쓸 수 있는 함수
+        Human.prototype.intro = function () {
+            document.write(`name = ${this.name}<br>`);
+            document.write(`age = ${this.age}<br>`);
+        };
+
+        var kim = new Human("김상형", 29); //생성자 쓸 땐 반드시 앞에 new 붙여주기
+        var gun = new Human("권성직", 45);
+        var mun = new Human("문종민", 42);
+        var lee = new Human("이미성", 44);
+        kim.intro();
+        gun.intro();
+        mun.intro();
+        lee.intro();
+
+        //instanceof : 이 변수가 이 객체에 속해있는지 체크
+        if(kim instanceof Human){
+            document.write("닝겐");
+        }
+        if(kim instanceof Human){
+            document.write("닝겐");
+        }
+        else{
+            document.write("닝겐");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <style>
+        .header {
+            height: 60px;
+            line-height: 60px;
+            background-color: aqua;
+            border-bottom: 1px solid black;
+            position: fixed;
+            left: 0;
+            right: 0;
+
+            /* 방법1 */
+            padding-left: 20px;
+            /* 방법2 */
+            /* 자식을 absolute + left 20px주고 부모를 relative 준다 */
+            /* border-bottom: 1px solid black;
+            position: relative;*/
+
+
+        }
+
+        /* 방법3 
+        .header>h1 {
+            margin-left: 20px;
+            position: absolute;
+            left: 20px;
+        }*/
+
+        .wrap {
+            /* 내부에 있는 것에 float left를 줘서 수평정렬하기 위함 */
+            overflow: hidden;
+            /* .header의 line-height와 height 값을 의미 */
+            padding-top: 60px;
+        }
+
+        .aside {
+            width: 200px;
+            float: left;
+            background-color: coral;
+        }
+
+        body {
+            min-width: 700px;
+        }
+
+        .section {
+            float: left;
+            /* 태블릿 레이아웃이라서 넓이가 얼마가 될지 모름 그래서 100% 잡아둠 */
+            width: 100%;
+            background-color: cornflowerblue;
+            /* aside부분이 200px만큼 공간을 차지하기 때문에 그만큼 빼줘야함 */
+            margin-right: -200px;
+        }
+
+        .inner_section {
+            /* 우측이 -200px 한것 만큼 잘리기 때문에 추가를 해줘야 함 */
+            padding-right: 220px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>header</h1>
+    </div>
+    <div class="wrap">
+        <div class="aside">
+            <p>Ex mollit sunt excepteur in mollit in dolor anim proident magna dolore occaecat. Consectetur ipsum
+                consequat cillum dolore voluptate occaecat. Aliquip ad esse ullamco ex nisi est consequat et ut.
+
+                Laborum excepteur non consectetur magna non dolore sit elit sint enim magna ea. Aute ex adipisicing ex
+                dolor adipisicing. Culpa anim labore excepteur ex non.
+
+                Amet amet do sit irure dolor minim et aliquip dolore dolor voluptate magna consectetur. Elit fugiat
+                veniam tempor officia id culpa ex consectetur dolore. Non esse voluptate anim consequat eu sint ullamco
+                occaecat ex adipisicing id incididunt sit. Sint amet ullamco ut aute reprehenderit. Ea dolor fugiat
+                veniam aliquip tempor consequat ad aliqua veniam non ea. Amet enim sunt aliquip proident reprehenderit
+                quis veniam commodo velit. Irure pariatur mollit cillum culpa ut pariatur excepteur.
+
+                Eu ad duis tempor esse sunt deserunt occaecat Lorem. Fugiat culpa et commodo cillum aliquip Lorem aute
+                et aliquip nostrud dolore officia cupidatat anim. Nostrud aliquip occaecat nisi laborum qui enim id
+                fugiat ex mollit elit. Ad voluptate et aliqua do consectetur excepteur deserunt ea excepteur sint velit
+                aliqua ad ad.
+
+                Qui adipisicing fugiat nostrud deserunt labore consectetur anim occaecat excepteur et duis qui
+                consectetur. Commodo amet ea officia aute anim excepteur. Sint deserunt consequat nisi veniam aliqua eu
+                ipsum proident cupidatat aliquip tempor irure fugiat. Ut qui in incididunt velit fugiat id pariatur et
+                aute ex mollit labore eiusmod duis. Duis sunt sunt minim qui. Non nostrud labore dolor occaecat nisi
+                commodo magna duis do sint.
+
+                Anim deserunt et tempor anim Lorem sit voluptate aliquip ex nostrud nostrud. Exercitation ut aliqua ex
+                est dolore ad reprehenderit elit ipsum mollit culpa in anim nulla. Sunt nostrud excepteur sint laborum
+                dolore quis sint id Lorem. Consectetur tempor laboris anim excepteur reprehenderit.</p>
+        </div>
+        <!-- 2중으로 감싸주는 것이 포인트 -->
+        <div class="section">
+            <div class="inner_section">
+                <h1>Lorem ipsum dolor sit amet.</h1>
+                <p>Occaecat laboris dolor magna culpa est occaecat ad adipisicing dolore. Laborum mollit consectetur
+                    ullamco veniam cupidatat quis. Et labore amet non sit anim occaecat reprehenderit voluptate. Amet
+                    non aute incididunt non nulla ex exercitation mollit cillum Lorem laboris ad tempor labore. Aliqua
+                    ut pariatur reprehenderit eu aliquip aliquip fugiat quis sunt sint cillum occaecat adipisicing.
+
+                    Velit consectetur id esse ipsum velit. In dolor magna irure qui consectetur id irure duis consequat
+                    deserunt duis minim. Incididunt eu occaecat aute deserunt nostrud tempor ad. Consectetur duis veniam
+                    dolor mollit nisi sunt ut dolore irure amet.
+
+                    Excepteur aute ea voluptate aliquip do qui consequat tempor veniam sunt. Culpa occaecat ea
+                    exercitation ut dolore pariatur ut. Aliquip dolore tempor aliquip id nisi consequat ex. Commodo
+                    proident ipsum elit occaecat duis dolor elit do aute elit quis sint officia pariatur. Enim ea
+                    laboris officia nisi amet veniam ad. Dolore deserunt sit pariatur deserunt id minim ea. Exercitation
+                    incididunt nulla Lorem ad dolor et irure veniam Lorem veniam exercitation amet sint.
+
+                    Nulla proident fugiat fugiat quis duis laborum anim do incididunt. Deserunt in veniam dolore
+                    consequat nulla duis sit. Ullamco ipsum occaecat velit enim.
+
+                    Sint duis sunt officia ad tempor laboris ullamco. Officia mollit consectetur ut fugiat magna est
+                    dolor tempor culpa exercitation sint ex. Sunt dolore qui nulla enim eu velit sit duis consectetur
+                    consequat aute deserunt. Officia do do nisi mollit fugiat eiusmod nostrud anim dolor ad id mollit
+                    est. Pariatur et culpa veniam esse. Qui nulla duis eu eu eu.
+
+                    Ea fugiat voluptate esse excepteur consequat magna duis id aliqua irure. Officia adipisicing magna
+                    consectetur consectetur cupidatat cupidatat et occaecat amet. Ad ullamco nisi quis sit nulla
+                    reprehenderit Lorem dolore consequat non qui dolor ut.</p>
+                <h1>Lorem ipsum dolor sit amet.</h1>
+                <p>Occaecat laboris dolor magna culpa est occaecat ad adipisicing dolore. Laborum mollit consectetur
+                    ullamco veniam cupidatat quis. Et labore amet non sit anim occaecat reprehenderit voluptate. Amet
+                    non aute incididunt non nulla ex exercitation mollit cillum Lorem laboris ad tempor labore. Aliqua
+                    ut pariatur reprehenderit eu aliquip aliquip fugiat quis sunt sint cillum occaecat adipisicing.
+
+                    Velit consectetur id esse ipsum velit. In dolor magna irure qui consectetur id irure duis consequat
+                    deserunt duis minim. Incididunt eu occaecat aute deserunt nostrud tempor ad. Consectetur duis veniam
+                    dolor mollit nisi sunt ut dolore irure amet.
+
+                    Excepteur aute ea voluptate aliquip do qui consequat tempor veniam sunt. Culpa occaecat ea
+                    exercitation ut dolore pariatur ut. Aliquip dolore tempor aliquip id nisi consequat ex. Commodo
+                    proident ipsum elit occaecat duis dolor elit do aute elit quis sint officia pariatur. Enim ea
+                    laboris officia nisi amet veniam ad. Dolore deserunt sit pariatur deserunt id minim ea. Exercitation
+                    incididunt nulla Lorem ad dolor et irure veniam Lorem veniam exercitation amet sint.
+
+                    Nulla proident fugiat fugiat quis duis laborum anim do incididunt. Deserunt in veniam dolore
+                    consequat nulla duis sit. Ullamco ipsum occaecat velit enim.
+
+                    Sint duis sunt officia ad tempor laboris ullamco. Officia mollit consectetur ut fugiat magna est
+                    dolor tempor culpa exercitation sint ex. Sunt dolore qui nulla enim eu velit sit duis consectetur
+                    consequat aute deserunt. Officia do do nisi mollit fugiat eiusmod nostrud anim dolor ad id mollit
+                    est. Pariatur et culpa veniam esse. Qui nulla duis eu eu eu.
+
+                    Ea fugiat voluptate esse excepteur consequat magna duis id aliqua irure. Officia adipisicing magna
+                    consectetur consectetur cupidatat cupidatat et occaecat amet. Ad ullamco nisi quis sit nulla
+                    reprehenderit Lorem dolore consequat non qui dolor ut.</p>
+                <h1>Lorem ipsum dolor sit amet.</h1>
+                <p>Occaecat laboris dolor magna culpa est occaecat ad adipisicing dolore. Laborum mollit consectetur
+                    ullamco veniam cupidatat quis. Et labore amet non sit anim occaecat reprehenderit voluptate. Amet
+                    non aute incididunt non nulla ex exercitation mollit cillum Lorem laboris ad tempor labore. Aliqua
+                    ut pariatur reprehenderit eu aliquip aliquip fugiat quis sunt sint cillum occaecat adipisicing.
+
+                    Velit consectetur id esse ipsum velit. In dolor magna irure qui consectetur id irure duis consequat
+                    deserunt duis minim. Incididunt eu occaecat aute deserunt nostrud tempor ad. Consectetur duis veniam
+                    dolor mollit nisi sunt ut dolore irure amet.
+
+                    Excepteur aute ea voluptate aliquip do qui consequat tempor veniam sunt. Culpa occaecat ea
+                    exercitation ut dolore pariatur ut. Aliquip dolore tempor aliquip id nisi consequat ex. Commodo
+                    proident ipsum elit occaecat duis dolor elit do aute elit quis sint officia pariatur. Enim ea
+                    laboris officia nisi amet veniam ad. Dolore deserunt sit pariatur deserunt id minim ea. Exercitation
+                    incididunt nulla Lorem ad dolor et irure veniam Lorem veniam exercitation amet sint.
+
+                    Nulla proident fugiat fugiat quis duis laborum anim do incididunt. Deserunt in veniam dolore
+                    consequat nulla duis sit. Ullamco ipsum occaecat velit enim.
+
+                    Sint duis sunt officia ad tempor laboris ullamco. Officia mollit consectetur ut fugiat magna est
+                    dolor tempor culpa exercitation sint ex. Sunt dolore qui nulla enim eu velit sit duis consectetur
+                    consequat aute deserunt. Officia do do nisi mollit fugiat eiusmod nostrud anim dolor ad id mollit
+                    est. Pariatur et culpa veniam esse. Qui nulla duis eu eu eu.
+
+                    Ea fugiat voluptate esse excepteur consequat magna duis id aliqua irure. Officia adipisicing magna
+                    consectetur consectetur cupidatat cupidatat et occaecat amet. Ad ullamco nisi quis sit nulla
+                    reprehenderit Lorem dolore consequat non qui dolor ut.</p>
+                <h1>Lorem ipsum dolor sit amet.</h1>
+                <p>Occaecat laboris dolor magna culpa est occaecat ad adipisicing dolore. Laborum mollit consectetur
+                    ullamco veniam cupidatat quis. Et labore amet non sit anim occaecat reprehenderit voluptate. Amet
+                    non aute incididunt non nulla ex exercitation mollit cillum Lorem laboris ad tempor labore. Aliqua
+                    ut pariatur reprehenderit eu aliquip aliquip fugiat quis sunt sint cillum occaecat adipisicing.
+
+                    Velit consectetur id esse ipsum velit. In dolor magna irure qui consectetur id irure duis consequat
+                    deserunt duis minim. Incididunt eu occaecat aute deserunt nostrud tempor ad. Consectetur duis veniam
+                    dolor mollit nisi sunt ut dolore irure amet.
+
+                    Excepteur aute ea voluptate aliquip do qui consequat tempor veniam sunt. Culpa occaecat ea
+                    exercitation ut dolore pariatur ut. Aliquip dolore tempor aliquip id nisi consequat ex. Commodo
+                    proident ipsum elit occaecat duis dolor elit do aute elit quis sint officia pariatur. Enim ea
+                    laboris officia nisi amet veniam ad. Dolore deserunt sit pariatur deserunt id minim ea. Exercitation
+                    incididunt nulla Lorem ad dolor et irure veniam Lorem veniam exercitation amet sint.
+
+                    Nulla proident fugiat fugiat quis duis laborum anim do incididunt. Deserunt in veniam dolore
+                    consequat nulla duis sit. Ullamco ipsum occaecat velit enim.
+
+                    Sint duis sunt officia ad tempor laboris ullamco. Officia mollit consectetur ut fugiat magna est
+                    dolor tempor culpa exercitation sint ex. Sunt dolore qui nulla enim eu velit sit duis consectetur
+                    consequat aute deserunt. Officia do do nisi mollit fugiat eiusmod nostrud anim dolor ad id mollit
+                    est. Pariatur et culpa veniam esse. Qui nulla duis eu eu eu.
+
+                    Ea fugiat voluptate esse excepteur consequat magna duis id aliqua irure. Officia adipisicing magna
+                    consectetur consectetur cupidatat cupidatat et occaecat amet. Ad ullamco nisi quis sit nulla
+                    reprehenderit Lorem dolore consequat non qui dolor ut.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

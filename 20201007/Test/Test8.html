@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News paper sample</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            box-sizing: border-box;
+        }
+        body {
+            width: 960px;
+            margin: 0 auto;
+        }
+        div {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        body>div {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        #wrap {
+            display: grid;
+            grid-template-columns: 2fr 8fr;
+            gap: 30px;
+            border: none;
+            padding: 0;
+        }
+        #aside{
+            background-color: rebeccapurple;
+        }
+        #section{
+            background-color: rosybrown;
+        }
+        #footer{
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <h1>Header</h1>
+    </div>
+    <div id="navigation">
+        <h1>Navigation</h1>
+    </div>
+    <div id="wrap">
+        <div id="aside">
+            <h1>Aside</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto inventore sint cupiditate iste nemo.
+                Repellendus, vitae? Aliquam illo officia animi placeat eius accusamus cum voluptate! Doloribus ab iste
+                maiores incidunt?</p>
+        </div>
+        <div id="section">
+            <h1>Section</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam vel non accusantium placeat qui
+                recusandae! Provident est obcaecati itaque commodi necessitatibus autem, quo iure aliquid saepe
+                molestiae maiores, quia explicabo.</p>
+        </div>
+    </div>
+    <div id="footer">
+        <h1>Footer</h1>
+    </div>
+</body>
+
+</html>

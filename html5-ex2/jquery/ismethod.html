@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ismethod</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<label for="male">남자</label>
+	<input type="checkbox" id="male" checked /><br/>
+	<hr />
+	<p></p>
+	<script>
+		$('#male').change(function() {
+			$('p').html(
+				'attr : ' + $(this).attr('checked') + '<br />' +
+				'prop : ' + $(this).prop('checked') + '<br />' +
+				'is : ' + $(this).is(':checked') + '<br />');
+		});
+	</script>
+</body>
+</html>

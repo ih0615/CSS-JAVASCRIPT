@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>arguments</title>
+</head>
+<body>
+	<script>
+		function total() {
+			var s = 0;
+			for (var i = 0; i < arguments.length; i++) {
+				s += arguments[i];
+			}
+			return s;
+		}
+		document.write(total(2, 5, 3) + "<br>");
+		document.write(total(1, 5, 8, 8, 12, 14) + "<br>");
+	</script>
+</body>
+</html>

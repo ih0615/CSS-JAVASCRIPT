@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+        var input = prompt("입력횟수");
+        var colum = input;
+        if(colum%2==1){
+            colum++;
+        }
+        for (var i = 1; i <= input * 2; i++) {
+            if (i % 2 == 0) {
+                for (var j = 1; j <= input/2; j++) {
+                    document.write("&nbsp*");
+                }
+            } else {
+                for (var j = 1; j <= colum/2; j++) {
+                        document.write("*&nbsp");
+                }
+            }
+            document.write("<br>");
+        }
+        */
+    </script>
+    <script>
+        document.write("1 2<br>"); //한 칸 까지는 스페이스로 삽입 가능;
+        document.write("1    2<br>"); //두 칸부터는 그냥 한 칸으로 인식
+        document.write("1&nbsp&nbsp&nbsp2<br>") //
+        /*
+        var input = prompt("숫자를 입력하시오");
+        
+        for (var i = 1; i <= input * 2; i++) {
+            for (var j = 1; j <= input; j++) {
+                if (i % 2 != 0) {
+                    if (j % 2 != 0) {
+                        document.write("*");
+                    } else {
+                        document.write("&nbsp")
+                    }
+                } else {
+                    if (j % 2 != 0) {
+                        document.write("&nbsp");
+                    } else {
+                        document.write("*")
+                    }
+                }
+            }
+            document.write("<br>");
+        }
+        */
+
+        var counter = Number(prompt("한 줄당 입력하는 문자의 수"));
+        var star = ''; //각 줄당 출력할 문자열
+        if (counter == 1) {
+            document.write("*");
+        } else {
+            var switch_star = 0; //규칙성을 부여하기 위한 변수
+            for (var i = 0; i < counter * 2; i++) { //(내가 입력한 숫자 X 2)줄 만큼 출력
+                for (var j = 0; j < counter; j++) {
+                    if (switch_star % 2 == 0) {
+                        star += '*' //처음엔 별부터 찍는다.
+                    } else { //그 다음엔 공백 부터 찍는다. 그 다음엔 다시 *부터 찍는다.
+                        star += '&nbsp';
+                    }
+                    switch_star++;
+                }
+
+                if (counter % 2 == 0) {
+                    switch_star++;
+                }
+                star += "<br>"
+            }
+            document.write(star);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* src속성이 png라는 글자로 끝날 경우 */
+        img[src$=png] {
+            border: 3px solid red;
+        }
+
+        /* src속성이 jpg라는 글자로 끝날 경우 */
+        img[src$=jpg] {
+            border: 3px solid green;
+        }
+
+        /* src속성이 gif라는 글자로 끝날 경우 */
+        img[src$=gif] {
+            border: 3px solid blue;
+        }
+
+        /* img 태그 전체에 대해 */
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="jajq.png" alt="" width="200" height="250">
+    <img src="node.jpg" alt="" width="200" height="250">
+    <img src="ux.gif" alt="" width="200" height="250">
+</body>
+
+</html>

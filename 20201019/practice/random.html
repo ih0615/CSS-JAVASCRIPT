@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function random(max, min) {
+            max = Math.floor(max);
+            min = Math.ceil(min);
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+        let array = [];
+        let output = "";
+        do {
+            let input = Math.floor(Math.random()*10);
+            input;
+            const idx = array.indexOf(input);
+            if (idx == -1) {
+                array.push(input);
+                output += input + " ";
+            }
+        } while (array.length < 4);
+        document.write(output);
+    </script>
+</body>
+
+</html>

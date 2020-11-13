@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 함수 헤드 부분에 리턴 타입 없다.
+        // 매개변수 타입이 정해져 있지 않다.
+        function add(a, b) {
+            return a + b;
+        }
+
+        function add_with_exception_handler(a, b) {
+            if (a == undefined) {
+                return 0;
+            }
+            if (b == undefined) { //매개변수를 하나만 넣은 경우에 대한 예외처리
+                return a;
+            } else {
+                return a + b
+            }
+        }
+        document.write(`2+3 = ${add(2,3)}<br>`);
+        document.write(`java+Script = ${add("java","Script")}<br>`);
+
+        //매개변수의 개수가 틀려도 오류 안남
+        document.write(`1 = ${add(1)}<br>`);
+        document.write(`1+2 = ${add(1,2)}<br>`);
+        document.write(`1+2+3 = ${add(1,2,3)}<br>`);
+        document.write(`1 = ${add_with_exception_handler(1)}<br>`);
+    </script>
+</body>
+
+</html>

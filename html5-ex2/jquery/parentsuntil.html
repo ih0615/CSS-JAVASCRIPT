@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>parentsuntil</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body class="stop">
+	<div>
+		<p>문단 안에 <strong>강조</strong> 표시가 있다.</p>
+	</div>
+	<hr />
+	<script>
+		var result = "조상 : ";
+		$('strong').parentsUntil('.stop').each(function(index) {
+			result += this.tagName + " ";
+		});
+		document.write(result + "<br>");
+	</script>
+</body>
+</html>

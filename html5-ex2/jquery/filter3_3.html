@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>filter3</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<p>평범한 문단입니다.</p>
+	<p class="sample">두 번째 <strong>문단</strong>입니다.</p>
+	<p>세 번째 <strong>문단</strong>입니다. </p>
+	<p class="sample">이 문단은 자식이 없습니다.</p>
+	<p class="sample">이 문단에는 <i>기울임체</i>가 있습니다.</p>
+	<script>
+		$('p').filter('.sample').css('background', 'yellow');
+	</script>
+</body>
+</html>

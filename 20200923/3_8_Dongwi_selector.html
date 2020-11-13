@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="v1iewport" content="width=device-width, initial-scale=1.0">
+    <title>Docume1nt</title>
+    <style>
+        /* h1 태그 바로 뒤에 위치한 h2 태그에 대하여 */
+        /* 자손이랑 비슷한 개념 */
+        h1+h2{
+            color: red;
+        }
+        /* h1태그 위에 위치한 h2 태그들 */
+        /* 후손이랑 비슷한 개념 */
+        h1~h2{
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+    <!-- h1{Header-1}+h2*5{$} -->
+    <h1>Header - 1</h1>
+    <h2>Header - 2</h2>
+    <h2>Header - 2</h2>
+    <h2>Header - 2</h2>
+    <h2>Header - 2</h2>
+</body>
+</html>

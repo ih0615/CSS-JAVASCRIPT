@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div가 대상 */
+        div:first-child {
+            color: red;
+        }
+
+        /* div의 후손이 대상 */
+        div :first-child {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>ASDFK-1</p>
+        <p>ASDFK-2</p>
+        <p>ASDFK-3</p>
+        <p>ASDFK-4</p>
+        <p>ASDFK-5</p>
+        <div>
+            <p>weiojroj-1</p>
+            <p>weiojroj-2</p>
+            <p>weiojroj-3</p>
+            <p>weiojroj-4</p>
+            <p>weiojroj-5</p>
+        </div>
+    </div>
+    <div>
+        <div>
+            <h6>1</h6>
+            <h6>2</h6>
+        </div>
+        <p>lorem-1</p>
+        <p>lorem-2</p>
+        <p>lorem-3</p>
+        <p>lorem-4</p>
+        <p>lorem-5</p>
+    </div>
+</body>
+
+</html>

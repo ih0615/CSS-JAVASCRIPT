@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>appendchild</title>
+</head>
+<body>
+	<p>문단 하나만 있습니다.</p>
+	<script>
+		var para = document.createElement("p");
+		var text = document.createTextNode("새로 추가된 문단입니다.");
+		para.appendChild(text);
+		document.body.appendChild(para);
+	</script>
+</body>
+</html>

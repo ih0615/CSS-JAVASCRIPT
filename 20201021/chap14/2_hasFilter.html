@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../chap13/jq.js"></script>
+    <script>
+        $(function(){
+            $('p:has(span)').css('background','lime');
+            $('p:contains(Adipisci)').css('color','royalblue');
+            $('p:empty').css('border','solid 1px black');
+        });
+    </script>
+</head>
+
+<body>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, mollitia illo deserunt voluptatum voluptates
+        aliquid harum consectetur? Vel minus, aspernatur, dolore qui impedit sint vero laboriosam, similique possimus
+        sed dicta.</p>
+    <p>Lorem ipsum dolor, <span>sit amet consectetur adipisicing elit.</span> Qui sit nisi deserunt fugit tempore, esse,
+        hic vero cumque beatae eius aspernatur! Fuga repellat dicta, consequuntur atque id sapiente dolores amet.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quae optio natus vero omnis. Eaque quaerat quod
+        deleniti. Adipisci deserunt molestiae ex mollitia beatae quibusdam porro corporis veritatis exercitationem quia.
+    </p>
+    <p></p>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>validate</title>
+</head>
+<body>
+	<form id="scoreform">
+		<label for="subject">과목</label>
+		<input type="text" id="subject"><br/>
+		<label for="score">점수</label>
+		<input type="number" id="score"><br/>
+		<input type="submit">
+		<input type="reset">
+	</form>
+	<script>
+		var scoreform = document.getElementById("scoreform");
+		scoreform.onsubmit = function() {
+			var score = document.getElementById("score").value;
+			if (score < 0 || score > 100) {
+				alert("점수 범위가 잘못되었습니다.");
+				return false;
+			}
+		}
+	</script>
+</body>
+</html>

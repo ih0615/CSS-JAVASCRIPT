@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let input = prompt("문자열을 입력해 주십시오");
+        let array = [];
+        let result = "";
+        for (let i = 0; i < input.length; i++) {
+            array[i] = input[i];
+        }
+        keyName = array[0];
+        keyNumber = 1;
+        document.write(array[0] + "은" + keyNumber + "번째 글자 입니다." + "<br>");
+        for (let k = 0; k < array.length; k++) {
+            for (let l = k + 1; l < array.length; l++) {
+                if (array[k] == array[l]) {
+                    array[l] = "";
+                }
+            }
+        }
+        for (let j = 0; j < array.length; j++) {
+            if (keyName != array[j]) {
+                keyName = array[j];
+                keyNumber = j + 1;
+                if (array[j] != "") {
+                    document.write(keyName + "은" + keyNumber + "번째 글자 입니다." + "<br>");
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

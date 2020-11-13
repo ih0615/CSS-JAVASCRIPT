@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>extend</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<script>
+		var target = {
+			name:'김상형',
+			age:29
+		};
+		var obj = {
+			age:35,
+			height:180,
+			weight:65
+		};
+		$.extend(target, obj);
+		document.write("이름 : " + target.name + 
+			"<br>나이 : " + target.age + 
+			"<br>키 : " + target.height + 
+			"<br>몸무게 : " + target.weight);
+	</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>hiddenfilter</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<p>보이는 문단</p>
+	<p style="visibility:hidden;">숨겨진 문단</p>
+	<p style="display:none;">자리를 차지하지 못한 문단</p>
+	<p style="opacity:0;">투명한 문단</p>
+	<hr />
+	<script>
+		document.write("hidden 문단 개수 : " + $('p:hidden').length);
+	</script>
+</body>

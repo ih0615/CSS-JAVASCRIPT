@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jq.js"></script>
+</head>
+
+<body>
+    <script>
+        let text = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, quas enim! Commodi maiores ex earum tempore quam possimus eius similique eveniet, sit quas officiis. Nobis rem minus nemo mollitia doloribus?'
+        let elem = $(`<h1>이 것은 ${text}입니다.<h1>`);//`${}` 이거랑 다른거임
+        elem.appendTo('body');//body에다가 elem을 추가한다.
+    </script>
+</body>
+
+</html>

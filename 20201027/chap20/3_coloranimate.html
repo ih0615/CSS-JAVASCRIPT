@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 1.css파일 -->
+    <link rel="stylesheet" href="css/overcast/jquery-ui-1.10.4.custom.min.css">
+    <!-- 2.jquery라이브러리 -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!-- 3.jquery UI 라이브러리 -->
+    <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+</head>
+
+<body>
+    <div id="effect" style="width: 300px; height: 200px; background-color:yellow"></div>
+    <script>
+        $('#effect').click(function () {
+            let target = 'yellow';
+            if ($('#effect').css('backgroundColor') == 'rgb(255,255,0') {
+                target = 'red';
+            }
+            $('#effect').animate({
+                backgroundColor:target
+            }, 2000);
+        })
+    </script>
+</body>
+
+</html>

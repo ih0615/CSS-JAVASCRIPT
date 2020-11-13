@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let dynamic_arr = [0,1,2,3];//4칸 짜리 배열
+        dynamic_arr[6] = 6;//!?
+        for(let i =0;i<dynamic_arr.length;i++){
+            document.write(`dynamic_arr[${i}]=${dynamic_arr[i]}<br>`);
+        }
+        //아예 추가도 하지 않은 것에 대해서는 undefined
+        document.write(`dynamic_arr[${100}]=${dynamic_arr[100]}<br>`);
+        document.write("<hr>");
+        // Bound Exception이 없음(out of Bound)
+        let empty = [];
+        empty[0]=0;
+        empty[1]=1;
+        for(let i = 0 ; i<empty.length;i++){
+            document.write(`empty[${i}]=${empty[i]}<br>`);
+        }
+        document.write("<hr>");
+        let example = [0,1,2,3,4,,6];//중간에 갑이 없는 배열도 만들 수 있음
+        for(let i = 0 ; i<example.length;i++){
+            document.write(`example[${i}]=${example[i]}<br>`);
+        }
+        document.write("<hr>");
+        // 중간에 값을 삭제 하는것도 가능
+        delete example[2];//undefined를 대입하는 것과 같음
+        for(let i = 0 ; i<example.length;i++){
+            document.write(`example[${i}]=${example[i]}<br>`);
+        }
+        document.write("<hr>");
+
+        //lengh속성 변경 가능
+        example.length=2;
+        for(let i = 0 ; i<example.length;i++){
+            document.write(`example[${i}]=${example[i]}<br>`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let array = ['가위', '바위', '보'];
+        let computer = Math.floor(Math.random() * 3);
+        let user=''
+        while (true) {
+            user = prompt('가위 바위 보 중 하나를 내 주십시오');
+            if (user == '가위') {
+                user = 0;
+                break;
+            } else if (user == '바위') {
+                user = 1;
+                break;
+            } else if (user == '보') {
+                user = 2;
+                break;
+            } else {
+                alert('잘못된 입력입니다. 다시 입력해 주십시오.')
+            }
+        }
+        console.log(`사용자 : ${array[user]} 컴퓨터 : ${array[computer]}`);
+        if(user==computer){
+            console.log('비겼습니다.');
+        }
+        else if(user==computer-1||user==computer+2){
+            console.log('졌습니다.');
+        }
+        else{
+            console.log('이겼습니다.');
+        }
+    </script>
+</body>
+
+</html>

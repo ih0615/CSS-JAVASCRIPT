@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div#header{
+            background: url(header_background.png);
+            height: 45px;
+            line-height: 45px;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            position: relative;
+        }
+        .icon{
+            display: block;
+        }
+        .left_button{
+            background: url(Sprites.png);
+            width: 62px;
+            height: 32px;
+            position: absolute;
+            top: 7px;
+            left: 5px;
+        }
+        .right_button{
+            background: url(Sprites.png) -62px 0;
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            top: 7px;
+            right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <i class="icon left_button"></i>
+        <h1>mobile</h1>
+        <i class="icon right_button"></i>
+    </div>
+</body>
+</html>

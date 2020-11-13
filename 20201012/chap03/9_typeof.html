@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var example = "for example";
+        document.write(typeof (example));
+        document.write('<br>');
+        if (typeof (example) == "string") //대소문자 구분할 것!
+        {
+            document.write("Hello!!!");
+        } else {
+            document.write("......");
+        }
+        // 자바 스크립트는 중간에 타입이 변하기도 한다.
+        example = 123123;
+        document.write('<br>');
+        document.write(typeof (example));
+        document.write('<br>');
+        if (typeof (example) == "string") //대소문자 구분할 것
+        {
+            document.write("Hello!!!");
+        } {
+            document.write("......");
+        }
+    </script>
+</body>
+
+</html>

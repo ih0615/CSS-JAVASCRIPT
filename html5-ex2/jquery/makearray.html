@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>makearray</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<p>문단1</p>
+	<p>문단2</p>
+	<p>문단3</p>
+	<hr />
+	<script>
+		var jQ = $('p');
+		var ar = $.makeArray(jQ);
+		ar.reverse();
+		for (i = 0; i < ar.length; i++) {
+			document.write(ar[i].firstChild.nodeValue + "<br />");
+		}
+	</script>
+</body>
+</html>

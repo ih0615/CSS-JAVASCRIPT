@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+
+<body>
+    <p><img src="playbtn_normal.png" alt=""></p>
+    <script>
+        $('img').hover(function () {
+                $('img').attr('src', 'playbtn_press.png')
+            },
+            function () {
+                $('img').attr('src', 'playbtn_normal.png')
+            }
+        );
+    </script>
+</body>
+
+</html>

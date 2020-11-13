@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" id="scoreform">
+        <lable for="subject">과목</lable><!-- 이 태그 클릭시 id가 subject인 태그에 포커스-->
+        <input type="text" id="subject"><br>
+        <label for="score" id="">점수</label>
+        <input type="number" id="score"><br>
+        <input type="submit"><br>
+        <input type="reset">
+    </form>
+    <script>
+        let scoreform = document.getElementById("scoreform");
+        scoreform.onsubmit = function () {
+            let score = document.getElementById("score").value;
+            if (score < 0 || score > 100) {
+                alert("wrond value!!!!");
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>

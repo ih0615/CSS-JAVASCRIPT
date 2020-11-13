@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>trim</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<pre id="str"></pre>
+	<pre id="trim"></pre>
+	<script>
+		var str = "    우리나라    대한민국    ";
+		$("#str").html("원본:->" + str + "<-");
+		$("#trim").html("정리:->" + $.trim(str) + "<-");
+	</script>
+</body>
+</html>

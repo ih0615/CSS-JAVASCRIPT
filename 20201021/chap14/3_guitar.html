@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../chap13/jq.js"></script>
+    <script>
+        $(function(){
+            //header : h1~h6태그를 의미
+            //*:header : 전체 태그 중 h1~h6태그 의미
+            $('*:header').css('background','springgreen');
+            //h3태그 중 id가 h3가 아닌 것들
+            $('h3:not(#h3)').css('border','solid 1px red');
+        })
+    </script>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h1>
+    <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, debitis?</h2>
+    <h3 id="h3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi eligendi, sint magni tenetur deleniti
+        odit?</h3>
+    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, totam! Cum esse repudiandae tempora doloremque
+        ea dolorum praesentium.</h3>
+    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam dolorem facilis ipsam delectus eum perferendis
+        veniam expedita error aliquid fugit.</h3>
+</body>
+
+</html>

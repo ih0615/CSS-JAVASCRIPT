@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>defineproperties</title>
+</head>
+<body>
+	<script>
+		var human = {
+			name: "김상형",
+			age: 29
+		};
+		
+		Object.defineProperties(human, {
+			title : {
+				value : "차장",
+				enumerable:true,
+			},
+			salary : {
+				value : 680,
+				enumerable:true,
+			},
+		});
+	
+		for (var i in human) {
+			document.write(human[i] + "<br>");
+		}
+	</script>
+</body>
+</html>

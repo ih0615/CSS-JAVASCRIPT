@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>h1attr</title>
+</head>
+<body>
+	<h1 id="header">제목이다.</h1>
+	<p>이것은 <b>문단</b>이다.</p>
+	<script>
+		var header = document.getElementById("header");
+		document.write("노드 타입 = " + header.nodeType + 
+			" ,노드 이름 = " + header.nodeName +
+			" ,노드 값 = " + header.nodeValue + "<br>");
+		
+		var text = header.firstChild;
+		document.write("노드 타입 = " + text.nodeType + 
+			" ,노드 이름 = " + text.nodeName +
+			" ,노드 값 = " + text.nodeValue + "<br>");
+	</script>
+</body>
+</html>

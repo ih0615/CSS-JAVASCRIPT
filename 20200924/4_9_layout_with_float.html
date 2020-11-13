@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- 공식 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- float 속성을 상요한 레이아웃 구성 -->
+    <style>
+        /* 중앙 정렬 공식 */
+        /* width를 지정한다. 그리고 margin 0 auto를 둔다. */
+        body {
+            width: 960px;
+            margin: 0 auto;
+        }
+        #aside{
+            width: 200px;
+            float: left;
+        }
+        #section{
+            width: 760px;
+            float: left;
+        }
+        /*자손에 float속성 적용시 부모태그에 overflow:hidden적용하기*/
+        #wrap{
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 레이아웃 구성은 가로 부분부터 먼저 구성 -->
+    <!-- 그 가로 안에서 세로 부분을 먼저 구성함 -->
+    <!-- Header, Navigation, Contents, Footer로 구상(가로) -->
+    <!-- 그 후 Contents를 Aside, Section으로 쪼개서 구상(세로) -->
+    <div id="header">
+        <h1>Header</h1>
+    </div>
+    <div id="navigation">
+        <h1>Navigation</h1>
+    </div>
+    <div id="wrap">
+        <div id="aside">
+            <h1>Aside</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div id="section">
+            <h1>Section</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </div>
+    <div id="footer">
+        <h1>Footer</h1>
+    </div>
+</body>
+
+</html>

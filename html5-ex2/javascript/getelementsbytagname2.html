@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>getelementsbytagname2</title>
+</head>
+<body>
+	<ul id="race">
+		<li>테란</li>
+		<li>프로토스</li>
+		<li>저그</li>
+	</ul>
+	<ol>
+		<li>소녀시대</li>
+		<li>원더걸스</li>
+	</ol>
+	<hr>
+	<script>
+		var race = document.getElementById("race");
+		var childs = race.getElementsByTagName("li");
+		for (var li in childs) {
+			document.write(li + "번째 목록 : " + childs[li].firstChild.nodeValue + "<br>");
+		}
+	</script>
+</body>
+</html>

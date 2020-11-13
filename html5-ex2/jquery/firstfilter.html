@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>firstfilter</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<ul>
+		<li>one
+		<li>two
+		<li>three
+		<li>four
+		<li>five
+		<li>six
+		<li>seven
+		<li>eight
+		<li>nine
+	</ul>
+	<script>
+		$('li:first, li:last').css('background', 'yellow');
+		$('li:eq(5)').css('background', 'red');
+		$('li:lt(4)').css('font-weight', 'bold');
+	</script>
+</body>
+</html>

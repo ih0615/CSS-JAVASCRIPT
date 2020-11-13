@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>end</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<h3>문단0</h3>
+	<h3>문단<span>1</span></h3>
+	<h3>문단<span>2</span></h3>
+	<h3>문단3</h3>
+	<h3>문단4</h3>
+	<script>
+		$('h3').filter(':odd').css('background', 'yellow').
+		filter(':has(span)').css('border', 'solid');
+	</script>
+</body>
+</html>

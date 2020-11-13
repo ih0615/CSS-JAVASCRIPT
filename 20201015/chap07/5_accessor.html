@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let human ={
+            name:"이동준",
+            age:32
+        };
+
+        let $salary;//이름은 아무렇게나 붙여줘도 됨
+        Object.defineProperty(
+            human,"salary",
+            {
+                enumerable:true,
+                get:function(){
+                    return $salary;
+                },
+                set:function(value){
+                    if(value>0){
+                        $salary=value;
+                    }
+                }
+            }
+        );
+        human.salary = 520;//set이 자동으로 추출함
+        human.salary = -100;//set 안의 예외처리로 인하여 실행되지 않음
+        for(let i in human){
+            document.write(human[i]+"<br>");
+        }
+    </script>
+</body>
+</html>

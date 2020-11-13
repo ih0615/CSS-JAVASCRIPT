@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let input = prompt("글자입력하기");
+        document.write(input+"<br>");//내가 입력한 글자를 확인하기 위한 용도
+        let alphabet = new Array(26);
+        alphabet.fill(0);
+        input = input.toLowerCase();
+
+        //입력한 글자만큼 for 수행
+        for(let i = 0; i<input.length;i++){
+            let index = input.charCodeAt(i)-'a'.charCodeAt(0);
+            alphabet[index]++;
+        }
+        for(let i =0;i<alphabet.length;i++){
+            //String.fromCharCode(97)
+            if(alphabet[i] != 0){
+                let sentense = `${String.fromCharCode(i+97)}는 ${alphabet[i]}개 있습니다<br>`
+                document.write(sentense);
+            }
+        }
+    </script>
+</body>
+</html>

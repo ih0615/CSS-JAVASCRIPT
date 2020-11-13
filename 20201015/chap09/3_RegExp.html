@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = "890430-1111111";
+        
+        let result = str.search(/[0-9]{6}-[1234][0-9]{6}/);
+        // 정규식 의미 해석
+        //앞자리는 0부터 9까지의 숫자로 구성되고, 6자리이다
+        //-(하이픈) 다음부터는
+        //맨 앞자리는 1,2,3,4중 하나이며, 그다음에는 0부터 9까지의 숫자 6자리이다.
+        if(result==-1){
+            document.write("ㄲㅈ");
+        }
+        else{
+            document.write("ㅎㅇ");
+        }
+        let sss = "228-123";//주민번호가 아닌 것
+        result = sss.search(/[0-9]{6}-[1234][0-9]{6}/);
+        if(result==-1){
+            document.write("ㄲㅈ");
+        }
+        else{
+            document.write("ㅎㅇ");
+        }
+        let aaa ="11111111-111111111111111";
+        result = aaa.search(/[0-9]{6}-[1234][0-9]{6}/);
+        if(result==-1){
+            document.write("ㄲㅈ");
+        }
+        else{
+            document.write("ㅎㅇ");
+        }
+    </script>
+</body>
+</html>

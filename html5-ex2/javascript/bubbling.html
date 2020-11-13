@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>bubbling</title>
+</head>
+<body>
+	<div id="div">
+		<p id="para">클릭하세요</p>
+	</div>
+	<script>
+		var div = document.getElementById("div");
+		div.onclick = function() {
+			alert("div를 클릭했습니다.");
+		}
+		var para = document.getElementById("para");
+		para.onclick = function() {
+			alert("para를 클릭했습니다.");
+		}
+	</script>
+</body>
+</html>

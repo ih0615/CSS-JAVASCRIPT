@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .box:nth-of-type(1) {
+            background-color: red;
+        }
+
+        .box:nth-of-type(2) {
+            background-color: royalblue;
+        }
+
+        .box:nth-of-type(3) {
+            background-color: seagreen;
+        }
+
+        .box:nth-of-type(4) {
+            background-color: springgreen;
+        }
+
+        .box:nth-of-type(5) {
+            background-color: violet;
+        }
+
+        .box:nth-of-type(6) {
+            background-color: black;
+        }
+.box{
+    opacity: 0.5;
+}
+        .box:nth-of-type(1) {
+            transform: translate3d(0px, 0px, 100px);
+        }
+
+        .box:nth-of-type(2) {
+            transform: rotateY(90deg) translate3d(0px, 0px, 100px);
+
+        }
+
+        .box:nth-of-type(3) {
+            transform: rotateY(180deg) translate3d(0px, 0px, 100px);
+
+        }
+
+        .box:nth-of-type(4) {
+            transform: rotateY(270deg) translate3d(0px, 0px, 100px);
+
+        }
+
+        .box:nth-of-type(5) {
+            transform: rotateX(90deg) translate3d(0px, 0px, 100px);
+
+        }
+
+        .box:nth-of-type(6) {
+            transform: rotateX(270deg) translate3d(0px, 0px, 100px);
+
+        }
+
+        .wrap {
+            transform-style: preserve-3d;
+        }
+
+        @keyframes abcd {
+            0% {
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            }
+
+            100% {
+                transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+            }
+        }
+
+        .wrap {
+            animation-name: abcd;
+            animation-duration: 20s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            left: 100px;
+            top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+</body>
+
+</html>

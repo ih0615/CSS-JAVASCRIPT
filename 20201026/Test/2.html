@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+
+<body>
+    <div id="one">
+        <h1>1</h1>
+        <p id="numberOneCount"></p>
+        <p id="numberOnePer"></p>
+    </div>
+    <div id="two">
+        <h1>2</h1>
+        <p id="numberTwoCount"></p>
+        <p id="numberTwoPer"></p>
+    </div>
+    <div id="three">
+        <h1>3</h1>
+        <p id="numberThreeCount"></p>
+        <p id="numberThreePer"></p>
+    </div>
+    <div id="four">
+        <h1>4</h1>
+        <p id="numberFourCount"></p>
+        <p id="numberFourPer"></p>
+    </div>
+    <div id="five">
+        <h1>5</h1>
+        <p id="numberFiveCount"></p>
+        <p id="numberFivePer"></p>
+    </div>
+    <div id="six">
+        <h1>6</h1>
+        <p id="numberSixCount"></p>
+        <p id="numberSixPer"></p>
+    </div>
+    <script>
+        let input = prompt('숫자를 입력해 주십시오');
+        let oneCount = 0;
+        let twoCount = 0;
+        let threeCount = 0;
+        let fourCount = 0;
+        let fiveCount = 0;
+        let sixCount = 0;
+
+        for (let i = 1; i <= input; i++) {
+            let random = Math.floor(Math.random() * 6) + 1;
+            switch (random) {
+                case 1:
+                    oneCount++;
+                    break;
+                case 2:
+                    twoCount++;
+                    break;
+                case 3:
+                    threeCount++;
+                    break;
+                case 4:
+                    fourCount++;
+                    break;
+                case 5:
+                    fiveCount++;
+                    break;
+                case 6:
+                    sixCount++;
+                    break;
+            }
+        }
+        
+        $('#numberOneCount').text(oneCount);
+        $('#numberTwoCount').text(twoCount);
+        $('#numberThreeCount').text(threeCount);
+        $('#numberFourCount').text(fourCount);
+        $('#numberFiveCount').text(fiveCount);
+        $('#numberSixCount').text(sixCount);
+        $('#numberOnePer').text(parseFloat((oneCount / input) * 100).toFixed(2));
+        $('#numberTwoPer').text(parseFloat((twoCount / input) * 100).toFixed(2));
+        $('#numberThreePer').text(parseFloat((threeCount / input) * 100).toFixed(2));
+        $('#numberFourPer').text(parseFloat((fourCount / input) * 100).toFixed(2));
+        $('#numberFivePer').text(parseFloat((fiveCount / input) * 100).toFixed(2));
+        $('#numberSixPer').text(parseFloat((sixCount / input) * 100).toFixed(2));
+        let array = [];
+        array.push(oneCount, twoCount, threeCount, fourCount, fiveCount, sixCount);
+        array.sort();
+        if (oneCount == array[5]) {
+            $('#one').css('color', 'blue');
+        } else if (twoCount == array[5]) {
+            $('#two').css('color', 'blue');
+        } else if (threeCount == array[5]) {
+            $('#three').css('color', 'blue');
+        } else if (fourCount == array[5]) {
+            $('#four').css('color', 'blue');
+        } else if (fiveCount == array[5]) {
+            $('#five').css('color', 'blue');
+        } else if (sixCount == array[5]) {
+            $('#six').css('color', 'blue');
+        }
+        if (oneCount == array[0]) {
+            $('#one').css('color', 'red');
+        } else if (twoCount == array[0]) {
+            $('#two').css('color', 'red');
+        } else if (threeCount == array[0]) {
+            $('#three').css('color', 'red');
+        } else if (fourCount == array[0]) {
+            $('#four').css('color', 'red');
+        } else if (fiveCount == array[0]) {
+            $('#five').css('color', 'red');
+        } else if (sixCount == array[0]) {
+            $('#six').css('color', 'red');
+        }
+    </script>
+</body>
+
+</html>

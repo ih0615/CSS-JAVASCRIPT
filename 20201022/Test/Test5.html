@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Student(name, number, gender) {
+            this.name = name;
+            this.number = number;
+            this.gender = gender;
+        };
+        Student.prototype.toString = function () {
+            return `이름 : ${this.name} 학번 : ${this.number} 성별 : ${this.gender}`
+        }
+        let StudentList = [];
+        StudentList.push(
+            new Student('이동준', 20000102, '남'),
+            new Student('이나겸', 20010302, '여'),
+            new Student('신수현', 20120106, '남'),
+            new Student('박소윤', 20201010, '여'),
+        );
+        for (let i in StudentList) {
+            if (StudentList[i].name == '이동준') {
+                StudentList[i].number = 19890203;
+            }
+        }
+        let idx = StudentList.findIndex(function (item) {
+            return item.name == '이나겸'
+        })
+
+        if (idx != -1) {
+            StudentList.splice(idx, 1);
+        }
+
+        for (let i =0;i<2;i++) {
+            let name = prompt('이름');
+            let number = prompt('학번');
+            let gender = prompt('성별');
+            StudentList.push(new Student(name, number, gender));
+        }
+
+        for (let i in StudentList) {
+            document.write(StudentList[i] + '<br>');
+        }
+    </script>
+</body>
+
+</html>

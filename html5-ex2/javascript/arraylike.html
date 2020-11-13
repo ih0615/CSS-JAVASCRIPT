@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>arraylike</title>
+</head>
+<body>
+	<script>
+		var human = { 
+			name: "김상형", 
+			age: 29 
+		};
+		human[0] = 87;
+		human[1] = 79;
+		human[2] = 92;
+		human.length = 3;
+	
+		for (var i = 0; i < human.length; i++) {
+			document.write("human[" + i + "] =" + human[i] + "<br>");
+		}
+		document.write("--------<br>");
+		for (var i in human) {
+			document.write("human[" + i + "] =" + human[i] + "<br>");
+		}
+	</script>
+</body>
+</html>

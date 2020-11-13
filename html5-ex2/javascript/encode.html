@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>encode</title>
+</head>
+<body>
+	<script>
+		var s = "소/녀:시@대";
+		document.write("원본 = " + s + "<br>");
+		var e = encodeURIComponent(s);
+		document.write("인코딩 = " + e + "<br>");
+		var u = decodeURIComponent(e);
+		document.write("디코딩 = " + u + "<br>");
+	</script>
+</body>
+</html>

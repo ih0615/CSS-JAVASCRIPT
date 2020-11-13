@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let child;
+
+        function openChild() {
+            child = window.open("", "", "width=400,height=300,resizable=no");
+            child.document.write("<p>Child Window</p>");
+            child.moveTo(100, 100); //to가 붙은 건 절대 좌표, by가 붙은건 상대좌표
+        }
+
+        function moveChild() {
+            child.moveBy(10, 10);
+            child.focus();
+        }
+
+        function closeChild() {
+            child.close();
+        }
+    </script>
+    <input type="button" value="Open" onclick="openChild()">
+    <input type="button" value="Move" onclick="moveChild()">
+    <input type="button" value="Close" onclick="closeChild()">
+</body>
+
+</html>

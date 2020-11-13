@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>grep</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body>
+	<p> ar = [8, 5, 0, 6, 2, 9]</p>
+	<hr />
+	<script>
+		var ar = [8, 5, 0, 6, 2, 9];
+		var ar2 = $.grep(ar, function(elem, index) {
+			return (elem % 2) == 0;
+		});
+		document.write(ar2.join() + "<br />");
+	</script>
+</body>
+</html>

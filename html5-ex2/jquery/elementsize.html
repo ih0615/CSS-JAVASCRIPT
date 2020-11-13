@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>elementsize</title>
+	<script src="jquery-1.11.0.min.js"></script>
+	<style>
+		img {
+			background-color:yellow;
+			margin:10pt;
+			padding:20pt; 
+			border:solid red 10px;
+		}
+	</style>
+</head>
+<body>
+	<p><img src="cosmos.jpg" /></p>
+	<hr />
+	<script>
+		var pic = $('img');
+		document.write("크기1 : " + pic.width() + ", " + pic.height() + "<br/>");
+		document.write("크기2 : " + pic.innerWidth() + ", " + pic.innerHeight() + "<br/>");
+		document.write("크기3 : " + pic.outerWidth() + ", " + pic.outerHeight() + "<br/>");
+		document.write("크기4 : " + pic.outerWidth(true) + ", " + pic.outerHeight(true) + "<br/>");
+	</script>
+</body>
+</html>

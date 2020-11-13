@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var key = prompt("숫자를 입력하세요", 5);
+        switch(Number(key)){
+            case 0:
+                alert("숫자 0 ㄴㄴ");
+                break;
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+                document.write('key는 5이하의 값입니다.');
+                break;
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+            case 10:
+                document.write('key는 10이하의 값입니다.');
+                break;
+            default:
+                alert("이상한 값 ㄴㄴ");
+                break;
+        }
+    </script>
+</body>
+</html>

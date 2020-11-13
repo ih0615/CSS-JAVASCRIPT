@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>closest</title>
+	<script src="jquery-1.11.0.min.js"></script>
+</head>
+<body class="sosi">
+	<div class="sosi">
+		<p>문단 안에 <strong class="sosi">강조</strong> 표시가 있다.</p>
+	</div>
+	<hr />
+	<script>
+		var result = "parents : ";
+		$('strong').parents('.sosi').each(function(index) {
+			result += this.tagName + " ";
+		});
+		document.write(result + "<br>");
+		
+		result = "closest : ";
+		$('strong').closest('.sosi').each(function(index) {
+			result += this.tagName + " ";
+		});
+		document.write(result + "<br>");
+	</script>
+</body>
+</html>

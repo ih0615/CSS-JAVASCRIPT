@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    span{
+        color: teal;
+    }
+    label{
+        color: gold;
+    }
+    label[for="name"]{
+        color: teal;
+    }
+    input[type=text]{
+        background-color: red;
+    }
+</style>
+</head>
+
+<body>
+    <form action="" method="POST" style="display: inline-block;">
+        <label for="name">이름 : </label>
+        <input id="name" type="text"><br>
+        <span>성별 : </span>
+        <input id="male" name="gender" type="radio">
+        <label for="male">남성</label>
+        <input id="female" name="gender" type="radio">
+        <label for="female">여성</label><br>
+        <span>취미 : </span>
+        <input id="exercise" name="hobby" type="checkbox">
+        <label for="exercise">운동</label>
+        <input id="music" name="hobby" type="checkbox">
+        <label for="music">음악</label>
+        <input id="develop" name="hobby" type="checkbox">
+        <label for="develop">개발</label><br>
+        <input type="submit">
+
+    </form>
+</body>
+
+</html>
